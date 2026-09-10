@@ -149,6 +149,22 @@ export const TOOLS: Tool[] = [
 		path: "/tools/lorem-ipsum",
 		runsLocally: true,
 	},
+	{
+		id: "extract-lines",
+		name: "Extract Lines",
+		description: "Keep lines matching a pattern",
+		category: "text",
+		path: "/tools/extract-lines",
+		runsLocally: true,
+	},
+	{
+		id: "find-replace",
+		name: "Find & Replace",
+		description: "Replace text with optional regex",
+		category: "text",
+		path: "/tools/find-replace",
+		runsLocally: true,
+	},
 
 	// DATA
 	{
@@ -197,6 +213,14 @@ export const TOOLS: Tool[] = [
 		description: "Convert CSV to Markdown table",
 		category: "data",
 		path: "/tools/csv-to-markdown",
+		runsLocally: true,
+	},
+	{
+		id: "factorial",
+		name: "Factorial",
+		description: "Calculate factorial",
+		category: "data",
+		path: "/tools/factorial-calculator",
 		runsLocally: true,
 	},
 
@@ -329,6 +353,46 @@ export const TOOLS: Tool[] = [
 		path: "/tools/cidr-calculator",
 		runsLocally: true,
 	},
+	{
+		id: "duration-calculator",
+		name: "Duration Calculator",
+		description: "Calculate time between two dates",
+		category: "development",
+		path: "/tools/duration-calculator",
+		runsLocally: true,
+	},
+	{
+		id: "epoch-converter",
+		name: "Epoch Converter",
+		description: "Unix epoch utilities",
+		category: "development",
+		path: "/tools/epoch-converter",
+		runsLocally: true,
+	},
+	{
+		id: "fake-email",
+		name: "Fake Email",
+		description: "Generate fake test emails",
+		category: "development",
+		path: "/tools/fake-email",
+		runsLocally: true,
+	},
+	{
+		id: "fake-name",
+		name: "Fake Name",
+		description: "Generate test names",
+		category: "development",
+		path: "/tools/fake-name",
+		runsLocally: true,
+	},
+	{
+		id: "hmac-generator",
+		name: "HMAC Generator",
+		description: "Generate HMAC signatures",
+		category: "development",
+		path: "/tools/hmac-generator",
+		runsLocally: true,
+	},
 
 	// IMAGES
 	{
@@ -353,6 +417,14 @@ export const TOOLS: Tool[] = [
 		description: "Decode Base64 into an image",
 		category: "images",
 		path: "/tools/base64-to-image",
+		runsLocally: true,
+	},
+	{
+		id: "favicon-generator",
+		name: "Favicon Generator",
+		description: "Generate favicon from image/text",
+		category: "images",
+		path: "/tools/favicon-generator",
 		runsLocally: true,
 	},
 

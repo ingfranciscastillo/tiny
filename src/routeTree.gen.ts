@@ -40,8 +40,17 @@ import { Route as ToolsDateConverterRouteImport } from './routes/tools/date-conv
 import { Route as ToolsDateGeneratorRouteImport } from './routes/tools/date-generator'
 import { Route as ToolsDateToTimestampRouteImport } from './routes/tools/date-to-timestamp'
 import { Route as ToolsDnsRecordBuilderRouteImport } from './routes/tools/dns-record-builder'
+import { Route as ToolsDurationCalculatorRouteImport } from './routes/tools/duration-calculator'
+import { Route as ToolsEpochConverterRouteImport } from './routes/tools/epoch-converter'
+import { Route as ToolsExtractLinesRouteImport } from './routes/tools/extract-lines'
+import { Route as ToolsFactorialCalculatorRouteImport } from './routes/tools/factorial-calculator'
+import { Route as ToolsFakeEmailRouteImport } from './routes/tools/fake-email'
+import { Route as ToolsFakeNameRouteImport } from './routes/tools/fake-name'
+import { Route as ToolsFaviconGeneratorRouteImport } from './routes/tools/favicon-generator'
+import { Route as ToolsFindReplaceRouteImport } from './routes/tools/find-replace'
 import { Route as ToolsHashGeneratorRouteImport } from './routes/tools/hash-generator'
 import { Route as ToolsHexConverterRouteImport } from './routes/tools/hex-converter'
+import { Route as ToolsHmacGeneratorRouteImport } from './routes/tools/hmac-generator'
 import { Route as ToolsHtmlEntitiesRouteImport } from './routes/tools/html-entities'
 import { Route as ToolsImageCompressRouteImport } from './routes/tools/image-compress'
 import { Route as ToolsImageCropperRouteImport } from './routes/tools/image-cropper'
@@ -216,6 +225,47 @@ const ToolsDnsRecordBuilderRoute = ToolsDnsRecordBuilderRouteImport.update({
   path: '/tools/dns-record-builder',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsDurationCalculatorRoute = ToolsDurationCalculatorRouteImport.update({
+  id: '/tools/duration-calculator',
+  path: '/tools/duration-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsEpochConverterRoute = ToolsEpochConverterRouteImport.update({
+  id: '/tools/epoch-converter',
+  path: '/tools/epoch-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsExtractLinesRoute = ToolsExtractLinesRouteImport.update({
+  id: '/tools/extract-lines',
+  path: '/tools/extract-lines',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsFactorialCalculatorRoute =
+  ToolsFactorialCalculatorRouteImport.update({
+    id: '/tools/factorial-calculator',
+    path: '/tools/factorial-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ToolsFakeEmailRoute = ToolsFakeEmailRouteImport.update({
+  id: '/tools/fake-email',
+  path: '/tools/fake-email',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsFakeNameRoute = ToolsFakeNameRouteImport.update({
+  id: '/tools/fake-name',
+  path: '/tools/fake-name',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsFaviconGeneratorRoute = ToolsFaviconGeneratorRouteImport.update({
+  id: '/tools/favicon-generator',
+  path: '/tools/favicon-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsFindReplaceRoute = ToolsFindReplaceRouteImport.update({
+  id: '/tools/find-replace',
+  path: '/tools/find-replace',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsHashGeneratorRoute = ToolsHashGeneratorRouteImport.update({
   id: '/tools/hash-generator',
   path: '/tools/hash-generator',
@@ -224,6 +274,11 @@ const ToolsHashGeneratorRoute = ToolsHashGeneratorRouteImport.update({
 const ToolsHexConverterRoute = ToolsHexConverterRouteImport.update({
   id: '/tools/hex-converter',
   path: '/tools/hex-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsHmacGeneratorRoute = ToolsHmacGeneratorRouteImport.update({
+  id: '/tools/hmac-generator',
+  path: '/tools/hmac-generator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsHtmlEntitiesRoute = ToolsHtmlEntitiesRouteImport.update({
@@ -349,8 +404,17 @@ export interface FileRoutesByFullPath {
   '/tools/date-generator': typeof ToolsDateGeneratorRoute
   '/tools/date-to-timestamp': typeof ToolsDateToTimestampRoute
   '/tools/dns-record-builder': typeof ToolsDnsRecordBuilderRoute
+  '/tools/duration-calculator': typeof ToolsDurationCalculatorRoute
+  '/tools/epoch-converter': typeof ToolsEpochConverterRoute
+  '/tools/extract-lines': typeof ToolsExtractLinesRoute
+  '/tools/factorial-calculator': typeof ToolsFactorialCalculatorRoute
+  '/tools/fake-email': typeof ToolsFakeEmailRoute
+  '/tools/fake-name': typeof ToolsFakeNameRoute
+  '/tools/favicon-generator': typeof ToolsFaviconGeneratorRoute
+  '/tools/find-replace': typeof ToolsFindReplaceRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
   '/tools/hex-converter': typeof ToolsHexConverterRoute
+  '/tools/hmac-generator': typeof ToolsHmacGeneratorRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
   '/tools/image-compress': typeof ToolsImageCompressRoute
   '/tools/image-cropper': typeof ToolsImageCropperRoute
@@ -402,8 +466,17 @@ export interface FileRoutesByTo {
   '/tools/date-generator': typeof ToolsDateGeneratorRoute
   '/tools/date-to-timestamp': typeof ToolsDateToTimestampRoute
   '/tools/dns-record-builder': typeof ToolsDnsRecordBuilderRoute
+  '/tools/duration-calculator': typeof ToolsDurationCalculatorRoute
+  '/tools/epoch-converter': typeof ToolsEpochConverterRoute
+  '/tools/extract-lines': typeof ToolsExtractLinesRoute
+  '/tools/factorial-calculator': typeof ToolsFactorialCalculatorRoute
+  '/tools/fake-email': typeof ToolsFakeEmailRoute
+  '/tools/fake-name': typeof ToolsFakeNameRoute
+  '/tools/favicon-generator': typeof ToolsFaviconGeneratorRoute
+  '/tools/find-replace': typeof ToolsFindReplaceRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
   '/tools/hex-converter': typeof ToolsHexConverterRoute
+  '/tools/hmac-generator': typeof ToolsHmacGeneratorRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
   '/tools/image-compress': typeof ToolsImageCompressRoute
   '/tools/image-cropper': typeof ToolsImageCropperRoute
@@ -456,8 +529,17 @@ export interface FileRoutesById {
   '/tools/date-generator': typeof ToolsDateGeneratorRoute
   '/tools/date-to-timestamp': typeof ToolsDateToTimestampRoute
   '/tools/dns-record-builder': typeof ToolsDnsRecordBuilderRoute
+  '/tools/duration-calculator': typeof ToolsDurationCalculatorRoute
+  '/tools/epoch-converter': typeof ToolsEpochConverterRoute
+  '/tools/extract-lines': typeof ToolsExtractLinesRoute
+  '/tools/factorial-calculator': typeof ToolsFactorialCalculatorRoute
+  '/tools/fake-email': typeof ToolsFakeEmailRoute
+  '/tools/fake-name': typeof ToolsFakeNameRoute
+  '/tools/favicon-generator': typeof ToolsFaviconGeneratorRoute
+  '/tools/find-replace': typeof ToolsFindReplaceRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
   '/tools/hex-converter': typeof ToolsHexConverterRoute
+  '/tools/hmac-generator': typeof ToolsHmacGeneratorRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
   '/tools/image-compress': typeof ToolsImageCompressRoute
   '/tools/image-cropper': typeof ToolsImageCropperRoute
@@ -511,8 +593,17 @@ export interface FileRouteTypes {
     | '/tools/date-generator'
     | '/tools/date-to-timestamp'
     | '/tools/dns-record-builder'
+    | '/tools/duration-calculator'
+    | '/tools/epoch-converter'
+    | '/tools/extract-lines'
+    | '/tools/factorial-calculator'
+    | '/tools/fake-email'
+    | '/tools/fake-name'
+    | '/tools/favicon-generator'
+    | '/tools/find-replace'
     | '/tools/hash-generator'
     | '/tools/hex-converter'
+    | '/tools/hmac-generator'
     | '/tools/html-entities'
     | '/tools/image-compress'
     | '/tools/image-cropper'
@@ -564,8 +655,17 @@ export interface FileRouteTypes {
     | '/tools/date-generator'
     | '/tools/date-to-timestamp'
     | '/tools/dns-record-builder'
+    | '/tools/duration-calculator'
+    | '/tools/epoch-converter'
+    | '/tools/extract-lines'
+    | '/tools/factorial-calculator'
+    | '/tools/fake-email'
+    | '/tools/fake-name'
+    | '/tools/favicon-generator'
+    | '/tools/find-replace'
     | '/tools/hash-generator'
     | '/tools/hex-converter'
+    | '/tools/hmac-generator'
     | '/tools/html-entities'
     | '/tools/image-compress'
     | '/tools/image-cropper'
@@ -617,8 +717,17 @@ export interface FileRouteTypes {
     | '/tools/date-generator'
     | '/tools/date-to-timestamp'
     | '/tools/dns-record-builder'
+    | '/tools/duration-calculator'
+    | '/tools/epoch-converter'
+    | '/tools/extract-lines'
+    | '/tools/factorial-calculator'
+    | '/tools/fake-email'
+    | '/tools/fake-name'
+    | '/tools/favicon-generator'
+    | '/tools/find-replace'
     | '/tools/hash-generator'
     | '/tools/hex-converter'
+    | '/tools/hmac-generator'
     | '/tools/html-entities'
     | '/tools/image-compress'
     | '/tools/image-cropper'
@@ -671,8 +780,17 @@ export interface RootRouteChildren {
   ToolsDateGeneratorRoute: typeof ToolsDateGeneratorRoute
   ToolsDateToTimestampRoute: typeof ToolsDateToTimestampRoute
   ToolsDnsRecordBuilderRoute: typeof ToolsDnsRecordBuilderRoute
+  ToolsDurationCalculatorRoute: typeof ToolsDurationCalculatorRoute
+  ToolsEpochConverterRoute: typeof ToolsEpochConverterRoute
+  ToolsExtractLinesRoute: typeof ToolsExtractLinesRoute
+  ToolsFactorialCalculatorRoute: typeof ToolsFactorialCalculatorRoute
+  ToolsFakeEmailRoute: typeof ToolsFakeEmailRoute
+  ToolsFakeNameRoute: typeof ToolsFakeNameRoute
+  ToolsFaviconGeneratorRoute: typeof ToolsFaviconGeneratorRoute
+  ToolsFindReplaceRoute: typeof ToolsFindReplaceRoute
   ToolsHashGeneratorRoute: typeof ToolsHashGeneratorRoute
   ToolsHexConverterRoute: typeof ToolsHexConverterRoute
+  ToolsHmacGeneratorRoute: typeof ToolsHmacGeneratorRoute
   ToolsHtmlEntitiesRoute: typeof ToolsHtmlEntitiesRoute
   ToolsImageCompressRoute: typeof ToolsImageCompressRoute
   ToolsImageCropperRoute: typeof ToolsImageCropperRoute
@@ -912,6 +1030,62 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsDnsRecordBuilderRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/duration-calculator': {
+      id: '/tools/duration-calculator'
+      path: '/tools/duration-calculator'
+      fullPath: '/tools/duration-calculator'
+      preLoaderRoute: typeof ToolsDurationCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/epoch-converter': {
+      id: '/tools/epoch-converter'
+      path: '/tools/epoch-converter'
+      fullPath: '/tools/epoch-converter'
+      preLoaderRoute: typeof ToolsEpochConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/extract-lines': {
+      id: '/tools/extract-lines'
+      path: '/tools/extract-lines'
+      fullPath: '/tools/extract-lines'
+      preLoaderRoute: typeof ToolsExtractLinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/factorial-calculator': {
+      id: '/tools/factorial-calculator'
+      path: '/tools/factorial-calculator'
+      fullPath: '/tools/factorial-calculator'
+      preLoaderRoute: typeof ToolsFactorialCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/fake-email': {
+      id: '/tools/fake-email'
+      path: '/tools/fake-email'
+      fullPath: '/tools/fake-email'
+      preLoaderRoute: typeof ToolsFakeEmailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/fake-name': {
+      id: '/tools/fake-name'
+      path: '/tools/fake-name'
+      fullPath: '/tools/fake-name'
+      preLoaderRoute: typeof ToolsFakeNameRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/favicon-generator': {
+      id: '/tools/favicon-generator'
+      path: '/tools/favicon-generator'
+      fullPath: '/tools/favicon-generator'
+      preLoaderRoute: typeof ToolsFaviconGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/find-replace': {
+      id: '/tools/find-replace'
+      path: '/tools/find-replace'
+      fullPath: '/tools/find-replace'
+      preLoaderRoute: typeof ToolsFindReplaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/hash-generator': {
       id: '/tools/hash-generator'
       path: '/tools/hash-generator'
@@ -924,6 +1098,13 @@ declare module '@tanstack/react-router' {
       path: '/tools/hex-converter'
       fullPath: '/tools/hex-converter'
       preLoaderRoute: typeof ToolsHexConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/hmac-generator': {
+      id: '/tools/hmac-generator'
+      path: '/tools/hmac-generator'
+      fullPath: '/tools/hmac-generator'
+      preLoaderRoute: typeof ToolsHmacGeneratorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/html-entities': {
@@ -1087,8 +1268,17 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsDateGeneratorRoute: ToolsDateGeneratorRoute,
   ToolsDateToTimestampRoute: ToolsDateToTimestampRoute,
   ToolsDnsRecordBuilderRoute: ToolsDnsRecordBuilderRoute,
+  ToolsDurationCalculatorRoute: ToolsDurationCalculatorRoute,
+  ToolsEpochConverterRoute: ToolsEpochConverterRoute,
+  ToolsExtractLinesRoute: ToolsExtractLinesRoute,
+  ToolsFactorialCalculatorRoute: ToolsFactorialCalculatorRoute,
+  ToolsFakeEmailRoute: ToolsFakeEmailRoute,
+  ToolsFakeNameRoute: ToolsFakeNameRoute,
+  ToolsFaviconGeneratorRoute: ToolsFaviconGeneratorRoute,
+  ToolsFindReplaceRoute: ToolsFindReplaceRoute,
   ToolsHashGeneratorRoute: ToolsHashGeneratorRoute,
   ToolsHexConverterRoute: ToolsHexConverterRoute,
+  ToolsHmacGeneratorRoute: ToolsHmacGeneratorRoute,
   ToolsHtmlEntitiesRoute: ToolsHtmlEntitiesRoute,
   ToolsImageCompressRoute: ToolsImageCompressRoute,
   ToolsImageCropperRoute: ToolsImageCropperRoute,
