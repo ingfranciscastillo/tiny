@@ -237,6 +237,22 @@ export const TOOLS: Tool[] = [
 		path: "/tools/split-text",
 		runsLocally: true,
 	},
+	{
+		id: "trim-lines",
+		name: "Trim Lines",
+		description: "Remove whitespace from every line",
+		category: "text",
+		path: "/tools/trim-lines",
+		runsLocally: true,
+	},
+	{
+		id: "whitespace-cleaner",
+		name: "Whitespace Cleaner",
+		description: "Normalize spaces and line breaks",
+		category: "text",
+		path: "/tools/whitespace-cleaner",
+		runsLocally: true,
+	},
 
 	// DATA
 	{
@@ -373,6 +389,22 @@ export const TOOLS: Tool[] = [
 		description: "Convert notation",
 		category: "data",
 		path: "/tools/scientific-notation",
+		runsLocally: true,
+	},
+	{
+		id: "unit-converter",
+		name: "Unit Converter",
+		description: "Length · weight · temperature",
+		category: "data",
+		path: "/tools/unit-converter",
+		runsLocally: true,
+	},
+	{
+		id: "yaml-to-json",
+		name: "YAML → JSON",
+		description: "Convert YAML to JSON",
+		category: "data",
+		path: "/tools/yaml-to-json",
 		runsLocally: true,
 	},
 
@@ -841,6 +873,46 @@ export const TOOLS: Tool[] = [
 		path: "/tools/subnet-calculator",
 		runsLocally: true,
 	},
+	{
+		id: "ulid",
+		name: "ULID Generator",
+		description: "Generate ULIDs",
+		category: "development",
+		path: "/tools/ulid-generator",
+		runsLocally: true,
+	},
+	{
+		id: "unix-permissions",
+		name: "Unix Permissions",
+		description: "755 ↔ rwxr-xr-x",
+		category: "development",
+		path: "/tools/unix-permissions",
+		runsLocally: true,
+	},
+	{
+		id: "url-builder",
+		name: "URL Builder",
+		description: "Build URLs from components",
+		category: "development",
+		path: "/tools/url-builder",
+		runsLocally: true,
+	},
+	{
+		id: "url-parser",
+		name: "URL Parser",
+		description: "Break a URL into components",
+		category: "development",
+		path: "/tools/url-parser",
+		runsLocally: true,
+	},
+	{
+		id: "user-agent-parser",
+		name: "User-Agent Parser",
+		description: "Parse a User-Agent string",
+		category: "development",
+		path: "/tools/user-agent-parser",
+		runsLocally: true,
+	},
 
 	// IMAGES
 	{
@@ -997,8 +1069,24 @@ export const TOOLS: Tool[] = [
 		path: "/tools/text-to-ascii",
 		runsLocally: true,
 	},
+	{
+		id: "unicode-escape",
+		name: "Unicode Escape",
+		description: "Text ↔ \\uXXXX",
+		category: "encoding",
+		path: "/tools/unicode-escape",
+		runsLocally: true,
+	},
 
 	// DESIGN
+	{
+		id: "tint-generator",
+		name: "Tint Generator",
+		description: "Generate tints",
+		category: "design",
+		path: "/tools/tint-generator",
+		runsLocally: true,
+	},
 	{
 		id: "random-color",
 		name: "Random Color",

@@ -105,6 +105,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/trim-lines</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/whitespace-cleaner</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tiny-tools-app.vercel.app/tools/json-format</loc>
     <priority>0.8</priority>
   </url>
@@ -170,6 +178,14 @@
   </url>
   <url>
     <loc>https://tiny-tools-app.vercel.app/tools/scientific-notation</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/unit-converter</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/yaml-to-json</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -405,6 +421,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/ulid-generator</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/unix-permissions</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/url-builder</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/url-parser</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/user-agent-parser</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tiny-tools-app.vercel.app/tools/image-compress</loc>
     <priority>0.8</priority>
   </url>
@@ -478,6 +514,14 @@
   </url>
   <url>
     <loc>https://tiny-tools-app.vercel.app/tools/text-to-ascii</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/unicode-escape</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/tint-generator</loc>
     <priority>0.8</priority>
   </url>
   <url>

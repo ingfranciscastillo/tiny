@@ -132,9 +132,20 @@ import { Route as ToolsTextToAsciiRouteImport } from './routes/tools/text-to-asc
 import { Route as ToolsTimestampConverterRouteImport } from './routes/tools/timestamp-converter'
 import { Route as ToolsTimestampToDateRouteImport } from './routes/tools/timestamp-to-date'
 import { Route as ToolsTimezoneConverterRouteImport } from './routes/tools/timezone-converter'
+import { Route as ToolsTintGeneratorRouteImport } from './routes/tools/tint-generator'
+import { Route as ToolsTrimLinesRouteImport } from './routes/tools/trim-lines'
+import { Route as ToolsUlidGeneratorRouteImport } from './routes/tools/ulid-generator'
+import { Route as ToolsUnicodeEscapeRouteImport } from './routes/tools/unicode-escape'
+import { Route as ToolsUnitConverterRouteImport } from './routes/tools/unit-converter'
+import { Route as ToolsUnixPermissionsRouteImport } from './routes/tools/unix-permissions'
+import { Route as ToolsUrlBuilderRouteImport } from './routes/tools/url-builder'
 import { Route as ToolsUrlEncodeRouteImport } from './routes/tools/url-encode'
+import { Route as ToolsUrlParserRouteImport } from './routes/tools/url-parser'
+import { Route as ToolsUserAgentParserRouteImport } from './routes/tools/user-agent-parser'
 import { Route as ToolsUuidGeneratorRouteImport } from './routes/tools/uuid-generator'
+import { Route as ToolsWhitespaceCleanerRouteImport } from './routes/tools/whitespace-cleaner'
 import { Route as ToolsWordCountRouteImport } from './routes/tools/word-count'
+import { Route as ToolsYamlToJsonRouteImport } from './routes/tools/yaml-to-json'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -756,9 +767,54 @@ const ToolsTimezoneConverterRoute = ToolsTimezoneConverterRouteImport.update({
   path: '/tools/timezone-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsTintGeneratorRoute = ToolsTintGeneratorRouteImport.update({
+  id: '/tools/tint-generator',
+  path: '/tools/tint-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsTrimLinesRoute = ToolsTrimLinesRouteImport.update({
+  id: '/tools/trim-lines',
+  path: '/tools/trim-lines',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsUlidGeneratorRoute = ToolsUlidGeneratorRouteImport.update({
+  id: '/tools/ulid-generator',
+  path: '/tools/ulid-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsUnicodeEscapeRoute = ToolsUnicodeEscapeRouteImport.update({
+  id: '/tools/unicode-escape',
+  path: '/tools/unicode-escape',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsUnitConverterRoute = ToolsUnitConverterRouteImport.update({
+  id: '/tools/unit-converter',
+  path: '/tools/unit-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsUnixPermissionsRoute = ToolsUnixPermissionsRouteImport.update({
+  id: '/tools/unix-permissions',
+  path: '/tools/unix-permissions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsUrlBuilderRoute = ToolsUrlBuilderRouteImport.update({
+  id: '/tools/url-builder',
+  path: '/tools/url-builder',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsUrlEncodeRoute = ToolsUrlEncodeRouteImport.update({
   id: '/tools/url-encode',
   path: '/tools/url-encode',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsUrlParserRoute = ToolsUrlParserRouteImport.update({
+  id: '/tools/url-parser',
+  path: '/tools/url-parser',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsUserAgentParserRoute = ToolsUserAgentParserRouteImport.update({
+  id: '/tools/user-agent-parser',
+  path: '/tools/user-agent-parser',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsUuidGeneratorRoute = ToolsUuidGeneratorRouteImport.update({
@@ -766,9 +822,19 @@ const ToolsUuidGeneratorRoute = ToolsUuidGeneratorRouteImport.update({
   path: '/tools/uuid-generator',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsWhitespaceCleanerRoute = ToolsWhitespaceCleanerRouteImport.update({
+  id: '/tools/whitespace-cleaner',
+  path: '/tools/whitespace-cleaner',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsWordCountRoute = ToolsWordCountRouteImport.update({
   id: '/tools/word-count',
   path: '/tools/word-count',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsYamlToJsonRoute = ToolsYamlToJsonRouteImport.update({
+  id: '/tools/yaml-to-json',
+  path: '/tools/yaml-to-json',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -896,9 +962,20 @@ export interface FileRoutesByFullPath {
   '/tools/timestamp-converter': typeof ToolsTimestampConverterRoute
   '/tools/timestamp-to-date': typeof ToolsTimestampToDateRoute
   '/tools/timezone-converter': typeof ToolsTimezoneConverterRoute
+  '/tools/tint-generator': typeof ToolsTintGeneratorRoute
+  '/tools/trim-lines': typeof ToolsTrimLinesRoute
+  '/tools/ulid-generator': typeof ToolsUlidGeneratorRoute
+  '/tools/unicode-escape': typeof ToolsUnicodeEscapeRoute
+  '/tools/unit-converter': typeof ToolsUnitConverterRoute
+  '/tools/unix-permissions': typeof ToolsUnixPermissionsRoute
+  '/tools/url-builder': typeof ToolsUrlBuilderRoute
   '/tools/url-encode': typeof ToolsUrlEncodeRoute
+  '/tools/url-parser': typeof ToolsUrlParserRoute
+  '/tools/user-agent-parser': typeof ToolsUserAgentParserRoute
   '/tools/uuid-generator': typeof ToolsUuidGeneratorRoute
+  '/tools/whitespace-cleaner': typeof ToolsWhitespaceCleanerRoute
   '/tools/word-count': typeof ToolsWordCountRoute
+  '/tools/yaml-to-json': typeof ToolsYamlToJsonRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -1024,9 +1101,20 @@ export interface FileRoutesByTo {
   '/tools/timestamp-converter': typeof ToolsTimestampConverterRoute
   '/tools/timestamp-to-date': typeof ToolsTimestampToDateRoute
   '/tools/timezone-converter': typeof ToolsTimezoneConverterRoute
+  '/tools/tint-generator': typeof ToolsTintGeneratorRoute
+  '/tools/trim-lines': typeof ToolsTrimLinesRoute
+  '/tools/ulid-generator': typeof ToolsUlidGeneratorRoute
+  '/tools/unicode-escape': typeof ToolsUnicodeEscapeRoute
+  '/tools/unit-converter': typeof ToolsUnitConverterRoute
+  '/tools/unix-permissions': typeof ToolsUnixPermissionsRoute
+  '/tools/url-builder': typeof ToolsUrlBuilderRoute
   '/tools/url-encode': typeof ToolsUrlEncodeRoute
+  '/tools/url-parser': typeof ToolsUrlParserRoute
+  '/tools/user-agent-parser': typeof ToolsUserAgentParserRoute
   '/tools/uuid-generator': typeof ToolsUuidGeneratorRoute
+  '/tools/whitespace-cleaner': typeof ToolsWhitespaceCleanerRoute
   '/tools/word-count': typeof ToolsWordCountRoute
+  '/tools/yaml-to-json': typeof ToolsYamlToJsonRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -1153,9 +1241,20 @@ export interface FileRoutesById {
   '/tools/timestamp-converter': typeof ToolsTimestampConverterRoute
   '/tools/timestamp-to-date': typeof ToolsTimestampToDateRoute
   '/tools/timezone-converter': typeof ToolsTimezoneConverterRoute
+  '/tools/tint-generator': typeof ToolsTintGeneratorRoute
+  '/tools/trim-lines': typeof ToolsTrimLinesRoute
+  '/tools/ulid-generator': typeof ToolsUlidGeneratorRoute
+  '/tools/unicode-escape': typeof ToolsUnicodeEscapeRoute
+  '/tools/unit-converter': typeof ToolsUnitConverterRoute
+  '/tools/unix-permissions': typeof ToolsUnixPermissionsRoute
+  '/tools/url-builder': typeof ToolsUrlBuilderRoute
   '/tools/url-encode': typeof ToolsUrlEncodeRoute
+  '/tools/url-parser': typeof ToolsUrlParserRoute
+  '/tools/user-agent-parser': typeof ToolsUserAgentParserRoute
   '/tools/uuid-generator': typeof ToolsUuidGeneratorRoute
+  '/tools/whitespace-cleaner': typeof ToolsWhitespaceCleanerRoute
   '/tools/word-count': typeof ToolsWordCountRoute
+  '/tools/yaml-to-json': typeof ToolsYamlToJsonRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -1283,9 +1382,20 @@ export interface FileRouteTypes {
     | '/tools/timestamp-converter'
     | '/tools/timestamp-to-date'
     | '/tools/timezone-converter'
+    | '/tools/tint-generator'
+    | '/tools/trim-lines'
+    | '/tools/ulid-generator'
+    | '/tools/unicode-escape'
+    | '/tools/unit-converter'
+    | '/tools/unix-permissions'
+    | '/tools/url-builder'
     | '/tools/url-encode'
+    | '/tools/url-parser'
+    | '/tools/user-agent-parser'
     | '/tools/uuid-generator'
+    | '/tools/whitespace-cleaner'
     | '/tools/word-count'
+    | '/tools/yaml-to-json'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -1411,9 +1521,20 @@ export interface FileRouteTypes {
     | '/tools/timestamp-converter'
     | '/tools/timestamp-to-date'
     | '/tools/timezone-converter'
+    | '/tools/tint-generator'
+    | '/tools/trim-lines'
+    | '/tools/ulid-generator'
+    | '/tools/unicode-escape'
+    | '/tools/unit-converter'
+    | '/tools/unix-permissions'
+    | '/tools/url-builder'
     | '/tools/url-encode'
+    | '/tools/url-parser'
+    | '/tools/user-agent-parser'
     | '/tools/uuid-generator'
+    | '/tools/whitespace-cleaner'
     | '/tools/word-count'
+    | '/tools/yaml-to-json'
   id:
     | '__root__'
     | '/'
@@ -1539,9 +1660,20 @@ export interface FileRouteTypes {
     | '/tools/timestamp-converter'
     | '/tools/timestamp-to-date'
     | '/tools/timezone-converter'
+    | '/tools/tint-generator'
+    | '/tools/trim-lines'
+    | '/tools/ulid-generator'
+    | '/tools/unicode-escape'
+    | '/tools/unit-converter'
+    | '/tools/unix-permissions'
+    | '/tools/url-builder'
     | '/tools/url-encode'
+    | '/tools/url-parser'
+    | '/tools/user-agent-parser'
     | '/tools/uuid-generator'
+    | '/tools/whitespace-cleaner'
     | '/tools/word-count'
+    | '/tools/yaml-to-json'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -1668,9 +1800,20 @@ export interface RootRouteChildren {
   ToolsTimestampConverterRoute: typeof ToolsTimestampConverterRoute
   ToolsTimestampToDateRoute: typeof ToolsTimestampToDateRoute
   ToolsTimezoneConverterRoute: typeof ToolsTimezoneConverterRoute
+  ToolsTintGeneratorRoute: typeof ToolsTintGeneratorRoute
+  ToolsTrimLinesRoute: typeof ToolsTrimLinesRoute
+  ToolsUlidGeneratorRoute: typeof ToolsUlidGeneratorRoute
+  ToolsUnicodeEscapeRoute: typeof ToolsUnicodeEscapeRoute
+  ToolsUnitConverterRoute: typeof ToolsUnitConverterRoute
+  ToolsUnixPermissionsRoute: typeof ToolsUnixPermissionsRoute
+  ToolsUrlBuilderRoute: typeof ToolsUrlBuilderRoute
   ToolsUrlEncodeRoute: typeof ToolsUrlEncodeRoute
+  ToolsUrlParserRoute: typeof ToolsUrlParserRoute
+  ToolsUserAgentParserRoute: typeof ToolsUserAgentParserRoute
   ToolsUuidGeneratorRoute: typeof ToolsUuidGeneratorRoute
+  ToolsWhitespaceCleanerRoute: typeof ToolsWhitespaceCleanerRoute
   ToolsWordCountRoute: typeof ToolsWordCountRoute
+  ToolsYamlToJsonRoute: typeof ToolsYamlToJsonRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -2536,11 +2679,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsTimezoneConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/tint-generator': {
+      id: '/tools/tint-generator'
+      path: '/tools/tint-generator'
+      fullPath: '/tools/tint-generator'
+      preLoaderRoute: typeof ToolsTintGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/trim-lines': {
+      id: '/tools/trim-lines'
+      path: '/tools/trim-lines'
+      fullPath: '/tools/trim-lines'
+      preLoaderRoute: typeof ToolsTrimLinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/ulid-generator': {
+      id: '/tools/ulid-generator'
+      path: '/tools/ulid-generator'
+      fullPath: '/tools/ulid-generator'
+      preLoaderRoute: typeof ToolsUlidGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/unicode-escape': {
+      id: '/tools/unicode-escape'
+      path: '/tools/unicode-escape'
+      fullPath: '/tools/unicode-escape'
+      preLoaderRoute: typeof ToolsUnicodeEscapeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/unit-converter': {
+      id: '/tools/unit-converter'
+      path: '/tools/unit-converter'
+      fullPath: '/tools/unit-converter'
+      preLoaderRoute: typeof ToolsUnitConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/unix-permissions': {
+      id: '/tools/unix-permissions'
+      path: '/tools/unix-permissions'
+      fullPath: '/tools/unix-permissions'
+      preLoaderRoute: typeof ToolsUnixPermissionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/url-builder': {
+      id: '/tools/url-builder'
+      path: '/tools/url-builder'
+      fullPath: '/tools/url-builder'
+      preLoaderRoute: typeof ToolsUrlBuilderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/url-encode': {
       id: '/tools/url-encode'
       path: '/tools/url-encode'
       fullPath: '/tools/url-encode'
       preLoaderRoute: typeof ToolsUrlEncodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/url-parser': {
+      id: '/tools/url-parser'
+      path: '/tools/url-parser'
+      fullPath: '/tools/url-parser'
+      preLoaderRoute: typeof ToolsUrlParserRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/user-agent-parser': {
+      id: '/tools/user-agent-parser'
+      path: '/tools/user-agent-parser'
+      fullPath: '/tools/user-agent-parser'
+      preLoaderRoute: typeof ToolsUserAgentParserRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/uuid-generator': {
@@ -2550,11 +2756,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsUuidGeneratorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/whitespace-cleaner': {
+      id: '/tools/whitespace-cleaner'
+      path: '/tools/whitespace-cleaner'
+      fullPath: '/tools/whitespace-cleaner'
+      preLoaderRoute: typeof ToolsWhitespaceCleanerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/word-count': {
       id: '/tools/word-count'
       path: '/tools/word-count'
       fullPath: '/tools/word-count'
       preLoaderRoute: typeof ToolsWordCountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/yaml-to-json': {
+      id: '/tools/yaml-to-json'
+      path: '/tools/yaml-to-json'
+      fullPath: '/tools/yaml-to-json'
+      preLoaderRoute: typeof ToolsYamlToJsonRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -2684,9 +2904,20 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsTimestampConverterRoute: ToolsTimestampConverterRoute,
   ToolsTimestampToDateRoute: ToolsTimestampToDateRoute,
   ToolsTimezoneConverterRoute: ToolsTimezoneConverterRoute,
+  ToolsTintGeneratorRoute: ToolsTintGeneratorRoute,
+  ToolsTrimLinesRoute: ToolsTrimLinesRoute,
+  ToolsUlidGeneratorRoute: ToolsUlidGeneratorRoute,
+  ToolsUnicodeEscapeRoute: ToolsUnicodeEscapeRoute,
+  ToolsUnitConverterRoute: ToolsUnitConverterRoute,
+  ToolsUnixPermissionsRoute: ToolsUnixPermissionsRoute,
+  ToolsUrlBuilderRoute: ToolsUrlBuilderRoute,
   ToolsUrlEncodeRoute: ToolsUrlEncodeRoute,
+  ToolsUrlParserRoute: ToolsUrlParserRoute,
+  ToolsUserAgentParserRoute: ToolsUserAgentParserRoute,
   ToolsUuidGeneratorRoute: ToolsUuidGeneratorRoute,
+  ToolsWhitespaceCleanerRoute: ToolsWhitespaceCleanerRoute,
   ToolsWordCountRoute: ToolsWordCountRoute,
+  ToolsYamlToJsonRoute: ToolsYamlToJsonRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
