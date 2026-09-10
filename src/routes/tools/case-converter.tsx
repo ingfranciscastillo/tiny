@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 
 import ToolShell, { OutputBlock, WorkSurface } from "#/components/ToolShell";
 
-export const Route = createFileRoute("/tools/case")({
+export const Route = createFileRoute("/tools/case-converter")({
 	component: CaseConverter,
 });
 

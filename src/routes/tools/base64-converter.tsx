@@ -3,13 +3,13 @@ import { useState } from "react";
 
 import ToolShell, { OutputBlock, WorkSurface } from "#/components/ToolShell";
 
-export const Route = createFileRoute("/tools/binary")({
-	component: BinaryConverter,
+export const Route = createFileRoute("/tools/base64-converter")({
+	component: Base64Tool,
 });
 
 type Mode = "encode" | "decode";
 
-function BinaryConverter() {
+function Base64Tool() {
 	const [mode, setMode] = useState<Mode>("encode");
 	const [input, setInput] = useState("");
 
@@ -18,27 +18,27 @@ function BinaryConverter() {
 	if (input) {
 		try {
 			if (mode === "encode") {
-				output = Array.from(new TextEncoder().encode(input))
-					.map((b) => b.toString(2).padStart(8, "0"))
-					.join(" ");
-			} else {
-				const parts = input.trim().split(/\s+/);
-				const bytes = parts.map((p) => {
-					if (!/^[01]+$/.test(p)) throw new Error("invalid binary digit");
-					return Number.parseInt(p, 2);
+				const bytes = new TextEncoder().encode(input);
+				let bin = "";
+				bytes.forEach((b) => {
+					bin += String.fromCharCode(b);
 				});
-				output = new TextDecoder().decode(Uint8Array.from(bytes));
+				output = btoa(bin);
+			} else {
+				const bin = atob(input.trim());
+				const bytes = Uint8Array.from(bin, (c) => c.charCodeAt(0));
+				output = new TextDecoder().decode(bytes);
 			}
-		} catch (e) {
-			error = e instanceof Error ? e.message : String(e);
+		} catch {
+			error = `invalid input for ${mode}`;
 		}
 	}
 
 	return (
 		<ToolShell
-			toolId="binary"
-			title="Binary Converter"
-			description="Convert between text and binary"
+			toolId="base64"
+			title="Base64"
+			description="Encode or decode Base64 text"
 			runsLocally
 		>
 			<div className="flex items-center gap-1">
@@ -55,21 +55,24 @@ function BinaryConverter() {
 					</button>
 				))}
 			</div>
+
 			<WorkSurface
-				label="input"
+				label={mode === "encode" ? "plain text" : "base64"}
 				value={input}
 				onChange={(e) => setInput(e.target.value)}
-				placeholder={mode === "encode" ? "text" : "01101000 01100101"}
-				rows={5}
+				placeholder={mode === "encode" ? "text to encode" : "base64 to decode"}
+				rows={8}
 			/>
+
 			{error && (
 				<div className="font-mono text-xs text-accent border-l-2 border-accent pl-3 py-1">
 					{error}
 				</div>
 			)}
+
 			<OutputBlock
 				value={error ? "" : output}
-				placeholder="binary output"
+				placeholder="output appears here"
 				copyLabel="Copy"
 			/>
 		</ToolShell>

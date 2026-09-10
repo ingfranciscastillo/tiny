@@ -10,80 +10,89 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ToolsBase64RouteImport } from './routes/tools/base64'
-import { Route as ToolsBinaryRouteImport } from './routes/tools/binary'
-import { Route as ToolsCaseRouteImport } from './routes/tools/case'
-import { Route as ToolsColorRouteImport } from './routes/tools/color'
+import { Route as ToolsBase64ConverterRouteImport } from './routes/tools/base64-converter'
+import { Route as ToolsBinaryConverterRouteImport } from './routes/tools/binary-converter'
+import { Route as ToolsCaseConverterRouteImport } from './routes/tools/case-converter'
+import { Route as ToolsColorConverterRouteImport } from './routes/tools/color-converter'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ToolsBase64Route = ToolsBase64RouteImport.update({
-  id: '/tools/base64',
-  path: '/tools/base64',
+const ToolsBase64ConverterRoute = ToolsBase64ConverterRouteImport.update({
+  id: '/tools/base64-converter',
+  path: '/tools/base64-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ToolsBinaryRoute = ToolsBinaryRouteImport.update({
-  id: '/tools/binary',
-  path: '/tools/binary',
+const ToolsBinaryConverterRoute = ToolsBinaryConverterRouteImport.update({
+  id: '/tools/binary-converter',
+  path: '/tools/binary-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ToolsCaseRoute = ToolsCaseRouteImport.update({
-  id: '/tools/case',
-  path: '/tools/case',
+const ToolsCaseConverterRoute = ToolsCaseConverterRouteImport.update({
+  id: '/tools/case-converter',
+  path: '/tools/case-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ToolsColorRoute = ToolsColorRouteImport.update({
-  id: '/tools/color',
-  path: '/tools/color',
+const ToolsColorConverterRoute = ToolsColorConverterRouteImport.update({
+  id: '/tools/color-converter',
+  path: '/tools/color-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/tools/base64': typeof ToolsBase64Route
-  '/tools/binary': typeof ToolsBinaryRoute
-  '/tools/case': typeof ToolsCaseRoute
-  '/tools/color': typeof ToolsColorRoute
+  '/tools/base64-converter': typeof ToolsBase64ConverterRoute
+  '/tools/binary-converter': typeof ToolsBinaryConverterRoute
+  '/tools/case-converter': typeof ToolsCaseConverterRoute
+  '/tools/color-converter': typeof ToolsColorConverterRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/tools/base64': typeof ToolsBase64Route
-  '/tools/binary': typeof ToolsBinaryRoute
-  '/tools/case': typeof ToolsCaseRoute
-  '/tools/color': typeof ToolsColorRoute
+  '/tools/base64-converter': typeof ToolsBase64ConverterRoute
+  '/tools/binary-converter': typeof ToolsBinaryConverterRoute
+  '/tools/case-converter': typeof ToolsCaseConverterRoute
+  '/tools/color-converter': typeof ToolsColorConverterRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/tools/base64': typeof ToolsBase64Route
-  '/tools/binary': typeof ToolsBinaryRoute
-  '/tools/case': typeof ToolsCaseRoute
-  '/tools/color': typeof ToolsColorRoute
+  '/tools/base64-converter': typeof ToolsBase64ConverterRoute
+  '/tools/binary-converter': typeof ToolsBinaryConverterRoute
+  '/tools/case-converter': typeof ToolsCaseConverterRoute
+  '/tools/color-converter': typeof ToolsColorConverterRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/tools/base64' | '/tools/binary' | '/tools/case' | '/tools/color'
+    | '/'
+    | '/tools/base64-converter'
+    | '/tools/binary-converter'
+    | '/tools/case-converter'
+    | '/tools/color-converter'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/tools/base64' | '/tools/binary' | '/tools/case' | '/tools/color'
+  to:
+    | '/'
+    | '/tools/base64-converter'
+    | '/tools/binary-converter'
+    | '/tools/case-converter'
+    | '/tools/color-converter'
   id:
     | '__root__'
     | '/'
-    | '/tools/base64'
-    | '/tools/binary'
-    | '/tools/case'
-    | '/tools/color'
+    | '/tools/base64-converter'
+    | '/tools/binary-converter'
+    | '/tools/case-converter'
+    | '/tools/color-converter'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ToolsBase64Route: typeof ToolsBase64Route
-  ToolsBinaryRoute: typeof ToolsBinaryRoute
-  ToolsCaseRoute: typeof ToolsCaseRoute
-  ToolsColorRoute: typeof ToolsColorRoute
+  ToolsBase64ConverterRoute: typeof ToolsBase64ConverterRoute
+  ToolsBinaryConverterRoute: typeof ToolsBinaryConverterRoute
+  ToolsCaseConverterRoute: typeof ToolsCaseConverterRoute
+  ToolsColorConverterRoute: typeof ToolsColorConverterRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -95,32 +104,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tools/base64': {
-      id: '/tools/base64'
-      path: '/tools/base64'
-      fullPath: '/tools/base64'
-      preLoaderRoute: typeof ToolsBase64RouteImport
+    '/tools/base64-converter': {
+      id: '/tools/base64-converter'
+      path: '/tools/base64-converter'
+      fullPath: '/tools/base64-converter'
+      preLoaderRoute: typeof ToolsBase64ConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tools/binary': {
-      id: '/tools/binary'
-      path: '/tools/binary'
-      fullPath: '/tools/binary'
-      preLoaderRoute: typeof ToolsBinaryRouteImport
+    '/tools/binary-converter': {
+      id: '/tools/binary-converter'
+      path: '/tools/binary-converter'
+      fullPath: '/tools/binary-converter'
+      preLoaderRoute: typeof ToolsBinaryConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tools/case': {
-      id: '/tools/case'
-      path: '/tools/case'
-      fullPath: '/tools/case'
-      preLoaderRoute: typeof ToolsCaseRouteImport
+    '/tools/case-converter': {
+      id: '/tools/case-converter'
+      path: '/tools/case-converter'
+      fullPath: '/tools/case-converter'
+      preLoaderRoute: typeof ToolsCaseConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tools/color': {
-      id: '/tools/color'
-      path: '/tools/color'
-      fullPath: '/tools/color'
-      preLoaderRoute: typeof ToolsColorRouteImport
+    '/tools/color-converter': {
+      id: '/tools/color-converter'
+      path: '/tools/color-converter'
+      fullPath: '/tools/color-converter'
+      preLoaderRoute: typeof ToolsColorConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -128,10 +137,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ToolsBase64Route: ToolsBase64Route,
-  ToolsBinaryRoute: ToolsBinaryRoute,
-  ToolsCaseRoute: ToolsCaseRoute,
-  ToolsColorRoute: ToolsColorRoute,
+  ToolsBase64ConverterRoute: ToolsBase64ConverterRoute,
+  ToolsBinaryConverterRoute: ToolsBinaryConverterRoute,
+  ToolsCaseConverterRoute: ToolsCaseConverterRoute,
+  ToolsColorConverterRoute: ToolsColorConverterRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

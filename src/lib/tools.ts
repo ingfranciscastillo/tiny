@@ -86,7 +86,7 @@ export const TOOLS: Tool[] = [
 		name: "Base64",
 		description: "Encode / decode",
 		category: "popular",
-		path: "/tools/base64",
+		path: "/tools/base64-converter",
 		runsLocally: true,
 	},
 	{
@@ -102,7 +102,7 @@ export const TOOLS: Tool[] = [
 		name: "Color Converter",
 		description: "HEX · RGB · HSL",
 		category: "popular",
-		path: "/tools/color",
+		path: "/tools/color-converter",
 		runsLocally: true,
 	},
 	{
@@ -120,7 +120,7 @@ export const TOOLS: Tool[] = [
 		name: "Case Converter",
 		description: "camelCase · snake · kebab",
 		category: "text",
-		path: "/tools/case",
+		path: "/tools/case-converter",
 		runsLocally: true,
 	},
 	{
@@ -240,7 +240,7 @@ export const TOOLS: Tool[] = [
 		name: "Binary Converter",
 		description: "Text ↔ binary",
 		category: "encoding",
-		path: "/tools/binary",
+		path: "/tools/binary-converter",
 		runsLocally: true,
 	},
 	{

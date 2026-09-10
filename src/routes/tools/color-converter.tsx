@@ -4,7 +4,7 @@ import { useState } from "react";
 import CopyButton from "#/components/CopyButton";
 import ToolShell from "#/components/ToolShell";
 
-export const Route = createFileRoute("/tools/color")({
+export const Route = createFileRoute("/tools/color-converter")({
 	component: ColorConverter,
 });
 
