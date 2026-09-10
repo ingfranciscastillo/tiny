@@ -20,6 +20,9 @@ import { Route as ToolsHashGeneratorRouteImport } from './routes/tools/hash-gene
 import { Route as ToolsHexConverterRouteImport } from './routes/tools/hex-converter'
 import { Route as ToolsHtmlEntitiesRouteImport } from './routes/tools/html-entities'
 import { Route as ToolsImageCompressRouteImport } from './routes/tools/image-compress'
+import { Route as ToolsImageCropperRouteImport } from './routes/tools/image-cropper'
+import { Route as ToolsImageToBase64RouteImport } from './routes/tools/image-to-base64'
+import { Route as ToolsJsonEscapeRouteImport } from './routes/tools/json-escape'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -76,6 +79,21 @@ const ToolsImageCompressRoute = ToolsImageCompressRouteImport.update({
   path: '/tools/image-compress',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsImageCropperRoute = ToolsImageCropperRouteImport.update({
+  id: '/tools/image-cropper',
+  path: '/tools/image-cropper',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsImageToBase64Route = ToolsImageToBase64RouteImport.update({
+  id: '/tools/image-to-base64',
+  path: '/tools/image-to-base64',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsJsonEscapeRoute = ToolsJsonEscapeRouteImport.update({
+  id: '/tools/json-escape',
+  path: '/tools/json-escape',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -89,6 +107,9 @@ export interface FileRoutesByFullPath {
   '/tools/hex-converter': typeof ToolsHexConverterRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
   '/tools/image-compress': typeof ToolsImageCompressRoute
+  '/tools/image-cropper': typeof ToolsImageCropperRoute
+  '/tools/image-to-base64': typeof ToolsImageToBase64Route
+  '/tools/json-escape': typeof ToolsJsonEscapeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -102,6 +123,9 @@ export interface FileRoutesByTo {
   '/tools/hex-converter': typeof ToolsHexConverterRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
   '/tools/image-compress': typeof ToolsImageCompressRoute
+  '/tools/image-cropper': typeof ToolsImageCropperRoute
+  '/tools/image-to-base64': typeof ToolsImageToBase64Route
+  '/tools/json-escape': typeof ToolsJsonEscapeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -116,6 +140,9 @@ export interface FileRoutesById {
   '/tools/hex-converter': typeof ToolsHexConverterRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
   '/tools/image-compress': typeof ToolsImageCompressRoute
+  '/tools/image-cropper': typeof ToolsImageCropperRoute
+  '/tools/image-to-base64': typeof ToolsImageToBase64Route
+  '/tools/json-escape': typeof ToolsJsonEscapeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -131,6 +158,9 @@ export interface FileRouteTypes {
     | '/tools/hex-converter'
     | '/tools/html-entities'
     | '/tools/image-compress'
+    | '/tools/image-cropper'
+    | '/tools/image-to-base64'
+    | '/tools/json-escape'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -144,6 +174,9 @@ export interface FileRouteTypes {
     | '/tools/hex-converter'
     | '/tools/html-entities'
     | '/tools/image-compress'
+    | '/tools/image-cropper'
+    | '/tools/image-to-base64'
+    | '/tools/json-escape'
   id:
     | '__root__'
     | '/'
@@ -157,6 +190,9 @@ export interface FileRouteTypes {
     | '/tools/hex-converter'
     | '/tools/html-entities'
     | '/tools/image-compress'
+    | '/tools/image-cropper'
+    | '/tools/image-to-base64'
+    | '/tools/json-escape'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -171,6 +207,9 @@ export interface RootRouteChildren {
   ToolsHexConverterRoute: typeof ToolsHexConverterRoute
   ToolsHtmlEntitiesRoute: typeof ToolsHtmlEntitiesRoute
   ToolsImageCompressRoute: typeof ToolsImageCompressRoute
+  ToolsImageCropperRoute: typeof ToolsImageCropperRoute
+  ToolsImageToBase64Route: typeof ToolsImageToBase64Route
+  ToolsJsonEscapeRoute: typeof ToolsJsonEscapeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -252,6 +291,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsImageCompressRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/image-cropper': {
+      id: '/tools/image-cropper'
+      path: '/tools/image-cropper'
+      fullPath: '/tools/image-cropper'
+      preLoaderRoute: typeof ToolsImageCropperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/image-to-base64': {
+      id: '/tools/image-to-base64'
+      path: '/tools/image-to-base64'
+      fullPath: '/tools/image-to-base64'
+      preLoaderRoute: typeof ToolsImageToBase64RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/json-escape': {
+      id: '/tools/json-escape'
+      path: '/tools/json-escape'
+      fullPath: '/tools/json-escape'
+      preLoaderRoute: typeof ToolsJsonEscapeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -267,6 +327,9 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsHexConverterRoute: ToolsHexConverterRoute,
   ToolsHtmlEntitiesRoute: ToolsHtmlEntitiesRoute,
   ToolsImageCompressRoute: ToolsImageCompressRoute,
+  ToolsImageCropperRoute: ToolsImageCropperRoute,
+  ToolsImageToBase64Route: ToolsImageToBase64Route,
+  ToolsJsonEscapeRoute: ToolsJsonEscapeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
