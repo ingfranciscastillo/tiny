@@ -1,64 +1,64 @@
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
-import { TanStackDevtools } from '@tanstack/react-devtools'
+import { TanStackDevtools } from "@tanstack/react-devtools";
+import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import { PaletteProvider } from "#/lib/palette-context";
+import { getLocale } from "#/paraglide/runtime";
 
-import { getLocale } from '#/paraglide/runtime'
-
-import appCss from '../styles.css?url'
+import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
-  beforeLoad: async () => {
-    // Other redirect strategies are possible; see
-    // https://github.com/TanStack/router/tree/main/examples/react/i18n-paraglide#offline-redirect
-    if (typeof document !== 'undefined') {
-      document.documentElement.setAttribute('lang', getLocale())
-    }
-  },
+	beforeLoad: async () => {
+		// Other redirect strategies are possible; see
+		// https://github.com/TanStack/router/tree/main/examples/react/i18n-paraglide#offline-redirect
+		if (typeof document !== "undefined") {
+			document.documentElement.setAttribute("lang", getLocale());
+		}
+	},
 
-  head: () => ({
-    meta: [
-      {
-        charSet: 'utf-8',
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
-      },
-      {
-        title: 'TanStack Start Starter',
-      },
-    ],
-    links: [
-      {
-        rel: 'stylesheet',
-        href: appCss,
-      },
-    ],
-  }),
-  shellComponent: RootDocument,
-})
+	head: () => ({
+		meta: [
+			{
+				charSet: "utf-8",
+			},
+			{
+				name: "viewport",
+				content: "width=device-width, initial-scale=1",
+			},
+			{
+				title: "TanStack Start Starter",
+			},
+		],
+		links: [
+			{
+				rel: "stylesheet",
+				href: appCss,
+			},
+		],
+	}),
+	shellComponent: RootDocument,
+});
 
 function RootDocument({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang={getLocale()}>
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <TanStackDevtools
-          config={{
-            position: 'bottom-right',
-          }}
-          plugins={[
-            {
-              name: 'Tanstack Router',
-              render: <TanStackRouterDevtoolsPanel />,
-            },
-          ]}
-        />
-        <Scripts />
-      </body>
-    </html>
-  )
+	return (
+		<html lang={getLocale()}>
+			<head>
+				<HeadContent />
+			</head>
+			<body>
+				<PaletteProvider>{children}</PaletteProvider>
+				<TanStackDevtools
+					config={{
+						position: "bottom-right",
+					}}
+					plugins={[
+						{
+							name: "Tanstack Router",
+							render: <TanStackRouterDevtoolsPanel />,
+						},
+					]}
+				/>
+				<Scripts />
+			</body>
+		</html>
+	);
 }
