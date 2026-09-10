@@ -1,17 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { usePalette } from "#/lib/palette-context";
-import { SITE_DESCRIPTION, SITE_NAME } from "#/lib/seo";
+import { homeHead } from "#/lib/seo";
 import type { Tool } from "#/lib/tools";
 import { CATEGORIES, searchTools, toolsByCategory } from "#/lib/tools";
 
 export const Route = createFileRoute("/")({
-	head: () => ({
-		meta: [
-			{ title: `${SITE_NAME} — small tools, zero ceremony` },
-			{ name: "description", content: SITE_DESCRIPTION },
-		],
-	}),
+	head: homeHead,
 	component: Home,
 });
 

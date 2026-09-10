@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@import '@fontsource-variable/ibm-plex-sans/wght.css';
-@import '@fontsource-variable/jetbrains-mono/wght.css';
+@import "@fontsource-variable/ibm-plex-sans/wght.css";
+@import "@fontsource-variable/jetbrains-mono/wght.css";
 
 @theme {
   --animate-slide-in: slide-in 150ms ease-out;
