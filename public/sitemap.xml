@@ -73,6 +73,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/markdown-to-plain</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/numbered-lines</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/prefix-suffix</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tiny-tools-app.vercel.app/tools/json-format</loc>
     <priority>0.8</priority>
   </url>
@@ -98,6 +110,26 @@
   </url>
   <url>
     <loc>https://tiny-tools-app.vercel.app/tools/factorial-calculator</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/percentage-calculator</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/json-path</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/json-to-schema</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/json-to-typescript</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/json-to-yaml</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -233,6 +265,50 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/jwt-generator</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/mac-formatter</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/md5</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/meta-tag-generator</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/mime-lookup</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/nanoid-generator</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/number-generator</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/open-graph-preview</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/package-name-checker</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/password-generator</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/port-validator</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tiny-tools-app.vercel.app/tools/image-compress</loc>
     <priority>0.8</priority>
   </url>
@@ -261,6 +337,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/placeholder-image</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tiny-tools-app.vercel.app/tools/hex-converter</loc>
     <priority>0.8</priority>
   </url>
@@ -286,6 +366,10 @@
   </url>
   <url>
     <loc>https://tiny-tools-app.vercel.app/tools/base64-url</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/number-base-converter</loc>
     <priority>0.8</priority>
   </url>
   <url>

@@ -73,9 +73,30 @@ import { Route as ToolsJsFormatterRouteImport } from './routes/tools/js-formatte
 import { Route as ToolsJsMinifierRouteImport } from './routes/tools/js-minifier'
 import { Route as ToolsJsonEscapeRouteImport } from './routes/tools/json-escape'
 import { Route as ToolsJsonFormatRouteImport } from './routes/tools/json-format'
+import { Route as ToolsJsonPathRouteImport } from './routes/tools/json-path'
 import { Route as ToolsJsonToCsvRouteImport } from './routes/tools/json-to-csv'
+import { Route as ToolsJsonToSchemaRouteImport } from './routes/tools/json-to-schema'
+import { Route as ToolsJsonToTypescriptRouteImport } from './routes/tools/json-to-typescript'
+import { Route as ToolsJsonToYamlRouteImport } from './routes/tools/json-to-yaml'
 import { Route as ToolsJwtDecoderRouteImport } from './routes/tools/jwt-decoder'
+import { Route as ToolsJwtGeneratorRouteImport } from './routes/tools/jwt-generator'
 import { Route as ToolsLoremIpsumRouteImport } from './routes/tools/lorem-ipsum'
+import { Route as ToolsMacFormatterRouteImport } from './routes/tools/mac-formatter'
+import { Route as ToolsMarkdownToPlainRouteImport } from './routes/tools/markdown-to-plain'
+import { Route as ToolsMd5RouteImport } from './routes/tools/md5'
+import { Route as ToolsMetaTagGeneratorRouteImport } from './routes/tools/meta-tag-generator'
+import { Route as ToolsMimeLookupRouteImport } from './routes/tools/mime-lookup'
+import { Route as ToolsNanoidGeneratorRouteImport } from './routes/tools/nanoid-generator'
+import { Route as ToolsNumberBaseConverterRouteImport } from './routes/tools/number-base-converter'
+import { Route as ToolsNumberGeneratorRouteImport } from './routes/tools/number-generator'
+import { Route as ToolsNumberedLinesRouteImport } from './routes/tools/numbered-lines'
+import { Route as ToolsOpenGraphPreviewRouteImport } from './routes/tools/open-graph-preview'
+import { Route as ToolsPackageNameCheckerRouteImport } from './routes/tools/package-name-checker'
+import { Route as ToolsPasswordGeneratorRouteImport } from './routes/tools/password-generator'
+import { Route as ToolsPercentageCalculatorRouteImport } from './routes/tools/percentage-calculator'
+import { Route as ToolsPlaceholderImageRouteImport } from './routes/tools/placeholder-image'
+import { Route as ToolsPortValidatorRouteImport } from './routes/tools/port-validator'
+import { Route as ToolsPrefixSuffixRouteImport } from './routes/tools/prefix-suffix'
 import { Route as ToolsQrGeneratorRouteImport } from './routes/tools/qr-generator'
 import { Route as ToolsRegexTesterRouteImport } from './routes/tools/regex-tester'
 import { Route as ToolsRot13CipherRouteImport } from './routes/tools/rot13-cipher'
@@ -408,9 +429,29 @@ const ToolsJsonFormatRoute = ToolsJsonFormatRouteImport.update({
   path: '/tools/json-format',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsJsonPathRoute = ToolsJsonPathRouteImport.update({
+  id: '/tools/json-path',
+  path: '/tools/json-path',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsJsonToCsvRoute = ToolsJsonToCsvRouteImport.update({
   id: '/tools/json-to-csv',
   path: '/tools/json-to-csv',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsJsonToSchemaRoute = ToolsJsonToSchemaRouteImport.update({
+  id: '/tools/json-to-schema',
+  path: '/tools/json-to-schema',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsJsonToTypescriptRoute = ToolsJsonToTypescriptRouteImport.update({
+  id: '/tools/json-to-typescript',
+  path: '/tools/json-to-typescript',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsJsonToYamlRoute = ToolsJsonToYamlRouteImport.update({
+  id: '/tools/json-to-yaml',
+  path: '/tools/json-to-yaml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsJwtDecoderRoute = ToolsJwtDecoderRouteImport.update({
@@ -418,9 +459,96 @@ const ToolsJwtDecoderRoute = ToolsJwtDecoderRouteImport.update({
   path: '/tools/jwt-decoder',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsJwtGeneratorRoute = ToolsJwtGeneratorRouteImport.update({
+  id: '/tools/jwt-generator',
+  path: '/tools/jwt-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsLoremIpsumRoute = ToolsLoremIpsumRouteImport.update({
   id: '/tools/lorem-ipsum',
   path: '/tools/lorem-ipsum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsMacFormatterRoute = ToolsMacFormatterRouteImport.update({
+  id: '/tools/mac-formatter',
+  path: '/tools/mac-formatter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsMarkdownToPlainRoute = ToolsMarkdownToPlainRouteImport.update({
+  id: '/tools/markdown-to-plain',
+  path: '/tools/markdown-to-plain',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsMd5Route = ToolsMd5RouteImport.update({
+  id: '/tools/md5',
+  path: '/tools/md5',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsMetaTagGeneratorRoute = ToolsMetaTagGeneratorRouteImport.update({
+  id: '/tools/meta-tag-generator',
+  path: '/tools/meta-tag-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsMimeLookupRoute = ToolsMimeLookupRouteImport.update({
+  id: '/tools/mime-lookup',
+  path: '/tools/mime-lookup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsNanoidGeneratorRoute = ToolsNanoidGeneratorRouteImport.update({
+  id: '/tools/nanoid-generator',
+  path: '/tools/nanoid-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsNumberBaseConverterRoute =
+  ToolsNumberBaseConverterRouteImport.update({
+    id: '/tools/number-base-converter',
+    path: '/tools/number-base-converter',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ToolsNumberGeneratorRoute = ToolsNumberGeneratorRouteImport.update({
+  id: '/tools/number-generator',
+  path: '/tools/number-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsNumberedLinesRoute = ToolsNumberedLinesRouteImport.update({
+  id: '/tools/numbered-lines',
+  path: '/tools/numbered-lines',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsOpenGraphPreviewRoute = ToolsOpenGraphPreviewRouteImport.update({
+  id: '/tools/open-graph-preview',
+  path: '/tools/open-graph-preview',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsPackageNameCheckerRoute = ToolsPackageNameCheckerRouteImport.update({
+  id: '/tools/package-name-checker',
+  path: '/tools/package-name-checker',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsPasswordGeneratorRoute = ToolsPasswordGeneratorRouteImport.update({
+  id: '/tools/password-generator',
+  path: '/tools/password-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsPercentageCalculatorRoute =
+  ToolsPercentageCalculatorRouteImport.update({
+    id: '/tools/percentage-calculator',
+    path: '/tools/percentage-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ToolsPlaceholderImageRoute = ToolsPlaceholderImageRouteImport.update({
+  id: '/tools/placeholder-image',
+  path: '/tools/placeholder-image',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsPortValidatorRoute = ToolsPortValidatorRouteImport.update({
+  id: '/tools/port-validator',
+  path: '/tools/port-validator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsPrefixSuffixRoute = ToolsPrefixSuffixRouteImport.update({
+  id: '/tools/prefix-suffix',
+  path: '/tools/prefix-suffix',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsQrGeneratorRoute = ToolsQrGeneratorRouteImport.update({
@@ -534,9 +662,30 @@ export interface FileRoutesByFullPath {
   '/tools/js-minifier': typeof ToolsJsMinifierRoute
   '/tools/json-escape': typeof ToolsJsonEscapeRoute
   '/tools/json-format': typeof ToolsJsonFormatRoute
+  '/tools/json-path': typeof ToolsJsonPathRoute
   '/tools/json-to-csv': typeof ToolsJsonToCsvRoute
+  '/tools/json-to-schema': typeof ToolsJsonToSchemaRoute
+  '/tools/json-to-typescript': typeof ToolsJsonToTypescriptRoute
+  '/tools/json-to-yaml': typeof ToolsJsonToYamlRoute
   '/tools/jwt-decoder': typeof ToolsJwtDecoderRoute
+  '/tools/jwt-generator': typeof ToolsJwtGeneratorRoute
   '/tools/lorem-ipsum': typeof ToolsLoremIpsumRoute
+  '/tools/mac-formatter': typeof ToolsMacFormatterRoute
+  '/tools/markdown-to-plain': typeof ToolsMarkdownToPlainRoute
+  '/tools/md5': typeof ToolsMd5Route
+  '/tools/meta-tag-generator': typeof ToolsMetaTagGeneratorRoute
+  '/tools/mime-lookup': typeof ToolsMimeLookupRoute
+  '/tools/nanoid-generator': typeof ToolsNanoidGeneratorRoute
+  '/tools/number-base-converter': typeof ToolsNumberBaseConverterRoute
+  '/tools/number-generator': typeof ToolsNumberGeneratorRoute
+  '/tools/numbered-lines': typeof ToolsNumberedLinesRoute
+  '/tools/open-graph-preview': typeof ToolsOpenGraphPreviewRoute
+  '/tools/package-name-checker': typeof ToolsPackageNameCheckerRoute
+  '/tools/password-generator': typeof ToolsPasswordGeneratorRoute
+  '/tools/percentage-calculator': typeof ToolsPercentageCalculatorRoute
+  '/tools/placeholder-image': typeof ToolsPlaceholderImageRoute
+  '/tools/port-validator': typeof ToolsPortValidatorRoute
+  '/tools/prefix-suffix': typeof ToolsPrefixSuffixRoute
   '/tools/qr-generator': typeof ToolsQrGeneratorRoute
   '/tools/regex-tester': typeof ToolsRegexTesterRoute
   '/tools/rot13-cipher': typeof ToolsRot13CipherRoute
@@ -612,9 +761,30 @@ export interface FileRoutesByTo {
   '/tools/js-minifier': typeof ToolsJsMinifierRoute
   '/tools/json-escape': typeof ToolsJsonEscapeRoute
   '/tools/json-format': typeof ToolsJsonFormatRoute
+  '/tools/json-path': typeof ToolsJsonPathRoute
   '/tools/json-to-csv': typeof ToolsJsonToCsvRoute
+  '/tools/json-to-schema': typeof ToolsJsonToSchemaRoute
+  '/tools/json-to-typescript': typeof ToolsJsonToTypescriptRoute
+  '/tools/json-to-yaml': typeof ToolsJsonToYamlRoute
   '/tools/jwt-decoder': typeof ToolsJwtDecoderRoute
+  '/tools/jwt-generator': typeof ToolsJwtGeneratorRoute
   '/tools/lorem-ipsum': typeof ToolsLoremIpsumRoute
+  '/tools/mac-formatter': typeof ToolsMacFormatterRoute
+  '/tools/markdown-to-plain': typeof ToolsMarkdownToPlainRoute
+  '/tools/md5': typeof ToolsMd5Route
+  '/tools/meta-tag-generator': typeof ToolsMetaTagGeneratorRoute
+  '/tools/mime-lookup': typeof ToolsMimeLookupRoute
+  '/tools/nanoid-generator': typeof ToolsNanoidGeneratorRoute
+  '/tools/number-base-converter': typeof ToolsNumberBaseConverterRoute
+  '/tools/number-generator': typeof ToolsNumberGeneratorRoute
+  '/tools/numbered-lines': typeof ToolsNumberedLinesRoute
+  '/tools/open-graph-preview': typeof ToolsOpenGraphPreviewRoute
+  '/tools/package-name-checker': typeof ToolsPackageNameCheckerRoute
+  '/tools/password-generator': typeof ToolsPasswordGeneratorRoute
+  '/tools/percentage-calculator': typeof ToolsPercentageCalculatorRoute
+  '/tools/placeholder-image': typeof ToolsPlaceholderImageRoute
+  '/tools/port-validator': typeof ToolsPortValidatorRoute
+  '/tools/prefix-suffix': typeof ToolsPrefixSuffixRoute
   '/tools/qr-generator': typeof ToolsQrGeneratorRoute
   '/tools/regex-tester': typeof ToolsRegexTesterRoute
   '/tools/rot13-cipher': typeof ToolsRot13CipherRoute
@@ -691,9 +861,30 @@ export interface FileRoutesById {
   '/tools/js-minifier': typeof ToolsJsMinifierRoute
   '/tools/json-escape': typeof ToolsJsonEscapeRoute
   '/tools/json-format': typeof ToolsJsonFormatRoute
+  '/tools/json-path': typeof ToolsJsonPathRoute
   '/tools/json-to-csv': typeof ToolsJsonToCsvRoute
+  '/tools/json-to-schema': typeof ToolsJsonToSchemaRoute
+  '/tools/json-to-typescript': typeof ToolsJsonToTypescriptRoute
+  '/tools/json-to-yaml': typeof ToolsJsonToYamlRoute
   '/tools/jwt-decoder': typeof ToolsJwtDecoderRoute
+  '/tools/jwt-generator': typeof ToolsJwtGeneratorRoute
   '/tools/lorem-ipsum': typeof ToolsLoremIpsumRoute
+  '/tools/mac-formatter': typeof ToolsMacFormatterRoute
+  '/tools/markdown-to-plain': typeof ToolsMarkdownToPlainRoute
+  '/tools/md5': typeof ToolsMd5Route
+  '/tools/meta-tag-generator': typeof ToolsMetaTagGeneratorRoute
+  '/tools/mime-lookup': typeof ToolsMimeLookupRoute
+  '/tools/nanoid-generator': typeof ToolsNanoidGeneratorRoute
+  '/tools/number-base-converter': typeof ToolsNumberBaseConverterRoute
+  '/tools/number-generator': typeof ToolsNumberGeneratorRoute
+  '/tools/numbered-lines': typeof ToolsNumberedLinesRoute
+  '/tools/open-graph-preview': typeof ToolsOpenGraphPreviewRoute
+  '/tools/package-name-checker': typeof ToolsPackageNameCheckerRoute
+  '/tools/password-generator': typeof ToolsPasswordGeneratorRoute
+  '/tools/percentage-calculator': typeof ToolsPercentageCalculatorRoute
+  '/tools/placeholder-image': typeof ToolsPlaceholderImageRoute
+  '/tools/port-validator': typeof ToolsPortValidatorRoute
+  '/tools/prefix-suffix': typeof ToolsPrefixSuffixRoute
   '/tools/qr-generator': typeof ToolsQrGeneratorRoute
   '/tools/regex-tester': typeof ToolsRegexTesterRoute
   '/tools/rot13-cipher': typeof ToolsRot13CipherRoute
@@ -771,9 +962,30 @@ export interface FileRouteTypes {
     | '/tools/js-minifier'
     | '/tools/json-escape'
     | '/tools/json-format'
+    | '/tools/json-path'
     | '/tools/json-to-csv'
+    | '/tools/json-to-schema'
+    | '/tools/json-to-typescript'
+    | '/tools/json-to-yaml'
     | '/tools/jwt-decoder'
+    | '/tools/jwt-generator'
     | '/tools/lorem-ipsum'
+    | '/tools/mac-formatter'
+    | '/tools/markdown-to-plain'
+    | '/tools/md5'
+    | '/tools/meta-tag-generator'
+    | '/tools/mime-lookup'
+    | '/tools/nanoid-generator'
+    | '/tools/number-base-converter'
+    | '/tools/number-generator'
+    | '/tools/numbered-lines'
+    | '/tools/open-graph-preview'
+    | '/tools/package-name-checker'
+    | '/tools/password-generator'
+    | '/tools/percentage-calculator'
+    | '/tools/placeholder-image'
+    | '/tools/port-validator'
+    | '/tools/prefix-suffix'
     | '/tools/qr-generator'
     | '/tools/regex-tester'
     | '/tools/rot13-cipher'
@@ -849,9 +1061,30 @@ export interface FileRouteTypes {
     | '/tools/js-minifier'
     | '/tools/json-escape'
     | '/tools/json-format'
+    | '/tools/json-path'
     | '/tools/json-to-csv'
+    | '/tools/json-to-schema'
+    | '/tools/json-to-typescript'
+    | '/tools/json-to-yaml'
     | '/tools/jwt-decoder'
+    | '/tools/jwt-generator'
     | '/tools/lorem-ipsum'
+    | '/tools/mac-formatter'
+    | '/tools/markdown-to-plain'
+    | '/tools/md5'
+    | '/tools/meta-tag-generator'
+    | '/tools/mime-lookup'
+    | '/tools/nanoid-generator'
+    | '/tools/number-base-converter'
+    | '/tools/number-generator'
+    | '/tools/numbered-lines'
+    | '/tools/open-graph-preview'
+    | '/tools/package-name-checker'
+    | '/tools/password-generator'
+    | '/tools/percentage-calculator'
+    | '/tools/placeholder-image'
+    | '/tools/port-validator'
+    | '/tools/prefix-suffix'
     | '/tools/qr-generator'
     | '/tools/regex-tester'
     | '/tools/rot13-cipher'
@@ -927,9 +1160,30 @@ export interface FileRouteTypes {
     | '/tools/js-minifier'
     | '/tools/json-escape'
     | '/tools/json-format'
+    | '/tools/json-path'
     | '/tools/json-to-csv'
+    | '/tools/json-to-schema'
+    | '/tools/json-to-typescript'
+    | '/tools/json-to-yaml'
     | '/tools/jwt-decoder'
+    | '/tools/jwt-generator'
     | '/tools/lorem-ipsum'
+    | '/tools/mac-formatter'
+    | '/tools/markdown-to-plain'
+    | '/tools/md5'
+    | '/tools/meta-tag-generator'
+    | '/tools/mime-lookup'
+    | '/tools/nanoid-generator'
+    | '/tools/number-base-converter'
+    | '/tools/number-generator'
+    | '/tools/numbered-lines'
+    | '/tools/open-graph-preview'
+    | '/tools/package-name-checker'
+    | '/tools/password-generator'
+    | '/tools/percentage-calculator'
+    | '/tools/placeholder-image'
+    | '/tools/port-validator'
+    | '/tools/prefix-suffix'
     | '/tools/qr-generator'
     | '/tools/regex-tester'
     | '/tools/rot13-cipher'
@@ -1006,9 +1260,30 @@ export interface RootRouteChildren {
   ToolsJsMinifierRoute: typeof ToolsJsMinifierRoute
   ToolsJsonEscapeRoute: typeof ToolsJsonEscapeRoute
   ToolsJsonFormatRoute: typeof ToolsJsonFormatRoute
+  ToolsJsonPathRoute: typeof ToolsJsonPathRoute
   ToolsJsonToCsvRoute: typeof ToolsJsonToCsvRoute
+  ToolsJsonToSchemaRoute: typeof ToolsJsonToSchemaRoute
+  ToolsJsonToTypescriptRoute: typeof ToolsJsonToTypescriptRoute
+  ToolsJsonToYamlRoute: typeof ToolsJsonToYamlRoute
   ToolsJwtDecoderRoute: typeof ToolsJwtDecoderRoute
+  ToolsJwtGeneratorRoute: typeof ToolsJwtGeneratorRoute
   ToolsLoremIpsumRoute: typeof ToolsLoremIpsumRoute
+  ToolsMacFormatterRoute: typeof ToolsMacFormatterRoute
+  ToolsMarkdownToPlainRoute: typeof ToolsMarkdownToPlainRoute
+  ToolsMd5Route: typeof ToolsMd5Route
+  ToolsMetaTagGeneratorRoute: typeof ToolsMetaTagGeneratorRoute
+  ToolsMimeLookupRoute: typeof ToolsMimeLookupRoute
+  ToolsNanoidGeneratorRoute: typeof ToolsNanoidGeneratorRoute
+  ToolsNumberBaseConverterRoute: typeof ToolsNumberBaseConverterRoute
+  ToolsNumberGeneratorRoute: typeof ToolsNumberGeneratorRoute
+  ToolsNumberedLinesRoute: typeof ToolsNumberedLinesRoute
+  ToolsOpenGraphPreviewRoute: typeof ToolsOpenGraphPreviewRoute
+  ToolsPackageNameCheckerRoute: typeof ToolsPackageNameCheckerRoute
+  ToolsPasswordGeneratorRoute: typeof ToolsPasswordGeneratorRoute
+  ToolsPercentageCalculatorRoute: typeof ToolsPercentageCalculatorRoute
+  ToolsPlaceholderImageRoute: typeof ToolsPlaceholderImageRoute
+  ToolsPortValidatorRoute: typeof ToolsPortValidatorRoute
+  ToolsPrefixSuffixRoute: typeof ToolsPrefixSuffixRoute
   ToolsQrGeneratorRoute: typeof ToolsQrGeneratorRoute
   ToolsRegexTesterRoute: typeof ToolsRegexTesterRoute
   ToolsRot13CipherRoute: typeof ToolsRot13CipherRoute
@@ -1470,11 +1745,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsJsonFormatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/json-path': {
+      id: '/tools/json-path'
+      path: '/tools/json-path'
+      fullPath: '/tools/json-path'
+      preLoaderRoute: typeof ToolsJsonPathRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/json-to-csv': {
       id: '/tools/json-to-csv'
       path: '/tools/json-to-csv'
       fullPath: '/tools/json-to-csv'
       preLoaderRoute: typeof ToolsJsonToCsvRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/json-to-schema': {
+      id: '/tools/json-to-schema'
+      path: '/tools/json-to-schema'
+      fullPath: '/tools/json-to-schema'
+      preLoaderRoute: typeof ToolsJsonToSchemaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/json-to-typescript': {
+      id: '/tools/json-to-typescript'
+      path: '/tools/json-to-typescript'
+      fullPath: '/tools/json-to-typescript'
+      preLoaderRoute: typeof ToolsJsonToTypescriptRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/json-to-yaml': {
+      id: '/tools/json-to-yaml'
+      path: '/tools/json-to-yaml'
+      fullPath: '/tools/json-to-yaml'
+      preLoaderRoute: typeof ToolsJsonToYamlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/jwt-decoder': {
@@ -1484,11 +1787,130 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsJwtDecoderRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/jwt-generator': {
+      id: '/tools/jwt-generator'
+      path: '/tools/jwt-generator'
+      fullPath: '/tools/jwt-generator'
+      preLoaderRoute: typeof ToolsJwtGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/lorem-ipsum': {
       id: '/tools/lorem-ipsum'
       path: '/tools/lorem-ipsum'
       fullPath: '/tools/lorem-ipsum'
       preLoaderRoute: typeof ToolsLoremIpsumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/mac-formatter': {
+      id: '/tools/mac-formatter'
+      path: '/tools/mac-formatter'
+      fullPath: '/tools/mac-formatter'
+      preLoaderRoute: typeof ToolsMacFormatterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/markdown-to-plain': {
+      id: '/tools/markdown-to-plain'
+      path: '/tools/markdown-to-plain'
+      fullPath: '/tools/markdown-to-plain'
+      preLoaderRoute: typeof ToolsMarkdownToPlainRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/md5': {
+      id: '/tools/md5'
+      path: '/tools/md5'
+      fullPath: '/tools/md5'
+      preLoaderRoute: typeof ToolsMd5RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/meta-tag-generator': {
+      id: '/tools/meta-tag-generator'
+      path: '/tools/meta-tag-generator'
+      fullPath: '/tools/meta-tag-generator'
+      preLoaderRoute: typeof ToolsMetaTagGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/mime-lookup': {
+      id: '/tools/mime-lookup'
+      path: '/tools/mime-lookup'
+      fullPath: '/tools/mime-lookup'
+      preLoaderRoute: typeof ToolsMimeLookupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/nanoid-generator': {
+      id: '/tools/nanoid-generator'
+      path: '/tools/nanoid-generator'
+      fullPath: '/tools/nanoid-generator'
+      preLoaderRoute: typeof ToolsNanoidGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/number-base-converter': {
+      id: '/tools/number-base-converter'
+      path: '/tools/number-base-converter'
+      fullPath: '/tools/number-base-converter'
+      preLoaderRoute: typeof ToolsNumberBaseConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/number-generator': {
+      id: '/tools/number-generator'
+      path: '/tools/number-generator'
+      fullPath: '/tools/number-generator'
+      preLoaderRoute: typeof ToolsNumberGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/numbered-lines': {
+      id: '/tools/numbered-lines'
+      path: '/tools/numbered-lines'
+      fullPath: '/tools/numbered-lines'
+      preLoaderRoute: typeof ToolsNumberedLinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/open-graph-preview': {
+      id: '/tools/open-graph-preview'
+      path: '/tools/open-graph-preview'
+      fullPath: '/tools/open-graph-preview'
+      preLoaderRoute: typeof ToolsOpenGraphPreviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/package-name-checker': {
+      id: '/tools/package-name-checker'
+      path: '/tools/package-name-checker'
+      fullPath: '/tools/package-name-checker'
+      preLoaderRoute: typeof ToolsPackageNameCheckerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/password-generator': {
+      id: '/tools/password-generator'
+      path: '/tools/password-generator'
+      fullPath: '/tools/password-generator'
+      preLoaderRoute: typeof ToolsPasswordGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/percentage-calculator': {
+      id: '/tools/percentage-calculator'
+      path: '/tools/percentage-calculator'
+      fullPath: '/tools/percentage-calculator'
+      preLoaderRoute: typeof ToolsPercentageCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/placeholder-image': {
+      id: '/tools/placeholder-image'
+      path: '/tools/placeholder-image'
+      fullPath: '/tools/placeholder-image'
+      preLoaderRoute: typeof ToolsPlaceholderImageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/port-validator': {
+      id: '/tools/port-validator'
+      path: '/tools/port-validator'
+      fullPath: '/tools/port-validator'
+      preLoaderRoute: typeof ToolsPortValidatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/prefix-suffix': {
+      id: '/tools/prefix-suffix'
+      path: '/tools/prefix-suffix'
+      fullPath: '/tools/prefix-suffix'
+      preLoaderRoute: typeof ToolsPrefixSuffixRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/qr-generator': {
@@ -1622,9 +2044,30 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsJsMinifierRoute: ToolsJsMinifierRoute,
   ToolsJsonEscapeRoute: ToolsJsonEscapeRoute,
   ToolsJsonFormatRoute: ToolsJsonFormatRoute,
+  ToolsJsonPathRoute: ToolsJsonPathRoute,
   ToolsJsonToCsvRoute: ToolsJsonToCsvRoute,
+  ToolsJsonToSchemaRoute: ToolsJsonToSchemaRoute,
+  ToolsJsonToTypescriptRoute: ToolsJsonToTypescriptRoute,
+  ToolsJsonToYamlRoute: ToolsJsonToYamlRoute,
   ToolsJwtDecoderRoute: ToolsJwtDecoderRoute,
+  ToolsJwtGeneratorRoute: ToolsJwtGeneratorRoute,
   ToolsLoremIpsumRoute: ToolsLoremIpsumRoute,
+  ToolsMacFormatterRoute: ToolsMacFormatterRoute,
+  ToolsMarkdownToPlainRoute: ToolsMarkdownToPlainRoute,
+  ToolsMd5Route: ToolsMd5Route,
+  ToolsMetaTagGeneratorRoute: ToolsMetaTagGeneratorRoute,
+  ToolsMimeLookupRoute: ToolsMimeLookupRoute,
+  ToolsNanoidGeneratorRoute: ToolsNanoidGeneratorRoute,
+  ToolsNumberBaseConverterRoute: ToolsNumberBaseConverterRoute,
+  ToolsNumberGeneratorRoute: ToolsNumberGeneratorRoute,
+  ToolsNumberedLinesRoute: ToolsNumberedLinesRoute,
+  ToolsOpenGraphPreviewRoute: ToolsOpenGraphPreviewRoute,
+  ToolsPackageNameCheckerRoute: ToolsPackageNameCheckerRoute,
+  ToolsPasswordGeneratorRoute: ToolsPasswordGeneratorRoute,
+  ToolsPercentageCalculatorRoute: ToolsPercentageCalculatorRoute,
+  ToolsPlaceholderImageRoute: ToolsPlaceholderImageRoute,
+  ToolsPortValidatorRoute: ToolsPortValidatorRoute,
+  ToolsPrefixSuffixRoute: ToolsPrefixSuffixRoute,
   ToolsQrGeneratorRoute: ToolsQrGeneratorRoute,
   ToolsRegexTesterRoute: ToolsRegexTesterRoute,
   ToolsRot13CipherRoute: ToolsRot13CipherRoute,
