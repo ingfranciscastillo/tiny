@@ -21,7 +21,12 @@ import { Route as ToolsBinaryConverterRouteImport } from './routes/tools/binary-
 import { Route as ToolsCaseConverterRouteImport } from './routes/tools/case-converter'
 import { Route as ToolsChmodCalculatorRouteImport } from './routes/tools/chmod-calculator'
 import { Route as ToolsCidrCalculatorRouteImport } from './routes/tools/cidr-calculator'
+import { Route as ToolsColorContrastRouteImport } from './routes/tools/color-contrast'
 import { Route as ToolsColorConverterRouteImport } from './routes/tools/color-converter'
+import { Route as ToolsColorExtractorRouteImport } from './routes/tools/color-extractor'
+import { Route as ToolsColorGeneratorRouteImport } from './routes/tools/color-generator'
+import { Route as ToolsColorMixerRouteImport } from './routes/tools/color-mixer'
+import { Route as ToolsCronBuilderRouteImport } from './routes/tools/cron-builder'
 import { Route as ToolsCronExplainRouteImport } from './routes/tools/cron-explain'
 import { Route as ToolsCsvToJsonRouteImport } from './routes/tools/csv-to-json'
 import { Route as ToolsHashGeneratorRouteImport } from './routes/tools/hash-generator'
@@ -105,9 +110,34 @@ const ToolsCidrCalculatorRoute = ToolsCidrCalculatorRouteImport.update({
   path: '/tools/cidr-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsColorContrastRoute = ToolsColorContrastRouteImport.update({
+  id: '/tools/color-contrast',
+  path: '/tools/color-contrast',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsColorConverterRoute = ToolsColorConverterRouteImport.update({
   id: '/tools/color-converter',
   path: '/tools/color-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsColorExtractorRoute = ToolsColorExtractorRouteImport.update({
+  id: '/tools/color-extractor',
+  path: '/tools/color-extractor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsColorGeneratorRoute = ToolsColorGeneratorRouteImport.update({
+  id: '/tools/color-generator',
+  path: '/tools/color-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsColorMixerRoute = ToolsColorMixerRouteImport.update({
+  id: '/tools/color-mixer',
+  path: '/tools/color-mixer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsCronBuilderRoute = ToolsCronBuilderRouteImport.update({
+  id: '/tools/cron-builder',
+  path: '/tools/cron-builder',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsCronExplainRoute = ToolsCronExplainRouteImport.update({
@@ -234,7 +264,12 @@ export interface FileRoutesByFullPath {
   '/tools/case-converter': typeof ToolsCaseConverterRoute
   '/tools/chmod-calculator': typeof ToolsChmodCalculatorRoute
   '/tools/cidr-calculator': typeof ToolsCidrCalculatorRoute
+  '/tools/color-contrast': typeof ToolsColorContrastRoute
   '/tools/color-converter': typeof ToolsColorConverterRoute
+  '/tools/color-extractor': typeof ToolsColorExtractorRoute
+  '/tools/color-generator': typeof ToolsColorGeneratorRoute
+  '/tools/color-mixer': typeof ToolsColorMixerRoute
+  '/tools/cron-builder': typeof ToolsCronBuilderRoute
   '/tools/cron-explain': typeof ToolsCronExplainRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
@@ -271,7 +306,12 @@ export interface FileRoutesByTo {
   '/tools/case-converter': typeof ToolsCaseConverterRoute
   '/tools/chmod-calculator': typeof ToolsChmodCalculatorRoute
   '/tools/cidr-calculator': typeof ToolsCidrCalculatorRoute
+  '/tools/color-contrast': typeof ToolsColorContrastRoute
   '/tools/color-converter': typeof ToolsColorConverterRoute
+  '/tools/color-extractor': typeof ToolsColorExtractorRoute
+  '/tools/color-generator': typeof ToolsColorGeneratorRoute
+  '/tools/color-mixer': typeof ToolsColorMixerRoute
+  '/tools/cron-builder': typeof ToolsCronBuilderRoute
   '/tools/cron-explain': typeof ToolsCronExplainRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
@@ -309,7 +349,12 @@ export interface FileRoutesById {
   '/tools/case-converter': typeof ToolsCaseConverterRoute
   '/tools/chmod-calculator': typeof ToolsChmodCalculatorRoute
   '/tools/cidr-calculator': typeof ToolsCidrCalculatorRoute
+  '/tools/color-contrast': typeof ToolsColorContrastRoute
   '/tools/color-converter': typeof ToolsColorConverterRoute
+  '/tools/color-extractor': typeof ToolsColorExtractorRoute
+  '/tools/color-generator': typeof ToolsColorGeneratorRoute
+  '/tools/color-mixer': typeof ToolsColorMixerRoute
+  '/tools/cron-builder': typeof ToolsCronBuilderRoute
   '/tools/cron-explain': typeof ToolsCronExplainRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
@@ -348,7 +393,12 @@ export interface FileRouteTypes {
     | '/tools/case-converter'
     | '/tools/chmod-calculator'
     | '/tools/cidr-calculator'
+    | '/tools/color-contrast'
     | '/tools/color-converter'
+    | '/tools/color-extractor'
+    | '/tools/color-generator'
+    | '/tools/color-mixer'
+    | '/tools/cron-builder'
     | '/tools/cron-explain'
     | '/tools/csv-to-json'
     | '/tools/hash-generator'
@@ -385,7 +435,12 @@ export interface FileRouteTypes {
     | '/tools/case-converter'
     | '/tools/chmod-calculator'
     | '/tools/cidr-calculator'
+    | '/tools/color-contrast'
     | '/tools/color-converter'
+    | '/tools/color-extractor'
+    | '/tools/color-generator'
+    | '/tools/color-mixer'
+    | '/tools/cron-builder'
     | '/tools/cron-explain'
     | '/tools/csv-to-json'
     | '/tools/hash-generator'
@@ -422,7 +477,12 @@ export interface FileRouteTypes {
     | '/tools/case-converter'
     | '/tools/chmod-calculator'
     | '/tools/cidr-calculator'
+    | '/tools/color-contrast'
     | '/tools/color-converter'
+    | '/tools/color-extractor'
+    | '/tools/color-generator'
+    | '/tools/color-mixer'
+    | '/tools/cron-builder'
     | '/tools/cron-explain'
     | '/tools/csv-to-json'
     | '/tools/hash-generator'
@@ -460,7 +520,12 @@ export interface RootRouteChildren {
   ToolsCaseConverterRoute: typeof ToolsCaseConverterRoute
   ToolsChmodCalculatorRoute: typeof ToolsChmodCalculatorRoute
   ToolsCidrCalculatorRoute: typeof ToolsCidrCalculatorRoute
+  ToolsColorContrastRoute: typeof ToolsColorContrastRoute
   ToolsColorConverterRoute: typeof ToolsColorConverterRoute
+  ToolsColorExtractorRoute: typeof ToolsColorExtractorRoute
+  ToolsColorGeneratorRoute: typeof ToolsColorGeneratorRoute
+  ToolsColorMixerRoute: typeof ToolsColorMixerRoute
+  ToolsCronBuilderRoute: typeof ToolsCronBuilderRoute
   ToolsCronExplainRoute: typeof ToolsCronExplainRoute
   ToolsCsvToJsonRoute: typeof ToolsCsvToJsonRoute
   ToolsHashGeneratorRoute: typeof ToolsHashGeneratorRoute
@@ -571,11 +636,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsCidrCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/color-contrast': {
+      id: '/tools/color-contrast'
+      path: '/tools/color-contrast'
+      fullPath: '/tools/color-contrast'
+      preLoaderRoute: typeof ToolsColorContrastRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/color-converter': {
       id: '/tools/color-converter'
       path: '/tools/color-converter'
       fullPath: '/tools/color-converter'
       preLoaderRoute: typeof ToolsColorConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/color-extractor': {
+      id: '/tools/color-extractor'
+      path: '/tools/color-extractor'
+      fullPath: '/tools/color-extractor'
+      preLoaderRoute: typeof ToolsColorExtractorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/color-generator': {
+      id: '/tools/color-generator'
+      path: '/tools/color-generator'
+      fullPath: '/tools/color-generator'
+      preLoaderRoute: typeof ToolsColorGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/color-mixer': {
+      id: '/tools/color-mixer'
+      path: '/tools/color-mixer'
+      fullPath: '/tools/color-mixer'
+      preLoaderRoute: typeof ToolsColorMixerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/cron-builder': {
+      id: '/tools/cron-builder'
+      path: '/tools/cron-builder'
+      fullPath: '/tools/cron-builder'
+      preLoaderRoute: typeof ToolsCronBuilderRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/cron-explain': {
@@ -748,7 +848,12 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsCaseConverterRoute: ToolsCaseConverterRoute,
   ToolsChmodCalculatorRoute: ToolsChmodCalculatorRoute,
   ToolsCidrCalculatorRoute: ToolsCidrCalculatorRoute,
+  ToolsColorContrastRoute: ToolsColorContrastRoute,
   ToolsColorConverterRoute: ToolsColorConverterRoute,
+  ToolsColorExtractorRoute: ToolsColorExtractorRoute,
+  ToolsColorGeneratorRoute: ToolsColorGeneratorRoute,
+  ToolsColorMixerRoute: ToolsColorMixerRoute,
+  ToolsCronBuilderRoute: ToolsCronBuilderRoute,
   ToolsCronExplainRoute: ToolsCronExplainRoute,
   ToolsCsvToJsonRoute: ToolsCsvToJsonRoute,
   ToolsHashGeneratorRoute: ToolsHashGeneratorRoute,

@@ -6,7 +6,8 @@ export type ToolCategory =
 	| "data"
 	| "development"
 	| "images"
-	| "encoding";
+	| "encoding"
+	| "design";
 
 export interface Category {
 	id: ToolCategory;
@@ -29,6 +30,7 @@ export const CATEGORIES: Category[] = [
 	{ id: "development", label: "DEVELOPMENT" },
 	{ id: "images", label: "IMAGES" },
 	{ id: "encoding", label: "ENCODING" },
+	{ id: "design", label: "DESIGN" },
 ];
 
 export const TOOLS: Tool[] = [
@@ -216,6 +218,14 @@ export const TOOLS: Tool[] = [
 		runsLocally: true,
 	},
 	{
+		id: "cron-builder",
+		name: "Cron Builder",
+		description: "Build cron expressions",
+		category: "development",
+		path: "/tools/cron-builder",
+		runsLocally: true,
+	},
+	{
 		id: "chmod-calculator",
 		name: "Chmod Calculator",
 		description: "Calculate chmod values",
@@ -313,6 +323,40 @@ export const TOOLS: Tool[] = [
 		description: "URL-safe Base64",
 		category: "encoding",
 		path: "/tools/base64-url",
+		runsLocally: true,
+	},
+
+	// DESIGN
+	{
+		id: "color-contrast",
+		name: "Color Contrast",
+		description: "WCAG contrast checker",
+		category: "design",
+		path: "/tools/color-contrast",
+		runsLocally: true,
+	},
+	{
+		id: "color-mixer",
+		name: "Color Mixer",
+		description: "Mix two colors",
+		category: "design",
+		path: "/tools/color-mixer",
+		runsLocally: true,
+	},
+	{
+		id: "color-generator",
+		name: "Color Generator",
+		description: "Generate random colors",
+		category: "design",
+		path: "/tools/color-generator",
+		runsLocally: true,
+	},
+	{
+		id: "color-extractor",
+		name: "Color Extractor",
+		description: "Extract colors from an image",
+		category: "design",
+		path: "/tools/color-extractor",
 		runsLocally: true,
 	},
 ];
