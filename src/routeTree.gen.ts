@@ -13,9 +13,14 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ToolsAsciiConverterRouteImport } from './routes/tools/ascii-converter'
 import { Route as ToolsAverageMedianRouteImport } from './routes/tools/average-median'
 import { Route as ToolsBase32ConverterRouteImport } from './routes/tools/base32-converter'
+import { Route as ToolsBase58ConverterRouteImport } from './routes/tools/base58-converter'
 import { Route as ToolsBase64ConverterRouteImport } from './routes/tools/base64-converter'
+import { Route as ToolsBase64ToImageRouteImport } from './routes/tools/base64-to-image'
+import { Route as ToolsBase64UrlRouteImport } from './routes/tools/base64-url'
 import { Route as ToolsBinaryConverterRouteImport } from './routes/tools/binary-converter'
 import { Route as ToolsCaseConverterRouteImport } from './routes/tools/case-converter'
+import { Route as ToolsChmodCalculatorRouteImport } from './routes/tools/chmod-calculator'
+import { Route as ToolsCidrCalculatorRouteImport } from './routes/tools/cidr-calculator'
 import { Route as ToolsColorConverterRouteImport } from './routes/tools/color-converter'
 import { Route as ToolsCronExplainRouteImport } from './routes/tools/cron-explain'
 import { Route as ToolsCsvToJsonRouteImport } from './routes/tools/csv-to-json'
@@ -60,9 +65,24 @@ const ToolsBase32ConverterRoute = ToolsBase32ConverterRouteImport.update({
   path: '/tools/base32-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsBase58ConverterRoute = ToolsBase58ConverterRouteImport.update({
+  id: '/tools/base58-converter',
+  path: '/tools/base58-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsBase64ConverterRoute = ToolsBase64ConverterRouteImport.update({
   id: '/tools/base64-converter',
   path: '/tools/base64-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsBase64ToImageRoute = ToolsBase64ToImageRouteImport.update({
+  id: '/tools/base64-to-image',
+  path: '/tools/base64-to-image',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsBase64UrlRoute = ToolsBase64UrlRouteImport.update({
+  id: '/tools/base64-url',
+  path: '/tools/base64-url',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsBinaryConverterRoute = ToolsBinaryConverterRouteImport.update({
@@ -73,6 +93,16 @@ const ToolsBinaryConverterRoute = ToolsBinaryConverterRouteImport.update({
 const ToolsCaseConverterRoute = ToolsCaseConverterRouteImport.update({
   id: '/tools/case-converter',
   path: '/tools/case-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsChmodCalculatorRoute = ToolsChmodCalculatorRouteImport.update({
+  id: '/tools/chmod-calculator',
+  path: '/tools/chmod-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsCidrCalculatorRoute = ToolsCidrCalculatorRouteImport.update({
+  id: '/tools/cidr-calculator',
+  path: '/tools/cidr-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsColorConverterRoute = ToolsColorConverterRouteImport.update({
@@ -196,9 +226,14 @@ export interface FileRoutesByFullPath {
   '/tools/ascii-converter': typeof ToolsAsciiConverterRoute
   '/tools/average-median': typeof ToolsAverageMedianRoute
   '/tools/base32-converter': typeof ToolsBase32ConverterRoute
+  '/tools/base58-converter': typeof ToolsBase58ConverterRoute
   '/tools/base64-converter': typeof ToolsBase64ConverterRoute
+  '/tools/base64-to-image': typeof ToolsBase64ToImageRoute
+  '/tools/base64-url': typeof ToolsBase64UrlRoute
   '/tools/binary-converter': typeof ToolsBinaryConverterRoute
   '/tools/case-converter': typeof ToolsCaseConverterRoute
+  '/tools/chmod-calculator': typeof ToolsChmodCalculatorRoute
+  '/tools/cidr-calculator': typeof ToolsCidrCalculatorRoute
   '/tools/color-converter': typeof ToolsColorConverterRoute
   '/tools/cron-explain': typeof ToolsCronExplainRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
@@ -228,9 +263,14 @@ export interface FileRoutesByTo {
   '/tools/ascii-converter': typeof ToolsAsciiConverterRoute
   '/tools/average-median': typeof ToolsAverageMedianRoute
   '/tools/base32-converter': typeof ToolsBase32ConverterRoute
+  '/tools/base58-converter': typeof ToolsBase58ConverterRoute
   '/tools/base64-converter': typeof ToolsBase64ConverterRoute
+  '/tools/base64-to-image': typeof ToolsBase64ToImageRoute
+  '/tools/base64-url': typeof ToolsBase64UrlRoute
   '/tools/binary-converter': typeof ToolsBinaryConverterRoute
   '/tools/case-converter': typeof ToolsCaseConverterRoute
+  '/tools/chmod-calculator': typeof ToolsChmodCalculatorRoute
+  '/tools/cidr-calculator': typeof ToolsCidrCalculatorRoute
   '/tools/color-converter': typeof ToolsColorConverterRoute
   '/tools/cron-explain': typeof ToolsCronExplainRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
@@ -261,9 +301,14 @@ export interface FileRoutesById {
   '/tools/ascii-converter': typeof ToolsAsciiConverterRoute
   '/tools/average-median': typeof ToolsAverageMedianRoute
   '/tools/base32-converter': typeof ToolsBase32ConverterRoute
+  '/tools/base58-converter': typeof ToolsBase58ConverterRoute
   '/tools/base64-converter': typeof ToolsBase64ConverterRoute
+  '/tools/base64-to-image': typeof ToolsBase64ToImageRoute
+  '/tools/base64-url': typeof ToolsBase64UrlRoute
   '/tools/binary-converter': typeof ToolsBinaryConverterRoute
   '/tools/case-converter': typeof ToolsCaseConverterRoute
+  '/tools/chmod-calculator': typeof ToolsChmodCalculatorRoute
+  '/tools/cidr-calculator': typeof ToolsCidrCalculatorRoute
   '/tools/color-converter': typeof ToolsColorConverterRoute
   '/tools/cron-explain': typeof ToolsCronExplainRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
@@ -295,9 +340,14 @@ export interface FileRouteTypes {
     | '/tools/ascii-converter'
     | '/tools/average-median'
     | '/tools/base32-converter'
+    | '/tools/base58-converter'
     | '/tools/base64-converter'
+    | '/tools/base64-to-image'
+    | '/tools/base64-url'
     | '/tools/binary-converter'
     | '/tools/case-converter'
+    | '/tools/chmod-calculator'
+    | '/tools/cidr-calculator'
     | '/tools/color-converter'
     | '/tools/cron-explain'
     | '/tools/csv-to-json'
@@ -327,9 +377,14 @@ export interface FileRouteTypes {
     | '/tools/ascii-converter'
     | '/tools/average-median'
     | '/tools/base32-converter'
+    | '/tools/base58-converter'
     | '/tools/base64-converter'
+    | '/tools/base64-to-image'
+    | '/tools/base64-url'
     | '/tools/binary-converter'
     | '/tools/case-converter'
+    | '/tools/chmod-calculator'
+    | '/tools/cidr-calculator'
     | '/tools/color-converter'
     | '/tools/cron-explain'
     | '/tools/csv-to-json'
@@ -359,9 +414,14 @@ export interface FileRouteTypes {
     | '/tools/ascii-converter'
     | '/tools/average-median'
     | '/tools/base32-converter'
+    | '/tools/base58-converter'
     | '/tools/base64-converter'
+    | '/tools/base64-to-image'
+    | '/tools/base64-url'
     | '/tools/binary-converter'
     | '/tools/case-converter'
+    | '/tools/chmod-calculator'
+    | '/tools/cidr-calculator'
     | '/tools/color-converter'
     | '/tools/cron-explain'
     | '/tools/csv-to-json'
@@ -392,9 +452,14 @@ export interface RootRouteChildren {
   ToolsAsciiConverterRoute: typeof ToolsAsciiConverterRoute
   ToolsAverageMedianRoute: typeof ToolsAverageMedianRoute
   ToolsBase32ConverterRoute: typeof ToolsBase32ConverterRoute
+  ToolsBase58ConverterRoute: typeof ToolsBase58ConverterRoute
   ToolsBase64ConverterRoute: typeof ToolsBase64ConverterRoute
+  ToolsBase64ToImageRoute: typeof ToolsBase64ToImageRoute
+  ToolsBase64UrlRoute: typeof ToolsBase64UrlRoute
   ToolsBinaryConverterRoute: typeof ToolsBinaryConverterRoute
   ToolsCaseConverterRoute: typeof ToolsCaseConverterRoute
+  ToolsChmodCalculatorRoute: typeof ToolsChmodCalculatorRoute
+  ToolsCidrCalculatorRoute: typeof ToolsCidrCalculatorRoute
   ToolsColorConverterRoute: typeof ToolsColorConverterRoute
   ToolsCronExplainRoute: typeof ToolsCronExplainRoute
   ToolsCsvToJsonRoute: typeof ToolsCsvToJsonRoute
@@ -450,11 +515,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsBase32ConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/base58-converter': {
+      id: '/tools/base58-converter'
+      path: '/tools/base58-converter'
+      fullPath: '/tools/base58-converter'
+      preLoaderRoute: typeof ToolsBase58ConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/base64-converter': {
       id: '/tools/base64-converter'
       path: '/tools/base64-converter'
       fullPath: '/tools/base64-converter'
       preLoaderRoute: typeof ToolsBase64ConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/base64-to-image': {
+      id: '/tools/base64-to-image'
+      path: '/tools/base64-to-image'
+      fullPath: '/tools/base64-to-image'
+      preLoaderRoute: typeof ToolsBase64ToImageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/base64-url': {
+      id: '/tools/base64-url'
+      path: '/tools/base64-url'
+      fullPath: '/tools/base64-url'
+      preLoaderRoute: typeof ToolsBase64UrlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/binary-converter': {
@@ -469,6 +555,20 @@ declare module '@tanstack/react-router' {
       path: '/tools/case-converter'
       fullPath: '/tools/case-converter'
       preLoaderRoute: typeof ToolsCaseConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/chmod-calculator': {
+      id: '/tools/chmod-calculator'
+      path: '/tools/chmod-calculator'
+      fullPath: '/tools/chmod-calculator'
+      preLoaderRoute: typeof ToolsChmodCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/cidr-calculator': {
+      id: '/tools/cidr-calculator'
+      path: '/tools/cidr-calculator'
+      fullPath: '/tools/cidr-calculator'
+      preLoaderRoute: typeof ToolsCidrCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/color-converter': {
@@ -640,9 +740,14 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsAsciiConverterRoute: ToolsAsciiConverterRoute,
   ToolsAverageMedianRoute: ToolsAverageMedianRoute,
   ToolsBase32ConverterRoute: ToolsBase32ConverterRoute,
+  ToolsBase58ConverterRoute: ToolsBase58ConverterRoute,
   ToolsBase64ConverterRoute: ToolsBase64ConverterRoute,
+  ToolsBase64ToImageRoute: ToolsBase64ToImageRoute,
+  ToolsBase64UrlRoute: ToolsBase64UrlRoute,
   ToolsBinaryConverterRoute: ToolsBinaryConverterRoute,
   ToolsCaseConverterRoute: ToolsCaseConverterRoute,
+  ToolsChmodCalculatorRoute: ToolsChmodCalculatorRoute,
+  ToolsCidrCalculatorRoute: ToolsCidrCalculatorRoute,
   ToolsColorConverterRoute: ToolsColorConverterRoute,
   ToolsCronExplainRoute: ToolsCronExplainRoute,
   ToolsCsvToJsonRoute: ToolsCsvToJsonRoute,

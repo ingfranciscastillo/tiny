@@ -93,11 +93,23 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/chmod-calculator</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/cidr-calculator</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tiny-tools-app.vercel.app/tools/image-compress</loc>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tiny-tools-app.vercel.app/tools/image-to-base64</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/base64-to-image</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -118,6 +130,14 @@
   </url>
   <url>
     <loc>https://tiny-tools-app.vercel.app/tools/ascii-converter</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/base58-converter</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/base64-url</loc>
     <priority>0.8</priority>
   </url>
 </urlset>

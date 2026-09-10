@@ -215,6 +215,22 @@ export const TOOLS: Tool[] = [
 		path: "/tools/cron-explain",
 		runsLocally: true,
 	},
+	{
+		id: "chmod-calculator",
+		name: "Chmod Calculator",
+		description: "Calculate chmod values",
+		category: "development",
+		path: "/tools/chmod-calculator",
+		runsLocally: true,
+	},
+	{
+		id: "cidr-calculator",
+		name: "CIDR Calculator",
+		description: "Calculate network ranges",
+		category: "development",
+		path: "/tools/cidr-calculator",
+		runsLocally: true,
+	},
 
 	// IMAGES
 	{
@@ -231,6 +247,14 @@ export const TOOLS: Tool[] = [
 		description: "Encode images as data URI",
 		category: "images",
 		path: "/tools/image-to-base64",
+		runsLocally: true,
+	},
+	{
+		id: "base64-to-image",
+		name: "Base64 → Image",
+		description: "Decode Base64 into an image",
+		category: "images",
+		path: "/tools/base64-to-image",
 		runsLocally: true,
 	},
 
@@ -273,6 +297,22 @@ export const TOOLS: Tool[] = [
 		description: "Text ↔ ASCII codes",
 		category: "encoding",
 		path: "/tools/ascii-converter",
+		runsLocally: true,
+	},
+	{
+		id: "base58",
+		name: "Base58",
+		description: "Encode / decode Base58",
+		category: "encoding",
+		path: "/tools/base58-converter",
+		runsLocally: true,
+	},
+	{
+		id: "base64url",
+		name: "Base64 URL",
+		description: "URL-safe Base64",
+		category: "encoding",
+		path: "/tools/base64-url",
 		runsLocally: true,
 	},
 ];
