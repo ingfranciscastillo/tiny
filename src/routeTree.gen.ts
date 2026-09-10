@@ -23,6 +23,10 @@ import { Route as ToolsImageCompressRouteImport } from './routes/tools/image-com
 import { Route as ToolsImageCropperRouteImport } from './routes/tools/image-cropper'
 import { Route as ToolsImageToBase64RouteImport } from './routes/tools/image-to-base64'
 import { Route as ToolsJsonEscapeRouteImport } from './routes/tools/json-escape'
+import { Route as ToolsJsonFormatRouteImport } from './routes/tools/json-format'
+import { Route as ToolsJsonToCsvRouteImport } from './routes/tools/json-to-csv'
+import { Route as ToolsJwtDecoderRouteImport } from './routes/tools/jwt-decoder'
+import { Route as ToolsLoremIpsumRouteImport } from './routes/tools/lorem-ipsum'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -94,6 +98,26 @@ const ToolsJsonEscapeRoute = ToolsJsonEscapeRouteImport.update({
   path: '/tools/json-escape',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsJsonFormatRoute = ToolsJsonFormatRouteImport.update({
+  id: '/tools/json-format',
+  path: '/tools/json-format',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsJsonToCsvRoute = ToolsJsonToCsvRouteImport.update({
+  id: '/tools/json-to-csv',
+  path: '/tools/json-to-csv',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsJwtDecoderRoute = ToolsJwtDecoderRouteImport.update({
+  id: '/tools/jwt-decoder',
+  path: '/tools/jwt-decoder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsLoremIpsumRoute = ToolsLoremIpsumRouteImport.update({
+  id: '/tools/lorem-ipsum',
+  path: '/tools/lorem-ipsum',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -110,6 +134,10 @@ export interface FileRoutesByFullPath {
   '/tools/image-cropper': typeof ToolsImageCropperRoute
   '/tools/image-to-base64': typeof ToolsImageToBase64Route
   '/tools/json-escape': typeof ToolsJsonEscapeRoute
+  '/tools/json-format': typeof ToolsJsonFormatRoute
+  '/tools/json-to-csv': typeof ToolsJsonToCsvRoute
+  '/tools/jwt-decoder': typeof ToolsJwtDecoderRoute
+  '/tools/lorem-ipsum': typeof ToolsLoremIpsumRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -126,6 +154,10 @@ export interface FileRoutesByTo {
   '/tools/image-cropper': typeof ToolsImageCropperRoute
   '/tools/image-to-base64': typeof ToolsImageToBase64Route
   '/tools/json-escape': typeof ToolsJsonEscapeRoute
+  '/tools/json-format': typeof ToolsJsonFormatRoute
+  '/tools/json-to-csv': typeof ToolsJsonToCsvRoute
+  '/tools/jwt-decoder': typeof ToolsJwtDecoderRoute
+  '/tools/lorem-ipsum': typeof ToolsLoremIpsumRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -143,6 +175,10 @@ export interface FileRoutesById {
   '/tools/image-cropper': typeof ToolsImageCropperRoute
   '/tools/image-to-base64': typeof ToolsImageToBase64Route
   '/tools/json-escape': typeof ToolsJsonEscapeRoute
+  '/tools/json-format': typeof ToolsJsonFormatRoute
+  '/tools/json-to-csv': typeof ToolsJsonToCsvRoute
+  '/tools/jwt-decoder': typeof ToolsJwtDecoderRoute
+  '/tools/lorem-ipsum': typeof ToolsLoremIpsumRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -161,6 +197,10 @@ export interface FileRouteTypes {
     | '/tools/image-cropper'
     | '/tools/image-to-base64'
     | '/tools/json-escape'
+    | '/tools/json-format'
+    | '/tools/json-to-csv'
+    | '/tools/jwt-decoder'
+    | '/tools/lorem-ipsum'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -177,6 +217,10 @@ export interface FileRouteTypes {
     | '/tools/image-cropper'
     | '/tools/image-to-base64'
     | '/tools/json-escape'
+    | '/tools/json-format'
+    | '/tools/json-to-csv'
+    | '/tools/jwt-decoder'
+    | '/tools/lorem-ipsum'
   id:
     | '__root__'
     | '/'
@@ -193,6 +237,10 @@ export interface FileRouteTypes {
     | '/tools/image-cropper'
     | '/tools/image-to-base64'
     | '/tools/json-escape'
+    | '/tools/json-format'
+    | '/tools/json-to-csv'
+    | '/tools/jwt-decoder'
+    | '/tools/lorem-ipsum'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -210,6 +258,10 @@ export interface RootRouteChildren {
   ToolsImageCropperRoute: typeof ToolsImageCropperRoute
   ToolsImageToBase64Route: typeof ToolsImageToBase64Route
   ToolsJsonEscapeRoute: typeof ToolsJsonEscapeRoute
+  ToolsJsonFormatRoute: typeof ToolsJsonFormatRoute
+  ToolsJsonToCsvRoute: typeof ToolsJsonToCsvRoute
+  ToolsJwtDecoderRoute: typeof ToolsJwtDecoderRoute
+  ToolsLoremIpsumRoute: typeof ToolsLoremIpsumRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -312,6 +364,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsJsonEscapeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/json-format': {
+      id: '/tools/json-format'
+      path: '/tools/json-format'
+      fullPath: '/tools/json-format'
+      preLoaderRoute: typeof ToolsJsonFormatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/json-to-csv': {
+      id: '/tools/json-to-csv'
+      path: '/tools/json-to-csv'
+      fullPath: '/tools/json-to-csv'
+      preLoaderRoute: typeof ToolsJsonToCsvRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/jwt-decoder': {
+      id: '/tools/jwt-decoder'
+      path: '/tools/jwt-decoder'
+      fullPath: '/tools/jwt-decoder'
+      preLoaderRoute: typeof ToolsJwtDecoderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/lorem-ipsum': {
+      id: '/tools/lorem-ipsum'
+      path: '/tools/lorem-ipsum'
+      fullPath: '/tools/lorem-ipsum'
+      preLoaderRoute: typeof ToolsLoremIpsumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -330,6 +410,10 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsImageCropperRoute: ToolsImageCropperRoute,
   ToolsImageToBase64Route: ToolsImageToBase64Route,
   ToolsJsonEscapeRoute: ToolsJsonEscapeRoute,
+  ToolsJsonFormatRoute: ToolsJsonFormatRoute,
+  ToolsJsonToCsvRoute: ToolsJsonToCsvRoute,
+  ToolsJwtDecoderRoute: ToolsJwtDecoderRoute,
+  ToolsLoremIpsumRoute: ToolsLoremIpsumRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

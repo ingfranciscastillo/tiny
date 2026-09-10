@@ -70,7 +70,7 @@ export const TOOLS: Tool[] = [
 		name: "JWT Decoder",
 		description: "Inspect JWT payloads",
 		category: "popular",
-		path: "/tools/jwt",
+		path: "/tools/jwt-decoder",
 		runsLocally: true,
 	},
 	{
@@ -144,7 +144,7 @@ export const TOOLS: Tool[] = [
 		name: "Lorem Ipsum",
 		description: "Generate placeholder text",
 		category: "text",
-		path: "/tools/lorem",
+		path: "/tools/lorem-ipsum",
 		runsLocally: true,
 	},
 
