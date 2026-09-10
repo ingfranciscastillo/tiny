@@ -180,7 +180,7 @@ export const TOOLS: Tool[] = [
 		name: "Hash Generator",
 		description: "SHA-1 · SHA-256 · SHA-512",
 		category: "development",
-		path: "/tools/hash",
+		path: "/tools/hash-generator",
 		runsLocally: true,
 	},
 	{
@@ -232,7 +232,7 @@ export const TOOLS: Tool[] = [
 		name: "Hex Converter",
 		description: "Text ↔ hex",
 		category: "encoding",
-		path: "/tools/hex",
+		path: "/tools/hex-converter",
 		runsLocally: true,
 	},
 	{

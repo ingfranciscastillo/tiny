@@ -16,6 +16,8 @@ import { Route as ToolsCaseConverterRouteImport } from './routes/tools/case-conv
 import { Route as ToolsColorConverterRouteImport } from './routes/tools/color-converter'
 import { Route as ToolsCronExplainRouteImport } from './routes/tools/cron-explain'
 import { Route as ToolsCsvToJsonRouteImport } from './routes/tools/csv-to-json'
+import { Route as ToolsHashGeneratorRouteImport } from './routes/tools/hash-generator'
+import { Route as ToolsHexConverterRouteImport } from './routes/tools/hex-converter'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -52,6 +54,16 @@ const ToolsCsvToJsonRoute = ToolsCsvToJsonRouteImport.update({
   path: '/tools/csv-to-json',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsHashGeneratorRoute = ToolsHashGeneratorRouteImport.update({
+  id: '/tools/hash-generator',
+  path: '/tools/hash-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsHexConverterRoute = ToolsHexConverterRouteImport.update({
+  id: '/tools/hex-converter',
+  path: '/tools/hex-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -61,6 +73,8 @@ export interface FileRoutesByFullPath {
   '/tools/color-converter': typeof ToolsColorConverterRoute
   '/tools/cron-explain': typeof ToolsCronExplainRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
+  '/tools/hash-generator': typeof ToolsHashGeneratorRoute
+  '/tools/hex-converter': typeof ToolsHexConverterRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +84,8 @@ export interface FileRoutesByTo {
   '/tools/color-converter': typeof ToolsColorConverterRoute
   '/tools/cron-explain': typeof ToolsCronExplainRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
+  '/tools/hash-generator': typeof ToolsHashGeneratorRoute
+  '/tools/hex-converter': typeof ToolsHexConverterRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +96,8 @@ export interface FileRoutesById {
   '/tools/color-converter': typeof ToolsColorConverterRoute
   '/tools/cron-explain': typeof ToolsCronExplainRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
+  '/tools/hash-generator': typeof ToolsHashGeneratorRoute
+  '/tools/hex-converter': typeof ToolsHexConverterRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +109,8 @@ export interface FileRouteTypes {
     | '/tools/color-converter'
     | '/tools/cron-explain'
     | '/tools/csv-to-json'
+    | '/tools/hash-generator'
+    | '/tools/hex-converter'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +120,8 @@ export interface FileRouteTypes {
     | '/tools/color-converter'
     | '/tools/cron-explain'
     | '/tools/csv-to-json'
+    | '/tools/hash-generator'
+    | '/tools/hex-converter'
   id:
     | '__root__'
     | '/'
@@ -109,6 +131,8 @@ export interface FileRouteTypes {
     | '/tools/color-converter'
     | '/tools/cron-explain'
     | '/tools/csv-to-json'
+    | '/tools/hash-generator'
+    | '/tools/hex-converter'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -119,6 +143,8 @@ export interface RootRouteChildren {
   ToolsColorConverterRoute: typeof ToolsColorConverterRoute
   ToolsCronExplainRoute: typeof ToolsCronExplainRoute
   ToolsCsvToJsonRoute: typeof ToolsCsvToJsonRoute
+  ToolsHashGeneratorRoute: typeof ToolsHashGeneratorRoute
+  ToolsHexConverterRoute: typeof ToolsHexConverterRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -172,6 +198,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsCsvToJsonRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/hash-generator': {
+      id: '/tools/hash-generator'
+      path: '/tools/hash-generator'
+      fullPath: '/tools/hash-generator'
+      preLoaderRoute: typeof ToolsHashGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/hex-converter': {
+      id: '/tools/hex-converter'
+      path: '/tools/hex-converter'
+      fullPath: '/tools/hex-converter'
+      preLoaderRoute: typeof ToolsHexConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -183,6 +223,8 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsColorConverterRoute: ToolsColorConverterRoute,
   ToolsCronExplainRoute: ToolsCronExplainRoute,
   ToolsCsvToJsonRoute: ToolsCsvToJsonRoute,
+  ToolsHashGeneratorRoute: ToolsHashGeneratorRoute,
+  ToolsHexConverterRoute: ToolsHexConverterRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
