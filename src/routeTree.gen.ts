@@ -18,6 +18,8 @@ import { Route as ToolsCronExplainRouteImport } from './routes/tools/cron-explai
 import { Route as ToolsCsvToJsonRouteImport } from './routes/tools/csv-to-json'
 import { Route as ToolsHashGeneratorRouteImport } from './routes/tools/hash-generator'
 import { Route as ToolsHexConverterRouteImport } from './routes/tools/hex-converter'
+import { Route as ToolsHtmlEntitiesRouteImport } from './routes/tools/html-entities'
+import { Route as ToolsImageCompressRouteImport } from './routes/tools/image-compress'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -64,6 +66,16 @@ const ToolsHexConverterRoute = ToolsHexConverterRouteImport.update({
   path: '/tools/hex-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsHtmlEntitiesRoute = ToolsHtmlEntitiesRouteImport.update({
+  id: '/tools/html-entities',
+  path: '/tools/html-entities',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsImageCompressRoute = ToolsImageCompressRouteImport.update({
+  id: '/tools/image-compress',
+  path: '/tools/image-compress',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -75,6 +87,8 @@ export interface FileRoutesByFullPath {
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
   '/tools/hex-converter': typeof ToolsHexConverterRoute
+  '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
+  '/tools/image-compress': typeof ToolsImageCompressRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -86,6 +100,8 @@ export interface FileRoutesByTo {
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
   '/tools/hex-converter': typeof ToolsHexConverterRoute
+  '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
+  '/tools/image-compress': typeof ToolsImageCompressRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -98,6 +114,8 @@ export interface FileRoutesById {
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
   '/tools/hex-converter': typeof ToolsHexConverterRoute
+  '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
+  '/tools/image-compress': typeof ToolsImageCompressRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -111,6 +129,8 @@ export interface FileRouteTypes {
     | '/tools/csv-to-json'
     | '/tools/hash-generator'
     | '/tools/hex-converter'
+    | '/tools/html-entities'
+    | '/tools/image-compress'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -122,6 +142,8 @@ export interface FileRouteTypes {
     | '/tools/csv-to-json'
     | '/tools/hash-generator'
     | '/tools/hex-converter'
+    | '/tools/html-entities'
+    | '/tools/image-compress'
   id:
     | '__root__'
     | '/'
@@ -133,6 +155,8 @@ export interface FileRouteTypes {
     | '/tools/csv-to-json'
     | '/tools/hash-generator'
     | '/tools/hex-converter'
+    | '/tools/html-entities'
+    | '/tools/image-compress'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -145,6 +169,8 @@ export interface RootRouteChildren {
   ToolsCsvToJsonRoute: typeof ToolsCsvToJsonRoute
   ToolsHashGeneratorRoute: typeof ToolsHashGeneratorRoute
   ToolsHexConverterRoute: typeof ToolsHexConverterRoute
+  ToolsHtmlEntitiesRoute: typeof ToolsHtmlEntitiesRoute
+  ToolsImageCompressRoute: typeof ToolsImageCompressRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -212,6 +238,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsHexConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/html-entities': {
+      id: '/tools/html-entities'
+      path: '/tools/html-entities'
+      fullPath: '/tools/html-entities'
+      preLoaderRoute: typeof ToolsHtmlEntitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/image-compress': {
+      id: '/tools/image-compress'
+      path: '/tools/image-compress'
+      fullPath: '/tools/image-compress'
+      preLoaderRoute: typeof ToolsImageCompressRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -225,6 +265,8 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsCsvToJsonRoute: ToolsCsvToJsonRoute,
   ToolsHashGeneratorRoute: ToolsHashGeneratorRoute,
   ToolsHexConverterRoute: ToolsHexConverterRoute,
+  ToolsHtmlEntitiesRoute: ToolsHtmlEntitiesRoute,
+  ToolsImageCompressRoute: ToolsImageCompressRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
