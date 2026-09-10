@@ -165,6 +165,14 @@ export const TOOLS: Tool[] = [
 		path: "/tools/find-replace",
 		runsLocally: true,
 	},
+	{
+		id: "join-lines",
+		name: "Join Lines",
+		description: "Combine lines with a chosen separator",
+		category: "text",
+		path: "/tools/join-lines",
+		runsLocally: true,
+	},
 
 	// DATA
 	{
@@ -433,6 +441,62 @@ export const TOOLS: Tool[] = [
 		path: "/tools/http-status",
 		runsLocally: true,
 	},
+	{
+		id: "js-formatter",
+		name: "JS Formatter",
+		description: "Format JavaScript",
+		category: "development",
+		path: "/tools/js-formatter",
+		runsLocally: true,
+	},
+	{
+		id: "js-minifier",
+		name: "JS Minifier",
+		description: "Minify JavaScript",
+		category: "development",
+		path: "/tools/js-minifier",
+		runsLocally: true,
+	},
+	{
+		id: "image-link-generator",
+		name: "Image Link Generator",
+		description: "Generate <img> tags",
+		category: "development",
+		path: "/tools/image-link-generator",
+		runsLocally: true,
+	},
+	{
+		id: "ip-info",
+		name: "IP Address Info",
+		description: "Parse and validate IP addresses",
+		category: "development",
+		path: "/tools/ip-info",
+		runsLocally: true,
+	},
+	{
+		id: "ip-range",
+		name: "IP Range Calculator",
+		description: "Calculate IP ranges",
+		category: "development",
+		path: "/tools/ip-range",
+		runsLocally: true,
+	},
+	{
+		id: "ipv4-ipv6",
+		name: "IPv4 ↔ IPv6",
+		description: "Convert IP representations",
+		category: "development",
+		path: "/tools/ipv4-ipv6",
+		runsLocally: true,
+	},
+	{
+		id: "iso-8601",
+		name: "ISO 8601",
+		description: "Parse and generate ISO dates",
+		category: "development",
+		path: "/tools/iso-8601",
+		runsLocally: true,
+	},
 
 	// IMAGES
 	{
@@ -473,6 +537,22 @@ export const TOOLS: Tool[] = [
 		description: "PNG · JPG · WebP",
 		category: "images",
 		path: "/tools/image-format-converter",
+		runsLocally: true,
+	},
+	{
+		id: "image-metadata",
+		name: "Image Metadata",
+		description: "Inspect image dimensions/type",
+		category: "images",
+		path: "/tools/image-metadata",
+		runsLocally: true,
+	},
+	{
+		id: "image-resize",
+		name: "Image Resize",
+		description: "Resize an image",
+		category: "images",
+		path: "/tools/image-resize",
 		runsLocally: true,
 	},
 

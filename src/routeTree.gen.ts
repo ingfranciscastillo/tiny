@@ -60,7 +60,17 @@ import { Route as ToolsHttpStatusRouteImport } from './routes/tools/http-status'
 import { Route as ToolsImageCompressRouteImport } from './routes/tools/image-compress'
 import { Route as ToolsImageCropperRouteImport } from './routes/tools/image-cropper'
 import { Route as ToolsImageFormatConverterRouteImport } from './routes/tools/image-format-converter'
+import { Route as ToolsImageLinkGeneratorRouteImport } from './routes/tools/image-link-generator'
+import { Route as ToolsImageMetadataRouteImport } from './routes/tools/image-metadata'
+import { Route as ToolsImageResizeRouteImport } from './routes/tools/image-resize'
 import { Route as ToolsImageToBase64RouteImport } from './routes/tools/image-to-base64'
+import { Route as ToolsIpInfoRouteImport } from './routes/tools/ip-info'
+import { Route as ToolsIpRangeRouteImport } from './routes/tools/ip-range'
+import { Route as ToolsIpv4Ipv6RouteImport } from './routes/tools/ipv4-ipv6'
+import { Route as ToolsIso8601RouteImport } from './routes/tools/iso-8601'
+import { Route as ToolsJoinLinesRouteImport } from './routes/tools/join-lines'
+import { Route as ToolsJsFormatterRouteImport } from './routes/tools/js-formatter'
+import { Route as ToolsJsMinifierRouteImport } from './routes/tools/js-minifier'
 import { Route as ToolsJsonEscapeRouteImport } from './routes/tools/json-escape'
 import { Route as ToolsJsonFormatRouteImport } from './routes/tools/json-format'
 import { Route as ToolsJsonToCsvRouteImport } from './routes/tools/json-to-csv'
@@ -333,9 +343,59 @@ const ToolsImageFormatConverterRoute =
     path: '/tools/image-format-converter',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ToolsImageLinkGeneratorRoute = ToolsImageLinkGeneratorRouteImport.update({
+  id: '/tools/image-link-generator',
+  path: '/tools/image-link-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsImageMetadataRoute = ToolsImageMetadataRouteImport.update({
+  id: '/tools/image-metadata',
+  path: '/tools/image-metadata',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsImageResizeRoute = ToolsImageResizeRouteImport.update({
+  id: '/tools/image-resize',
+  path: '/tools/image-resize',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsImageToBase64Route = ToolsImageToBase64RouteImport.update({
   id: '/tools/image-to-base64',
   path: '/tools/image-to-base64',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsIpInfoRoute = ToolsIpInfoRouteImport.update({
+  id: '/tools/ip-info',
+  path: '/tools/ip-info',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsIpRangeRoute = ToolsIpRangeRouteImport.update({
+  id: '/tools/ip-range',
+  path: '/tools/ip-range',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsIpv4Ipv6Route = ToolsIpv4Ipv6RouteImport.update({
+  id: '/tools/ipv4-ipv6',
+  path: '/tools/ipv4-ipv6',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsIso8601Route = ToolsIso8601RouteImport.update({
+  id: '/tools/iso-8601',
+  path: '/tools/iso-8601',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsJoinLinesRoute = ToolsJoinLinesRouteImport.update({
+  id: '/tools/join-lines',
+  path: '/tools/join-lines',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsJsFormatterRoute = ToolsJsFormatterRouteImport.update({
+  id: '/tools/js-formatter',
+  path: '/tools/js-formatter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsJsMinifierRoute = ToolsJsMinifierRouteImport.update({
+  id: '/tools/js-minifier',
+  path: '/tools/js-minifier',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsJsonEscapeRoute = ToolsJsonEscapeRouteImport.update({
@@ -461,7 +521,17 @@ export interface FileRoutesByFullPath {
   '/tools/image-compress': typeof ToolsImageCompressRoute
   '/tools/image-cropper': typeof ToolsImageCropperRoute
   '/tools/image-format-converter': typeof ToolsImageFormatConverterRoute
+  '/tools/image-link-generator': typeof ToolsImageLinkGeneratorRoute
+  '/tools/image-metadata': typeof ToolsImageMetadataRoute
+  '/tools/image-resize': typeof ToolsImageResizeRoute
   '/tools/image-to-base64': typeof ToolsImageToBase64Route
+  '/tools/ip-info': typeof ToolsIpInfoRoute
+  '/tools/ip-range': typeof ToolsIpRangeRoute
+  '/tools/ipv4-ipv6': typeof ToolsIpv4Ipv6Route
+  '/tools/iso-8601': typeof ToolsIso8601Route
+  '/tools/join-lines': typeof ToolsJoinLinesRoute
+  '/tools/js-formatter': typeof ToolsJsFormatterRoute
+  '/tools/js-minifier': typeof ToolsJsMinifierRoute
   '/tools/json-escape': typeof ToolsJsonEscapeRoute
   '/tools/json-format': typeof ToolsJsonFormatRoute
   '/tools/json-to-csv': typeof ToolsJsonToCsvRoute
@@ -529,7 +599,17 @@ export interface FileRoutesByTo {
   '/tools/image-compress': typeof ToolsImageCompressRoute
   '/tools/image-cropper': typeof ToolsImageCropperRoute
   '/tools/image-format-converter': typeof ToolsImageFormatConverterRoute
+  '/tools/image-link-generator': typeof ToolsImageLinkGeneratorRoute
+  '/tools/image-metadata': typeof ToolsImageMetadataRoute
+  '/tools/image-resize': typeof ToolsImageResizeRoute
   '/tools/image-to-base64': typeof ToolsImageToBase64Route
+  '/tools/ip-info': typeof ToolsIpInfoRoute
+  '/tools/ip-range': typeof ToolsIpRangeRoute
+  '/tools/ipv4-ipv6': typeof ToolsIpv4Ipv6Route
+  '/tools/iso-8601': typeof ToolsIso8601Route
+  '/tools/join-lines': typeof ToolsJoinLinesRoute
+  '/tools/js-formatter': typeof ToolsJsFormatterRoute
+  '/tools/js-minifier': typeof ToolsJsMinifierRoute
   '/tools/json-escape': typeof ToolsJsonEscapeRoute
   '/tools/json-format': typeof ToolsJsonFormatRoute
   '/tools/json-to-csv': typeof ToolsJsonToCsvRoute
@@ -598,7 +678,17 @@ export interface FileRoutesById {
   '/tools/image-compress': typeof ToolsImageCompressRoute
   '/tools/image-cropper': typeof ToolsImageCropperRoute
   '/tools/image-format-converter': typeof ToolsImageFormatConverterRoute
+  '/tools/image-link-generator': typeof ToolsImageLinkGeneratorRoute
+  '/tools/image-metadata': typeof ToolsImageMetadataRoute
+  '/tools/image-resize': typeof ToolsImageResizeRoute
   '/tools/image-to-base64': typeof ToolsImageToBase64Route
+  '/tools/ip-info': typeof ToolsIpInfoRoute
+  '/tools/ip-range': typeof ToolsIpRangeRoute
+  '/tools/ipv4-ipv6': typeof ToolsIpv4Ipv6Route
+  '/tools/iso-8601': typeof ToolsIso8601Route
+  '/tools/join-lines': typeof ToolsJoinLinesRoute
+  '/tools/js-formatter': typeof ToolsJsFormatterRoute
+  '/tools/js-minifier': typeof ToolsJsMinifierRoute
   '/tools/json-escape': typeof ToolsJsonEscapeRoute
   '/tools/json-format': typeof ToolsJsonFormatRoute
   '/tools/json-to-csv': typeof ToolsJsonToCsvRoute
@@ -668,7 +758,17 @@ export interface FileRouteTypes {
     | '/tools/image-compress'
     | '/tools/image-cropper'
     | '/tools/image-format-converter'
+    | '/tools/image-link-generator'
+    | '/tools/image-metadata'
+    | '/tools/image-resize'
     | '/tools/image-to-base64'
+    | '/tools/ip-info'
+    | '/tools/ip-range'
+    | '/tools/ipv4-ipv6'
+    | '/tools/iso-8601'
+    | '/tools/join-lines'
+    | '/tools/js-formatter'
+    | '/tools/js-minifier'
     | '/tools/json-escape'
     | '/tools/json-format'
     | '/tools/json-to-csv'
@@ -736,7 +836,17 @@ export interface FileRouteTypes {
     | '/tools/image-compress'
     | '/tools/image-cropper'
     | '/tools/image-format-converter'
+    | '/tools/image-link-generator'
+    | '/tools/image-metadata'
+    | '/tools/image-resize'
     | '/tools/image-to-base64'
+    | '/tools/ip-info'
+    | '/tools/ip-range'
+    | '/tools/ipv4-ipv6'
+    | '/tools/iso-8601'
+    | '/tools/join-lines'
+    | '/tools/js-formatter'
+    | '/tools/js-minifier'
     | '/tools/json-escape'
     | '/tools/json-format'
     | '/tools/json-to-csv'
@@ -804,7 +914,17 @@ export interface FileRouteTypes {
     | '/tools/image-compress'
     | '/tools/image-cropper'
     | '/tools/image-format-converter'
+    | '/tools/image-link-generator'
+    | '/tools/image-metadata'
+    | '/tools/image-resize'
     | '/tools/image-to-base64'
+    | '/tools/ip-info'
+    | '/tools/ip-range'
+    | '/tools/ipv4-ipv6'
+    | '/tools/iso-8601'
+    | '/tools/join-lines'
+    | '/tools/js-formatter'
+    | '/tools/js-minifier'
     | '/tools/json-escape'
     | '/tools/json-format'
     | '/tools/json-to-csv'
@@ -873,7 +993,17 @@ export interface RootRouteChildren {
   ToolsImageCompressRoute: typeof ToolsImageCompressRoute
   ToolsImageCropperRoute: typeof ToolsImageCropperRoute
   ToolsImageFormatConverterRoute: typeof ToolsImageFormatConverterRoute
+  ToolsImageLinkGeneratorRoute: typeof ToolsImageLinkGeneratorRoute
+  ToolsImageMetadataRoute: typeof ToolsImageMetadataRoute
+  ToolsImageResizeRoute: typeof ToolsImageResizeRoute
   ToolsImageToBase64Route: typeof ToolsImageToBase64Route
+  ToolsIpInfoRoute: typeof ToolsIpInfoRoute
+  ToolsIpRangeRoute: typeof ToolsIpRangeRoute
+  ToolsIpv4Ipv6Route: typeof ToolsIpv4Ipv6Route
+  ToolsIso8601Route: typeof ToolsIso8601Route
+  ToolsJoinLinesRoute: typeof ToolsJoinLinesRoute
+  ToolsJsFormatterRoute: typeof ToolsJsFormatterRoute
+  ToolsJsMinifierRoute: typeof ToolsJsMinifierRoute
   ToolsJsonEscapeRoute: typeof ToolsJsonEscapeRoute
   ToolsJsonFormatRoute: typeof ToolsJsonFormatRoute
   ToolsJsonToCsvRoute: typeof ToolsJsonToCsvRoute
@@ -1249,11 +1379,81 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsImageFormatConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/image-link-generator': {
+      id: '/tools/image-link-generator'
+      path: '/tools/image-link-generator'
+      fullPath: '/tools/image-link-generator'
+      preLoaderRoute: typeof ToolsImageLinkGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/image-metadata': {
+      id: '/tools/image-metadata'
+      path: '/tools/image-metadata'
+      fullPath: '/tools/image-metadata'
+      preLoaderRoute: typeof ToolsImageMetadataRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/image-resize': {
+      id: '/tools/image-resize'
+      path: '/tools/image-resize'
+      fullPath: '/tools/image-resize'
+      preLoaderRoute: typeof ToolsImageResizeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/image-to-base64': {
       id: '/tools/image-to-base64'
       path: '/tools/image-to-base64'
       fullPath: '/tools/image-to-base64'
       preLoaderRoute: typeof ToolsImageToBase64RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/ip-info': {
+      id: '/tools/ip-info'
+      path: '/tools/ip-info'
+      fullPath: '/tools/ip-info'
+      preLoaderRoute: typeof ToolsIpInfoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/ip-range': {
+      id: '/tools/ip-range'
+      path: '/tools/ip-range'
+      fullPath: '/tools/ip-range'
+      preLoaderRoute: typeof ToolsIpRangeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/ipv4-ipv6': {
+      id: '/tools/ipv4-ipv6'
+      path: '/tools/ipv4-ipv6'
+      fullPath: '/tools/ipv4-ipv6'
+      preLoaderRoute: typeof ToolsIpv4Ipv6RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/iso-8601': {
+      id: '/tools/iso-8601'
+      path: '/tools/iso-8601'
+      fullPath: '/tools/iso-8601'
+      preLoaderRoute: typeof ToolsIso8601RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/join-lines': {
+      id: '/tools/join-lines'
+      path: '/tools/join-lines'
+      fullPath: '/tools/join-lines'
+      preLoaderRoute: typeof ToolsJoinLinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/js-formatter': {
+      id: '/tools/js-formatter'
+      path: '/tools/js-formatter'
+      fullPath: '/tools/js-formatter'
+      preLoaderRoute: typeof ToolsJsFormatterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/js-minifier': {
+      id: '/tools/js-minifier'
+      path: '/tools/js-minifier'
+      fullPath: '/tools/js-minifier'
+      preLoaderRoute: typeof ToolsJsMinifierRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/json-escape': {
@@ -1409,7 +1609,17 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsImageCompressRoute: ToolsImageCompressRoute,
   ToolsImageCropperRoute: ToolsImageCropperRoute,
   ToolsImageFormatConverterRoute: ToolsImageFormatConverterRoute,
+  ToolsImageLinkGeneratorRoute: ToolsImageLinkGeneratorRoute,
+  ToolsImageMetadataRoute: ToolsImageMetadataRoute,
+  ToolsImageResizeRoute: ToolsImageResizeRoute,
   ToolsImageToBase64Route: ToolsImageToBase64Route,
+  ToolsIpInfoRoute: ToolsIpInfoRoute,
+  ToolsIpRangeRoute: ToolsIpRangeRoute,
+  ToolsIpv4Ipv6Route: ToolsIpv4Ipv6Route,
+  ToolsIso8601Route: ToolsIso8601Route,
+  ToolsJoinLinesRoute: ToolsJoinLinesRoute,
+  ToolsJsFormatterRoute: ToolsJsFormatterRoute,
+  ToolsJsMinifierRoute: ToolsJsMinifierRoute,
   ToolsJsonEscapeRoute: ToolsJsonEscapeRoute,
   ToolsJsonFormatRoute: ToolsJsonFormatRoute,
   ToolsJsonToCsvRoute: ToolsJsonToCsvRoute,
