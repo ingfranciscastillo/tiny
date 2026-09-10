@@ -27,6 +27,10 @@ import { Route as ToolsJsonFormatRouteImport } from './routes/tools/json-format'
 import { Route as ToolsJsonToCsvRouteImport } from './routes/tools/json-to-csv'
 import { Route as ToolsJwtDecoderRouteImport } from './routes/tools/jwt-decoder'
 import { Route as ToolsLoremIpsumRouteImport } from './routes/tools/lorem-ipsum'
+import { Route as ToolsQrGeneratorRouteImport } from './routes/tools/qr-generator'
+import { Route as ToolsRegexTesterRouteImport } from './routes/tools/regex-tester'
+import { Route as ToolsRot13CipherRouteImport } from './routes/tools/rot13-cipher'
+import { Route as ToolsSortLinesRouteImport } from './routes/tools/sort-lines'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -118,6 +122,26 @@ const ToolsLoremIpsumRoute = ToolsLoremIpsumRouteImport.update({
   path: '/tools/lorem-ipsum',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsQrGeneratorRoute = ToolsQrGeneratorRouteImport.update({
+  id: '/tools/qr-generator',
+  path: '/tools/qr-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsRegexTesterRoute = ToolsRegexTesterRouteImport.update({
+  id: '/tools/regex-tester',
+  path: '/tools/regex-tester',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsRot13CipherRoute = ToolsRot13CipherRouteImport.update({
+  id: '/tools/rot13-cipher',
+  path: '/tools/rot13-cipher',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsSortLinesRoute = ToolsSortLinesRouteImport.update({
+  id: '/tools/sort-lines',
+  path: '/tools/sort-lines',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -138,6 +162,10 @@ export interface FileRoutesByFullPath {
   '/tools/json-to-csv': typeof ToolsJsonToCsvRoute
   '/tools/jwt-decoder': typeof ToolsJwtDecoderRoute
   '/tools/lorem-ipsum': typeof ToolsLoremIpsumRoute
+  '/tools/qr-generator': typeof ToolsQrGeneratorRoute
+  '/tools/regex-tester': typeof ToolsRegexTesterRoute
+  '/tools/rot13-cipher': typeof ToolsRot13CipherRoute
+  '/tools/sort-lines': typeof ToolsSortLinesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -158,6 +186,10 @@ export interface FileRoutesByTo {
   '/tools/json-to-csv': typeof ToolsJsonToCsvRoute
   '/tools/jwt-decoder': typeof ToolsJwtDecoderRoute
   '/tools/lorem-ipsum': typeof ToolsLoremIpsumRoute
+  '/tools/qr-generator': typeof ToolsQrGeneratorRoute
+  '/tools/regex-tester': typeof ToolsRegexTesterRoute
+  '/tools/rot13-cipher': typeof ToolsRot13CipherRoute
+  '/tools/sort-lines': typeof ToolsSortLinesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -179,6 +211,10 @@ export interface FileRoutesById {
   '/tools/json-to-csv': typeof ToolsJsonToCsvRoute
   '/tools/jwt-decoder': typeof ToolsJwtDecoderRoute
   '/tools/lorem-ipsum': typeof ToolsLoremIpsumRoute
+  '/tools/qr-generator': typeof ToolsQrGeneratorRoute
+  '/tools/regex-tester': typeof ToolsRegexTesterRoute
+  '/tools/rot13-cipher': typeof ToolsRot13CipherRoute
+  '/tools/sort-lines': typeof ToolsSortLinesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -201,6 +237,10 @@ export interface FileRouteTypes {
     | '/tools/json-to-csv'
     | '/tools/jwt-decoder'
     | '/tools/lorem-ipsum'
+    | '/tools/qr-generator'
+    | '/tools/regex-tester'
+    | '/tools/rot13-cipher'
+    | '/tools/sort-lines'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -221,6 +261,10 @@ export interface FileRouteTypes {
     | '/tools/json-to-csv'
     | '/tools/jwt-decoder'
     | '/tools/lorem-ipsum'
+    | '/tools/qr-generator'
+    | '/tools/regex-tester'
+    | '/tools/rot13-cipher'
+    | '/tools/sort-lines'
   id:
     | '__root__'
     | '/'
@@ -241,6 +285,10 @@ export interface FileRouteTypes {
     | '/tools/json-to-csv'
     | '/tools/jwt-decoder'
     | '/tools/lorem-ipsum'
+    | '/tools/qr-generator'
+    | '/tools/regex-tester'
+    | '/tools/rot13-cipher'
+    | '/tools/sort-lines'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -262,6 +310,10 @@ export interface RootRouteChildren {
   ToolsJsonToCsvRoute: typeof ToolsJsonToCsvRoute
   ToolsJwtDecoderRoute: typeof ToolsJwtDecoderRoute
   ToolsLoremIpsumRoute: typeof ToolsLoremIpsumRoute
+  ToolsQrGeneratorRoute: typeof ToolsQrGeneratorRoute
+  ToolsRegexTesterRoute: typeof ToolsRegexTesterRoute
+  ToolsRot13CipherRoute: typeof ToolsRot13CipherRoute
+  ToolsSortLinesRoute: typeof ToolsSortLinesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -392,6 +444,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsLoremIpsumRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/qr-generator': {
+      id: '/tools/qr-generator'
+      path: '/tools/qr-generator'
+      fullPath: '/tools/qr-generator'
+      preLoaderRoute: typeof ToolsQrGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/regex-tester': {
+      id: '/tools/regex-tester'
+      path: '/tools/regex-tester'
+      fullPath: '/tools/regex-tester'
+      preLoaderRoute: typeof ToolsRegexTesterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/rot13-cipher': {
+      id: '/tools/rot13-cipher'
+      path: '/tools/rot13-cipher'
+      fullPath: '/tools/rot13-cipher'
+      preLoaderRoute: typeof ToolsRot13CipherRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/sort-lines': {
+      id: '/tools/sort-lines'
+      path: '/tools/sort-lines'
+      fullPath: '/tools/sort-lines'
+      preLoaderRoute: typeof ToolsSortLinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -414,6 +494,10 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsJsonToCsvRoute: ToolsJsonToCsvRoute,
   ToolsJwtDecoderRoute: ToolsJwtDecoderRoute,
   ToolsLoremIpsumRoute: ToolsLoremIpsumRoute,
+  ToolsQrGeneratorRoute: ToolsQrGeneratorRoute,
+  ToolsRegexTesterRoute: ToolsRegexTesterRoute,
+  ToolsRot13CipherRoute: ToolsRot13CipherRoute,
+  ToolsSortLinesRoute: ToolsSortLinesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

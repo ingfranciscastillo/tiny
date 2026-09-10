@@ -62,7 +62,7 @@ export const TOOLS: Tool[] = [
 		name: "Regex Tester",
 		description: "Test regular expressions",
 		category: "popular",
-		path: "/tools/regex",
+		path: "/tools/regex-tester",
 		runsLocally: true,
 	},
 	{
@@ -94,7 +94,7 @@ export const TOOLS: Tool[] = [
 		name: "QR Generator",
 		description: "Create a QR code",
 		category: "popular",
-		path: "/tools/qr",
+		path: "/tools/qr-generator",
 		runsLocally: true,
 	},
 	{
@@ -248,7 +248,7 @@ export const TOOLS: Tool[] = [
 		name: "ROT13",
 		description: "Rotate letters by 13",
 		category: "encoding",
-		path: "/tools/rot13",
+		path: "/tools/rot13-cipher",
 		runsLocally: true,
 	},
 ];
