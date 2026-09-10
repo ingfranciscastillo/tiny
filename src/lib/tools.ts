@@ -204,7 +204,7 @@ export const TOOLS: Tool[] = [
 		name: "Cron Explain",
 		description: "Decode cron expressions",
 		category: "development",
-		path: "/tools/cron",
+		path: "/tools/cron-explain",
 		runsLocally: true,
 	},
 

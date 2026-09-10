@@ -14,6 +14,8 @@ import { Route as ToolsBase64ConverterRouteImport } from './routes/tools/base64-
 import { Route as ToolsBinaryConverterRouteImport } from './routes/tools/binary-converter'
 import { Route as ToolsCaseConverterRouteImport } from './routes/tools/case-converter'
 import { Route as ToolsColorConverterRouteImport } from './routes/tools/color-converter'
+import { Route as ToolsCronExplainRouteImport } from './routes/tools/cron-explain'
+import { Route as ToolsCsvToJsonRouteImport } from './routes/tools/csv-to-json'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +42,16 @@ const ToolsColorConverterRoute = ToolsColorConverterRouteImport.update({
   path: '/tools/color-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsCronExplainRoute = ToolsCronExplainRouteImport.update({
+  id: '/tools/cron-explain',
+  path: '/tools/cron-explain',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsCsvToJsonRoute = ToolsCsvToJsonRouteImport.update({
+  id: '/tools/csv-to-json',
+  path: '/tools/csv-to-json',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +59,8 @@ export interface FileRoutesByFullPath {
   '/tools/binary-converter': typeof ToolsBinaryConverterRoute
   '/tools/case-converter': typeof ToolsCaseConverterRoute
   '/tools/color-converter': typeof ToolsColorConverterRoute
+  '/tools/cron-explain': typeof ToolsCronExplainRoute
+  '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +68,8 @@ export interface FileRoutesByTo {
   '/tools/binary-converter': typeof ToolsBinaryConverterRoute
   '/tools/case-converter': typeof ToolsCaseConverterRoute
   '/tools/color-converter': typeof ToolsColorConverterRoute
+  '/tools/cron-explain': typeof ToolsCronExplainRoute
+  '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,6 +78,8 @@ export interface FileRoutesById {
   '/tools/binary-converter': typeof ToolsBinaryConverterRoute
   '/tools/case-converter': typeof ToolsCaseConverterRoute
   '/tools/color-converter': typeof ToolsColorConverterRoute
+  '/tools/cron-explain': typeof ToolsCronExplainRoute
+  '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -71,6 +89,8 @@ export interface FileRouteTypes {
     | '/tools/binary-converter'
     | '/tools/case-converter'
     | '/tools/color-converter'
+    | '/tools/cron-explain'
+    | '/tools/csv-to-json'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -78,6 +98,8 @@ export interface FileRouteTypes {
     | '/tools/binary-converter'
     | '/tools/case-converter'
     | '/tools/color-converter'
+    | '/tools/cron-explain'
+    | '/tools/csv-to-json'
   id:
     | '__root__'
     | '/'
@@ -85,6 +107,8 @@ export interface FileRouteTypes {
     | '/tools/binary-converter'
     | '/tools/case-converter'
     | '/tools/color-converter'
+    | '/tools/cron-explain'
+    | '/tools/csv-to-json'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -93,6 +117,8 @@ export interface RootRouteChildren {
   ToolsBinaryConverterRoute: typeof ToolsBinaryConverterRoute
   ToolsCaseConverterRoute: typeof ToolsCaseConverterRoute
   ToolsColorConverterRoute: typeof ToolsColorConverterRoute
+  ToolsCronExplainRoute: typeof ToolsCronExplainRoute
+  ToolsCsvToJsonRoute: typeof ToolsCsvToJsonRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -132,6 +158,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsColorConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/cron-explain': {
+      id: '/tools/cron-explain'
+      path: '/tools/cron-explain'
+      fullPath: '/tools/cron-explain'
+      preLoaderRoute: typeof ToolsCronExplainRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/csv-to-json': {
+      id: '/tools/csv-to-json'
+      path: '/tools/csv-to-json'
+      fullPath: '/tools/csv-to-json'
+      preLoaderRoute: typeof ToolsCsvToJsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -141,6 +181,8 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsBinaryConverterRoute: ToolsBinaryConverterRoute,
   ToolsCaseConverterRoute: ToolsCaseConverterRoute,
   ToolsColorConverterRoute: ToolsColorConverterRoute,
+  ToolsCronExplainRoute: ToolsCronExplainRoute,
+  ToolsCsvToJsonRoute: ToolsCsvToJsonRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
