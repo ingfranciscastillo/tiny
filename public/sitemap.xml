@@ -73,6 +73,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/average-median</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tiny-tools-app.vercel.app/tools/hash-generator</loc>
     <priority>0.8</priority>
   </url>
@@ -106,6 +110,14 @@
   </url>
   <url>
     <loc>https://tiny-tools-app.vercel.app/tools/rot13-cipher</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/base32-converter</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/ascii-converter</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
