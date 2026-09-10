@@ -183,6 +183,22 @@ export const TOOLS: Tool[] = [
 		path: "/tools/average-median",
 		runsLocally: true,
 	},
+	{
+		id: "csv-formatter",
+		name: "CSV Formatter",
+		description: "Format messy CSV",
+		category: "data",
+		path: "/tools/csv-formatter",
+		runsLocally: true,
+	},
+	{
+		id: "csv-to-markdown",
+		name: "CSV → Markdown",
+		description: "Convert CSV to Markdown table",
+		category: "data",
+		path: "/tools/csv-to-markdown",
+		runsLocally: true,
+	},
 
 	// DEVELOPMENT
 	{
@@ -223,6 +239,30 @@ export const TOOLS: Tool[] = [
 		description: "Build cron expressions",
 		category: "development",
 		path: "/tools/cron-builder",
+		runsLocally: true,
+	},
+	{
+		id: "csp-builder",
+		name: "CSP Builder",
+		description: "Build Content-Security-Policy",
+		category: "development",
+		path: "/tools/csp-builder",
+		runsLocally: true,
+	},
+	{
+		id: "css-formatter",
+		name: "CSS Formatter",
+		description: "Format CSS",
+		category: "development",
+		path: "/tools/css-formatter",
+		runsLocally: true,
+	},
+	{
+		id: "css-minifier",
+		name: "CSS Minifier",
+		description: "Minify CSS",
+		category: "development",
+		path: "/tools/css-minifier",
 		runsLocally: true,
 	},
 	{

@@ -28,7 +28,12 @@ import { Route as ToolsColorGeneratorRouteImport } from './routes/tools/color-ge
 import { Route as ToolsColorMixerRouteImport } from './routes/tools/color-mixer'
 import { Route as ToolsCronBuilderRouteImport } from './routes/tools/cron-builder'
 import { Route as ToolsCronExplainRouteImport } from './routes/tools/cron-explain'
+import { Route as ToolsCspBuilderRouteImport } from './routes/tools/csp-builder'
+import { Route as ToolsCssFormatterRouteImport } from './routes/tools/css-formatter'
+import { Route as ToolsCssMinifierRouteImport } from './routes/tools/css-minifier'
+import { Route as ToolsCsvFormatterRouteImport } from './routes/tools/csv-formatter'
 import { Route as ToolsCsvToJsonRouteImport } from './routes/tools/csv-to-json'
+import { Route as ToolsCsvToMarkdownRouteImport } from './routes/tools/csv-to-markdown'
 import { Route as ToolsHashGeneratorRouteImport } from './routes/tools/hash-generator'
 import { Route as ToolsHexConverterRouteImport } from './routes/tools/hex-converter'
 import { Route as ToolsHtmlEntitiesRouteImport } from './routes/tools/html-entities'
@@ -145,9 +150,34 @@ const ToolsCronExplainRoute = ToolsCronExplainRouteImport.update({
   path: '/tools/cron-explain',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsCspBuilderRoute = ToolsCspBuilderRouteImport.update({
+  id: '/tools/csp-builder',
+  path: '/tools/csp-builder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsCssFormatterRoute = ToolsCssFormatterRouteImport.update({
+  id: '/tools/css-formatter',
+  path: '/tools/css-formatter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsCssMinifierRoute = ToolsCssMinifierRouteImport.update({
+  id: '/tools/css-minifier',
+  path: '/tools/css-minifier',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsCsvFormatterRoute = ToolsCsvFormatterRouteImport.update({
+  id: '/tools/csv-formatter',
+  path: '/tools/csv-formatter',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsCsvToJsonRoute = ToolsCsvToJsonRouteImport.update({
   id: '/tools/csv-to-json',
   path: '/tools/csv-to-json',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsCsvToMarkdownRoute = ToolsCsvToMarkdownRouteImport.update({
+  id: '/tools/csv-to-markdown',
+  path: '/tools/csv-to-markdown',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsHashGeneratorRoute = ToolsHashGeneratorRouteImport.update({
@@ -271,7 +301,12 @@ export interface FileRoutesByFullPath {
   '/tools/color-mixer': typeof ToolsColorMixerRoute
   '/tools/cron-builder': typeof ToolsCronBuilderRoute
   '/tools/cron-explain': typeof ToolsCronExplainRoute
+  '/tools/csp-builder': typeof ToolsCspBuilderRoute
+  '/tools/css-formatter': typeof ToolsCssFormatterRoute
+  '/tools/css-minifier': typeof ToolsCssMinifierRoute
+  '/tools/csv-formatter': typeof ToolsCsvFormatterRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
+  '/tools/csv-to-markdown': typeof ToolsCsvToMarkdownRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
   '/tools/hex-converter': typeof ToolsHexConverterRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
@@ -313,7 +348,12 @@ export interface FileRoutesByTo {
   '/tools/color-mixer': typeof ToolsColorMixerRoute
   '/tools/cron-builder': typeof ToolsCronBuilderRoute
   '/tools/cron-explain': typeof ToolsCronExplainRoute
+  '/tools/csp-builder': typeof ToolsCspBuilderRoute
+  '/tools/css-formatter': typeof ToolsCssFormatterRoute
+  '/tools/css-minifier': typeof ToolsCssMinifierRoute
+  '/tools/csv-formatter': typeof ToolsCsvFormatterRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
+  '/tools/csv-to-markdown': typeof ToolsCsvToMarkdownRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
   '/tools/hex-converter': typeof ToolsHexConverterRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
@@ -356,7 +396,12 @@ export interface FileRoutesById {
   '/tools/color-mixer': typeof ToolsColorMixerRoute
   '/tools/cron-builder': typeof ToolsCronBuilderRoute
   '/tools/cron-explain': typeof ToolsCronExplainRoute
+  '/tools/csp-builder': typeof ToolsCspBuilderRoute
+  '/tools/css-formatter': typeof ToolsCssFormatterRoute
+  '/tools/css-minifier': typeof ToolsCssMinifierRoute
+  '/tools/csv-formatter': typeof ToolsCsvFormatterRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
+  '/tools/csv-to-markdown': typeof ToolsCsvToMarkdownRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
   '/tools/hex-converter': typeof ToolsHexConverterRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
@@ -400,7 +445,12 @@ export interface FileRouteTypes {
     | '/tools/color-mixer'
     | '/tools/cron-builder'
     | '/tools/cron-explain'
+    | '/tools/csp-builder'
+    | '/tools/css-formatter'
+    | '/tools/css-minifier'
+    | '/tools/csv-formatter'
     | '/tools/csv-to-json'
+    | '/tools/csv-to-markdown'
     | '/tools/hash-generator'
     | '/tools/hex-converter'
     | '/tools/html-entities'
@@ -442,7 +492,12 @@ export interface FileRouteTypes {
     | '/tools/color-mixer'
     | '/tools/cron-builder'
     | '/tools/cron-explain'
+    | '/tools/csp-builder'
+    | '/tools/css-formatter'
+    | '/tools/css-minifier'
+    | '/tools/csv-formatter'
     | '/tools/csv-to-json'
+    | '/tools/csv-to-markdown'
     | '/tools/hash-generator'
     | '/tools/hex-converter'
     | '/tools/html-entities'
@@ -484,7 +539,12 @@ export interface FileRouteTypes {
     | '/tools/color-mixer'
     | '/tools/cron-builder'
     | '/tools/cron-explain'
+    | '/tools/csp-builder'
+    | '/tools/css-formatter'
+    | '/tools/css-minifier'
+    | '/tools/csv-formatter'
     | '/tools/csv-to-json'
+    | '/tools/csv-to-markdown'
     | '/tools/hash-generator'
     | '/tools/hex-converter'
     | '/tools/html-entities'
@@ -527,7 +587,12 @@ export interface RootRouteChildren {
   ToolsColorMixerRoute: typeof ToolsColorMixerRoute
   ToolsCronBuilderRoute: typeof ToolsCronBuilderRoute
   ToolsCronExplainRoute: typeof ToolsCronExplainRoute
+  ToolsCspBuilderRoute: typeof ToolsCspBuilderRoute
+  ToolsCssFormatterRoute: typeof ToolsCssFormatterRoute
+  ToolsCssMinifierRoute: typeof ToolsCssMinifierRoute
+  ToolsCsvFormatterRoute: typeof ToolsCsvFormatterRoute
   ToolsCsvToJsonRoute: typeof ToolsCsvToJsonRoute
+  ToolsCsvToMarkdownRoute: typeof ToolsCsvToMarkdownRoute
   ToolsHashGeneratorRoute: typeof ToolsHashGeneratorRoute
   ToolsHexConverterRoute: typeof ToolsHexConverterRoute
   ToolsHtmlEntitiesRoute: typeof ToolsHtmlEntitiesRoute
@@ -685,11 +750,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsCronExplainRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/csp-builder': {
+      id: '/tools/csp-builder'
+      path: '/tools/csp-builder'
+      fullPath: '/tools/csp-builder'
+      preLoaderRoute: typeof ToolsCspBuilderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/css-formatter': {
+      id: '/tools/css-formatter'
+      path: '/tools/css-formatter'
+      fullPath: '/tools/css-formatter'
+      preLoaderRoute: typeof ToolsCssFormatterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/css-minifier': {
+      id: '/tools/css-minifier'
+      path: '/tools/css-minifier'
+      fullPath: '/tools/css-minifier'
+      preLoaderRoute: typeof ToolsCssMinifierRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/csv-formatter': {
+      id: '/tools/csv-formatter'
+      path: '/tools/csv-formatter'
+      fullPath: '/tools/csv-formatter'
+      preLoaderRoute: typeof ToolsCsvFormatterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/csv-to-json': {
       id: '/tools/csv-to-json'
       path: '/tools/csv-to-json'
       fullPath: '/tools/csv-to-json'
       preLoaderRoute: typeof ToolsCsvToJsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/csv-to-markdown': {
+      id: '/tools/csv-to-markdown'
+      path: '/tools/csv-to-markdown'
+      fullPath: '/tools/csv-to-markdown'
+      preLoaderRoute: typeof ToolsCsvToMarkdownRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/hash-generator': {
@@ -855,7 +955,12 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsColorMixerRoute: ToolsColorMixerRoute,
   ToolsCronBuilderRoute: ToolsCronBuilderRoute,
   ToolsCronExplainRoute: ToolsCronExplainRoute,
+  ToolsCspBuilderRoute: ToolsCspBuilderRoute,
+  ToolsCssFormatterRoute: ToolsCssFormatterRoute,
+  ToolsCssMinifierRoute: ToolsCssMinifierRoute,
+  ToolsCsvFormatterRoute: ToolsCsvFormatterRoute,
   ToolsCsvToJsonRoute: ToolsCsvToJsonRoute,
+  ToolsCsvToMarkdownRoute: ToolsCsvToMarkdownRoute,
   ToolsHashGeneratorRoute: ToolsHashGeneratorRoute,
   ToolsHexConverterRoute: ToolsHexConverterRoute,
   ToolsHtmlEntitiesRoute: ToolsHtmlEntitiesRoute,
