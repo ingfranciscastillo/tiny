@@ -105,6 +105,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/html-formatter</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/html-minifier</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/html-link-generator</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tiny-tools-app.vercel.app/tools/url-encode</loc>
     <priority>0.8</priority>
   </url>
@@ -181,6 +193,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/http-headers</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/http-status</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tiny-tools-app.vercel.app/tools/image-compress</loc>
     <priority>0.8</priority>
   </url>
@@ -194,6 +214,10 @@
   </url>
   <url>
     <loc>https://tiny-tools-app.vercel.app/tools/favicon-generator</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/image-format-converter</loc>
     <priority>0.8</priority>
   </url>
   <url>

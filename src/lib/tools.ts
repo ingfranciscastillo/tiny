@@ -242,6 +242,30 @@ export const TOOLS: Tool[] = [
 		runsLocally: true,
 	},
 	{
+		id: "html-formatter",
+		name: "HTML Formatter",
+		description: "Format HTML",
+		category: "development",
+		path: "/tools/html-formatter",
+		runsLocally: true,
+	},
+	{
+		id: "html-minifier",
+		name: "HTML Minifier",
+		description: "Minify HTML",
+		category: "development",
+		path: "/tools/html-minifier",
+		runsLocally: true,
+	},
+	{
+		id: "html-link-generator",
+		name: "HTML Link Generator",
+		description: "Generate <a> tags",
+		category: "development",
+		path: "/tools/html-link-generator",
+		runsLocally: true,
+	},
+	{
 		id: "url-encode",
 		name: "URL Encode",
 		description: "Encode / decode URLs",
@@ -393,6 +417,22 @@ export const TOOLS: Tool[] = [
 		path: "/tools/hmac-generator",
 		runsLocally: true,
 	},
+	{
+		id: "http-headers",
+		name: "HTTP Headers",
+		description: "Format and inspect headers",
+		category: "development",
+		path: "/tools/http-headers",
+		runsLocally: true,
+	},
+	{
+		id: "http-status",
+		name: "HTTP Status",
+		description: "Explain HTTP status codes",
+		category: "development",
+		path: "/tools/http-status",
+		runsLocally: true,
+	},
 
 	// IMAGES
 	{
@@ -425,6 +465,14 @@ export const TOOLS: Tool[] = [
 		description: "Generate favicon from image/text",
 		category: "images",
 		path: "/tools/favicon-generator",
+		runsLocally: true,
+	},
+	{
+		id: "image-format-converter",
+		name: "Image Format Converter",
+		description: "PNG · JPG · WebP",
+		category: "images",
+		path: "/tools/image-format-converter",
 		runsLocally: true,
 	},
 

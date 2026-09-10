@@ -52,8 +52,14 @@ import { Route as ToolsHashGeneratorRouteImport } from './routes/tools/hash-gene
 import { Route as ToolsHexConverterRouteImport } from './routes/tools/hex-converter'
 import { Route as ToolsHmacGeneratorRouteImport } from './routes/tools/hmac-generator'
 import { Route as ToolsHtmlEntitiesRouteImport } from './routes/tools/html-entities'
+import { Route as ToolsHtmlFormatterRouteImport } from './routes/tools/html-formatter'
+import { Route as ToolsHtmlLinkGeneratorRouteImport } from './routes/tools/html-link-generator'
+import { Route as ToolsHtmlMinifierRouteImport } from './routes/tools/html-minifier'
+import { Route as ToolsHttpHeadersRouteImport } from './routes/tools/http-headers'
+import { Route as ToolsHttpStatusRouteImport } from './routes/tools/http-status'
 import { Route as ToolsImageCompressRouteImport } from './routes/tools/image-compress'
 import { Route as ToolsImageCropperRouteImport } from './routes/tools/image-cropper'
+import { Route as ToolsImageFormatConverterRouteImport } from './routes/tools/image-format-converter'
 import { Route as ToolsImageToBase64RouteImport } from './routes/tools/image-to-base64'
 import { Route as ToolsJsonEscapeRouteImport } from './routes/tools/json-escape'
 import { Route as ToolsJsonFormatRouteImport } from './routes/tools/json-format'
@@ -286,6 +292,31 @@ const ToolsHtmlEntitiesRoute = ToolsHtmlEntitiesRouteImport.update({
   path: '/tools/html-entities',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsHtmlFormatterRoute = ToolsHtmlFormatterRouteImport.update({
+  id: '/tools/html-formatter',
+  path: '/tools/html-formatter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsHtmlLinkGeneratorRoute = ToolsHtmlLinkGeneratorRouteImport.update({
+  id: '/tools/html-link-generator',
+  path: '/tools/html-link-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsHtmlMinifierRoute = ToolsHtmlMinifierRouteImport.update({
+  id: '/tools/html-minifier',
+  path: '/tools/html-minifier',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsHttpHeadersRoute = ToolsHttpHeadersRouteImport.update({
+  id: '/tools/http-headers',
+  path: '/tools/http-headers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsHttpStatusRoute = ToolsHttpStatusRouteImport.update({
+  id: '/tools/http-status',
+  path: '/tools/http-status',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsImageCompressRoute = ToolsImageCompressRouteImport.update({
   id: '/tools/image-compress',
   path: '/tools/image-compress',
@@ -296,6 +327,12 @@ const ToolsImageCropperRoute = ToolsImageCropperRouteImport.update({
   path: '/tools/image-cropper',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsImageFormatConverterRoute =
+  ToolsImageFormatConverterRouteImport.update({
+    id: '/tools/image-format-converter',
+    path: '/tools/image-format-converter',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ToolsImageToBase64Route = ToolsImageToBase64RouteImport.update({
   id: '/tools/image-to-base64',
   path: '/tools/image-to-base64',
@@ -416,8 +453,14 @@ export interface FileRoutesByFullPath {
   '/tools/hex-converter': typeof ToolsHexConverterRoute
   '/tools/hmac-generator': typeof ToolsHmacGeneratorRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
+  '/tools/html-formatter': typeof ToolsHtmlFormatterRoute
+  '/tools/html-link-generator': typeof ToolsHtmlLinkGeneratorRoute
+  '/tools/html-minifier': typeof ToolsHtmlMinifierRoute
+  '/tools/http-headers': typeof ToolsHttpHeadersRoute
+  '/tools/http-status': typeof ToolsHttpStatusRoute
   '/tools/image-compress': typeof ToolsImageCompressRoute
   '/tools/image-cropper': typeof ToolsImageCropperRoute
+  '/tools/image-format-converter': typeof ToolsImageFormatConverterRoute
   '/tools/image-to-base64': typeof ToolsImageToBase64Route
   '/tools/json-escape': typeof ToolsJsonEscapeRoute
   '/tools/json-format': typeof ToolsJsonFormatRoute
@@ -478,8 +521,14 @@ export interface FileRoutesByTo {
   '/tools/hex-converter': typeof ToolsHexConverterRoute
   '/tools/hmac-generator': typeof ToolsHmacGeneratorRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
+  '/tools/html-formatter': typeof ToolsHtmlFormatterRoute
+  '/tools/html-link-generator': typeof ToolsHtmlLinkGeneratorRoute
+  '/tools/html-minifier': typeof ToolsHtmlMinifierRoute
+  '/tools/http-headers': typeof ToolsHttpHeadersRoute
+  '/tools/http-status': typeof ToolsHttpStatusRoute
   '/tools/image-compress': typeof ToolsImageCompressRoute
   '/tools/image-cropper': typeof ToolsImageCropperRoute
+  '/tools/image-format-converter': typeof ToolsImageFormatConverterRoute
   '/tools/image-to-base64': typeof ToolsImageToBase64Route
   '/tools/json-escape': typeof ToolsJsonEscapeRoute
   '/tools/json-format': typeof ToolsJsonFormatRoute
@@ -541,8 +590,14 @@ export interface FileRoutesById {
   '/tools/hex-converter': typeof ToolsHexConverterRoute
   '/tools/hmac-generator': typeof ToolsHmacGeneratorRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
+  '/tools/html-formatter': typeof ToolsHtmlFormatterRoute
+  '/tools/html-link-generator': typeof ToolsHtmlLinkGeneratorRoute
+  '/tools/html-minifier': typeof ToolsHtmlMinifierRoute
+  '/tools/http-headers': typeof ToolsHttpHeadersRoute
+  '/tools/http-status': typeof ToolsHttpStatusRoute
   '/tools/image-compress': typeof ToolsImageCompressRoute
   '/tools/image-cropper': typeof ToolsImageCropperRoute
+  '/tools/image-format-converter': typeof ToolsImageFormatConverterRoute
   '/tools/image-to-base64': typeof ToolsImageToBase64Route
   '/tools/json-escape': typeof ToolsJsonEscapeRoute
   '/tools/json-format': typeof ToolsJsonFormatRoute
@@ -605,8 +660,14 @@ export interface FileRouteTypes {
     | '/tools/hex-converter'
     | '/tools/hmac-generator'
     | '/tools/html-entities'
+    | '/tools/html-formatter'
+    | '/tools/html-link-generator'
+    | '/tools/html-minifier'
+    | '/tools/http-headers'
+    | '/tools/http-status'
     | '/tools/image-compress'
     | '/tools/image-cropper'
+    | '/tools/image-format-converter'
     | '/tools/image-to-base64'
     | '/tools/json-escape'
     | '/tools/json-format'
@@ -667,8 +728,14 @@ export interface FileRouteTypes {
     | '/tools/hex-converter'
     | '/tools/hmac-generator'
     | '/tools/html-entities'
+    | '/tools/html-formatter'
+    | '/tools/html-link-generator'
+    | '/tools/html-minifier'
+    | '/tools/http-headers'
+    | '/tools/http-status'
     | '/tools/image-compress'
     | '/tools/image-cropper'
+    | '/tools/image-format-converter'
     | '/tools/image-to-base64'
     | '/tools/json-escape'
     | '/tools/json-format'
@@ -729,8 +796,14 @@ export interface FileRouteTypes {
     | '/tools/hex-converter'
     | '/tools/hmac-generator'
     | '/tools/html-entities'
+    | '/tools/html-formatter'
+    | '/tools/html-link-generator'
+    | '/tools/html-minifier'
+    | '/tools/http-headers'
+    | '/tools/http-status'
     | '/tools/image-compress'
     | '/tools/image-cropper'
+    | '/tools/image-format-converter'
     | '/tools/image-to-base64'
     | '/tools/json-escape'
     | '/tools/json-format'
@@ -792,8 +865,14 @@ export interface RootRouteChildren {
   ToolsHexConverterRoute: typeof ToolsHexConverterRoute
   ToolsHmacGeneratorRoute: typeof ToolsHmacGeneratorRoute
   ToolsHtmlEntitiesRoute: typeof ToolsHtmlEntitiesRoute
+  ToolsHtmlFormatterRoute: typeof ToolsHtmlFormatterRoute
+  ToolsHtmlLinkGeneratorRoute: typeof ToolsHtmlLinkGeneratorRoute
+  ToolsHtmlMinifierRoute: typeof ToolsHtmlMinifierRoute
+  ToolsHttpHeadersRoute: typeof ToolsHttpHeadersRoute
+  ToolsHttpStatusRoute: typeof ToolsHttpStatusRoute
   ToolsImageCompressRoute: typeof ToolsImageCompressRoute
   ToolsImageCropperRoute: typeof ToolsImageCropperRoute
+  ToolsImageFormatConverterRoute: typeof ToolsImageFormatConverterRoute
   ToolsImageToBase64Route: typeof ToolsImageToBase64Route
   ToolsJsonEscapeRoute: typeof ToolsJsonEscapeRoute
   ToolsJsonFormatRoute: typeof ToolsJsonFormatRoute
@@ -1114,6 +1193,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsHtmlEntitiesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/html-formatter': {
+      id: '/tools/html-formatter'
+      path: '/tools/html-formatter'
+      fullPath: '/tools/html-formatter'
+      preLoaderRoute: typeof ToolsHtmlFormatterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/html-link-generator': {
+      id: '/tools/html-link-generator'
+      path: '/tools/html-link-generator'
+      fullPath: '/tools/html-link-generator'
+      preLoaderRoute: typeof ToolsHtmlLinkGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/html-minifier': {
+      id: '/tools/html-minifier'
+      path: '/tools/html-minifier'
+      fullPath: '/tools/html-minifier'
+      preLoaderRoute: typeof ToolsHtmlMinifierRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/http-headers': {
+      id: '/tools/http-headers'
+      path: '/tools/http-headers'
+      fullPath: '/tools/http-headers'
+      preLoaderRoute: typeof ToolsHttpHeadersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/http-status': {
+      id: '/tools/http-status'
+      path: '/tools/http-status'
+      fullPath: '/tools/http-status'
+      preLoaderRoute: typeof ToolsHttpStatusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/image-compress': {
       id: '/tools/image-compress'
       path: '/tools/image-compress'
@@ -1126,6 +1240,13 @@ declare module '@tanstack/react-router' {
       path: '/tools/image-cropper'
       fullPath: '/tools/image-cropper'
       preLoaderRoute: typeof ToolsImageCropperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/image-format-converter': {
+      id: '/tools/image-format-converter'
+      path: '/tools/image-format-converter'
+      fullPath: '/tools/image-format-converter'
+      preLoaderRoute: typeof ToolsImageFormatConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/image-to-base64': {
@@ -1280,8 +1401,14 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsHexConverterRoute: ToolsHexConverterRoute,
   ToolsHmacGeneratorRoute: ToolsHmacGeneratorRoute,
   ToolsHtmlEntitiesRoute: ToolsHtmlEntitiesRoute,
+  ToolsHtmlFormatterRoute: ToolsHtmlFormatterRoute,
+  ToolsHtmlLinkGeneratorRoute: ToolsHtmlLinkGeneratorRoute,
+  ToolsHtmlMinifierRoute: ToolsHtmlMinifierRoute,
+  ToolsHttpHeadersRoute: ToolsHttpHeadersRoute,
+  ToolsHttpStatusRoute: ToolsHttpStatusRoute,
   ToolsImageCompressRoute: ToolsImageCompressRoute,
   ToolsImageCropperRoute: ToolsImageCropperRoute,
+  ToolsImageFormatConverterRoute: ToolsImageFormatConverterRoute,
   ToolsImageToBase64Route: ToolsImageToBase64Route,
   ToolsJsonEscapeRoute: ToolsJsonEscapeRoute,
   ToolsJsonFormatRoute: ToolsJsonFormatRoute,
