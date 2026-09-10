@@ -116,12 +116,16 @@ function AppShell({ children }: { children: React.ReactNode }) {
 				<div className="max-w-3xl mx-auto px-5 sm:px-6 py-5 flex items-center justify-between font-mono text-[11px] text-muted">
 					<span>tiny · {TOOLS.length} tools · runs locally</span>
 					<span className="flex items-center gap-3">
-						{/* biome-ignore lint/a11y/useValidAnchor: placeholder until real GitHub/Privacy URLs are provided */}
-						<a href="#" className="hover:text-accent transition-tiny">
+						<a
+							href="https://github.com/ingfranciscastillo/tiny"
+							target="_blank"
+							rel="noreferrer"
+							className="hover:text-accent transition-tiny"
+						>
 							GitHub
 						</a>
 						<span className="opacity-40">·</span>
-						{/* biome-ignore lint/a11y/useValidAnchor: placeholder until real GitHub/Privacy URLs are provided */}
+						{/* biome-ignore lint/a11y/useValidAnchor: placeholder until a real Privacy URL is provided */}
 						<a href="#" className="hover:text-accent transition-tiny">
 							Privacy
 						</a>
