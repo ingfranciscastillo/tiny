@@ -173,6 +173,14 @@ export const TOOLS: Tool[] = [
 		path: "/tools/csv-to-json",
 		runsLocally: true,
 	},
+	{
+		id: "average-median",
+		name: "Average / Median",
+		description: "Basic statistics",
+		category: "data",
+		path: "/tools/average-median",
+		runsLocally: true,
+	},
 
 	// DEVELOPMENT
 	{
@@ -249,6 +257,22 @@ export const TOOLS: Tool[] = [
 		description: "Rotate letters by 13",
 		category: "encoding",
 		path: "/tools/rot13-cipher",
+		runsLocally: true,
+	},
+	{
+		id: "base32",
+		name: "Base32",
+		description: "Encode / decode Base32",
+		category: "encoding",
+		path: "/tools/base32-converter",
+		runsLocally: true,
+	},
+	{
+		id: "ascii-converter",
+		name: "ASCII Converter",
+		description: "Text ↔ ASCII codes",
+		category: "encoding",
+		path: "/tools/ascii-converter",
 		runsLocally: true,
 	},
 ];

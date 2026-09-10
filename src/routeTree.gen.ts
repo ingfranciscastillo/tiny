@@ -10,6 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ToolsAsciiConverterRouteImport } from './routes/tools/ascii-converter'
+import { Route as ToolsAverageMedianRouteImport } from './routes/tools/average-median'
+import { Route as ToolsBase32ConverterRouteImport } from './routes/tools/base32-converter'
 import { Route as ToolsBase64ConverterRouteImport } from './routes/tools/base64-converter'
 import { Route as ToolsBinaryConverterRouteImport } from './routes/tools/binary-converter'
 import { Route as ToolsCaseConverterRouteImport } from './routes/tools/case-converter'
@@ -40,6 +43,21 @@ import { Route as ToolsWordCountRouteImport } from './routes/tools/word-count'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsAsciiConverterRoute = ToolsAsciiConverterRouteImport.update({
+  id: '/tools/ascii-converter',
+  path: '/tools/ascii-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsAverageMedianRoute = ToolsAverageMedianRouteImport.update({
+  id: '/tools/average-median',
+  path: '/tools/average-median',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsBase32ConverterRoute = ToolsBase32ConverterRouteImport.update({
+  id: '/tools/base32-converter',
+  path: '/tools/base32-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsBase64ConverterRoute = ToolsBase64ConverterRouteImport.update({
@@ -175,6 +193,9 @@ const ToolsWordCountRoute = ToolsWordCountRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/tools/ascii-converter': typeof ToolsAsciiConverterRoute
+  '/tools/average-median': typeof ToolsAverageMedianRoute
+  '/tools/base32-converter': typeof ToolsBase32ConverterRoute
   '/tools/base64-converter': typeof ToolsBase64ConverterRoute
   '/tools/binary-converter': typeof ToolsBinaryConverterRoute
   '/tools/case-converter': typeof ToolsCaseConverterRoute
@@ -204,6 +225,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/tools/ascii-converter': typeof ToolsAsciiConverterRoute
+  '/tools/average-median': typeof ToolsAverageMedianRoute
+  '/tools/base32-converter': typeof ToolsBase32ConverterRoute
   '/tools/base64-converter': typeof ToolsBase64ConverterRoute
   '/tools/binary-converter': typeof ToolsBinaryConverterRoute
   '/tools/case-converter': typeof ToolsCaseConverterRoute
@@ -234,6 +258,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/tools/ascii-converter': typeof ToolsAsciiConverterRoute
+  '/tools/average-median': typeof ToolsAverageMedianRoute
+  '/tools/base32-converter': typeof ToolsBase32ConverterRoute
   '/tools/base64-converter': typeof ToolsBase64ConverterRoute
   '/tools/binary-converter': typeof ToolsBinaryConverterRoute
   '/tools/case-converter': typeof ToolsCaseConverterRoute
@@ -265,6 +292,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/tools/ascii-converter'
+    | '/tools/average-median'
+    | '/tools/base32-converter'
     | '/tools/base64-converter'
     | '/tools/binary-converter'
     | '/tools/case-converter'
@@ -294,6 +324,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/tools/ascii-converter'
+    | '/tools/average-median'
+    | '/tools/base32-converter'
     | '/tools/base64-converter'
     | '/tools/binary-converter'
     | '/tools/case-converter'
@@ -323,6 +356,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/tools/ascii-converter'
+    | '/tools/average-median'
+    | '/tools/base32-converter'
     | '/tools/base64-converter'
     | '/tools/binary-converter'
     | '/tools/case-converter'
@@ -353,6 +389,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ToolsAsciiConverterRoute: typeof ToolsAsciiConverterRoute
+  ToolsAverageMedianRoute: typeof ToolsAverageMedianRoute
+  ToolsBase32ConverterRoute: typeof ToolsBase32ConverterRoute
   ToolsBase64ConverterRoute: typeof ToolsBase64ConverterRoute
   ToolsBinaryConverterRoute: typeof ToolsBinaryConverterRoute
   ToolsCaseConverterRoute: typeof ToolsCaseConverterRoute
@@ -388,6 +427,27 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/ascii-converter': {
+      id: '/tools/ascii-converter'
+      path: '/tools/ascii-converter'
+      fullPath: '/tools/ascii-converter'
+      preLoaderRoute: typeof ToolsAsciiConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/average-median': {
+      id: '/tools/average-median'
+      path: '/tools/average-median'
+      fullPath: '/tools/average-median'
+      preLoaderRoute: typeof ToolsAverageMedianRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/base32-converter': {
+      id: '/tools/base32-converter'
+      path: '/tools/base32-converter'
+      fullPath: '/tools/base32-converter'
+      preLoaderRoute: typeof ToolsBase32ConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/base64-converter': {
@@ -577,6 +637,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ToolsAsciiConverterRoute: ToolsAsciiConverterRoute,
+  ToolsAverageMedianRoute: ToolsAverageMedianRoute,
+  ToolsBase32ConverterRoute: ToolsBase32ConverterRoute,
   ToolsBase64ConverterRoute: ToolsBase64ConverterRoute,
   ToolsBinaryConverterRoute: ToolsBinaryConverterRoute,
   ToolsCaseConverterRoute: ToolsCaseConverterRoute,
