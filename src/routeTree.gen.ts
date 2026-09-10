@@ -34,6 +34,12 @@ import { Route as ToolsCssMinifierRouteImport } from './routes/tools/css-minifie
 import { Route as ToolsCsvFormatterRouteImport } from './routes/tools/csv-formatter'
 import { Route as ToolsCsvToJsonRouteImport } from './routes/tools/csv-to-json'
 import { Route as ToolsCsvToMarkdownRouteImport } from './routes/tools/csv-to-markdown'
+import { Route as ToolsCuidGeneratorRouteImport } from './routes/tools/cuid-generator'
+import { Route as ToolsDataUriGeneratorRouteImport } from './routes/tools/data-uri-generator'
+import { Route as ToolsDateConverterRouteImport } from './routes/tools/date-converter'
+import { Route as ToolsDateGeneratorRouteImport } from './routes/tools/date-generator'
+import { Route as ToolsDateToTimestampRouteImport } from './routes/tools/date-to-timestamp'
+import { Route as ToolsDnsRecordBuilderRouteImport } from './routes/tools/dns-record-builder'
 import { Route as ToolsHashGeneratorRouteImport } from './routes/tools/hash-generator'
 import { Route as ToolsHexConverterRouteImport } from './routes/tools/hex-converter'
 import { Route as ToolsHtmlEntitiesRouteImport } from './routes/tools/html-entities'
@@ -180,6 +186,36 @@ const ToolsCsvToMarkdownRoute = ToolsCsvToMarkdownRouteImport.update({
   path: '/tools/csv-to-markdown',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsCuidGeneratorRoute = ToolsCuidGeneratorRouteImport.update({
+  id: '/tools/cuid-generator',
+  path: '/tools/cuid-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsDataUriGeneratorRoute = ToolsDataUriGeneratorRouteImport.update({
+  id: '/tools/data-uri-generator',
+  path: '/tools/data-uri-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsDateConverterRoute = ToolsDateConverterRouteImport.update({
+  id: '/tools/date-converter',
+  path: '/tools/date-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsDateGeneratorRoute = ToolsDateGeneratorRouteImport.update({
+  id: '/tools/date-generator',
+  path: '/tools/date-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsDateToTimestampRoute = ToolsDateToTimestampRouteImport.update({
+  id: '/tools/date-to-timestamp',
+  path: '/tools/date-to-timestamp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsDnsRecordBuilderRoute = ToolsDnsRecordBuilderRouteImport.update({
+  id: '/tools/dns-record-builder',
+  path: '/tools/dns-record-builder',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsHashGeneratorRoute = ToolsHashGeneratorRouteImport.update({
   id: '/tools/hash-generator',
   path: '/tools/hash-generator',
@@ -307,6 +343,12 @@ export interface FileRoutesByFullPath {
   '/tools/csv-formatter': typeof ToolsCsvFormatterRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
   '/tools/csv-to-markdown': typeof ToolsCsvToMarkdownRoute
+  '/tools/cuid-generator': typeof ToolsCuidGeneratorRoute
+  '/tools/data-uri-generator': typeof ToolsDataUriGeneratorRoute
+  '/tools/date-converter': typeof ToolsDateConverterRoute
+  '/tools/date-generator': typeof ToolsDateGeneratorRoute
+  '/tools/date-to-timestamp': typeof ToolsDateToTimestampRoute
+  '/tools/dns-record-builder': typeof ToolsDnsRecordBuilderRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
   '/tools/hex-converter': typeof ToolsHexConverterRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
@@ -354,6 +396,12 @@ export interface FileRoutesByTo {
   '/tools/csv-formatter': typeof ToolsCsvFormatterRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
   '/tools/csv-to-markdown': typeof ToolsCsvToMarkdownRoute
+  '/tools/cuid-generator': typeof ToolsCuidGeneratorRoute
+  '/tools/data-uri-generator': typeof ToolsDataUriGeneratorRoute
+  '/tools/date-converter': typeof ToolsDateConverterRoute
+  '/tools/date-generator': typeof ToolsDateGeneratorRoute
+  '/tools/date-to-timestamp': typeof ToolsDateToTimestampRoute
+  '/tools/dns-record-builder': typeof ToolsDnsRecordBuilderRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
   '/tools/hex-converter': typeof ToolsHexConverterRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
@@ -402,6 +450,12 @@ export interface FileRoutesById {
   '/tools/csv-formatter': typeof ToolsCsvFormatterRoute
   '/tools/csv-to-json': typeof ToolsCsvToJsonRoute
   '/tools/csv-to-markdown': typeof ToolsCsvToMarkdownRoute
+  '/tools/cuid-generator': typeof ToolsCuidGeneratorRoute
+  '/tools/data-uri-generator': typeof ToolsDataUriGeneratorRoute
+  '/tools/date-converter': typeof ToolsDateConverterRoute
+  '/tools/date-generator': typeof ToolsDateGeneratorRoute
+  '/tools/date-to-timestamp': typeof ToolsDateToTimestampRoute
+  '/tools/dns-record-builder': typeof ToolsDnsRecordBuilderRoute
   '/tools/hash-generator': typeof ToolsHashGeneratorRoute
   '/tools/hex-converter': typeof ToolsHexConverterRoute
   '/tools/html-entities': typeof ToolsHtmlEntitiesRoute
@@ -451,6 +505,12 @@ export interface FileRouteTypes {
     | '/tools/csv-formatter'
     | '/tools/csv-to-json'
     | '/tools/csv-to-markdown'
+    | '/tools/cuid-generator'
+    | '/tools/data-uri-generator'
+    | '/tools/date-converter'
+    | '/tools/date-generator'
+    | '/tools/date-to-timestamp'
+    | '/tools/dns-record-builder'
     | '/tools/hash-generator'
     | '/tools/hex-converter'
     | '/tools/html-entities'
@@ -498,6 +558,12 @@ export interface FileRouteTypes {
     | '/tools/csv-formatter'
     | '/tools/csv-to-json'
     | '/tools/csv-to-markdown'
+    | '/tools/cuid-generator'
+    | '/tools/data-uri-generator'
+    | '/tools/date-converter'
+    | '/tools/date-generator'
+    | '/tools/date-to-timestamp'
+    | '/tools/dns-record-builder'
     | '/tools/hash-generator'
     | '/tools/hex-converter'
     | '/tools/html-entities'
@@ -545,6 +611,12 @@ export interface FileRouteTypes {
     | '/tools/csv-formatter'
     | '/tools/csv-to-json'
     | '/tools/csv-to-markdown'
+    | '/tools/cuid-generator'
+    | '/tools/data-uri-generator'
+    | '/tools/date-converter'
+    | '/tools/date-generator'
+    | '/tools/date-to-timestamp'
+    | '/tools/dns-record-builder'
     | '/tools/hash-generator'
     | '/tools/hex-converter'
     | '/tools/html-entities'
@@ -593,6 +665,12 @@ export interface RootRouteChildren {
   ToolsCsvFormatterRoute: typeof ToolsCsvFormatterRoute
   ToolsCsvToJsonRoute: typeof ToolsCsvToJsonRoute
   ToolsCsvToMarkdownRoute: typeof ToolsCsvToMarkdownRoute
+  ToolsCuidGeneratorRoute: typeof ToolsCuidGeneratorRoute
+  ToolsDataUriGeneratorRoute: typeof ToolsDataUriGeneratorRoute
+  ToolsDateConverterRoute: typeof ToolsDateConverterRoute
+  ToolsDateGeneratorRoute: typeof ToolsDateGeneratorRoute
+  ToolsDateToTimestampRoute: typeof ToolsDateToTimestampRoute
+  ToolsDnsRecordBuilderRoute: typeof ToolsDnsRecordBuilderRoute
   ToolsHashGeneratorRoute: typeof ToolsHashGeneratorRoute
   ToolsHexConverterRoute: typeof ToolsHexConverterRoute
   ToolsHtmlEntitiesRoute: typeof ToolsHtmlEntitiesRoute
@@ -792,6 +870,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsCsvToMarkdownRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/cuid-generator': {
+      id: '/tools/cuid-generator'
+      path: '/tools/cuid-generator'
+      fullPath: '/tools/cuid-generator'
+      preLoaderRoute: typeof ToolsCuidGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/data-uri-generator': {
+      id: '/tools/data-uri-generator'
+      path: '/tools/data-uri-generator'
+      fullPath: '/tools/data-uri-generator'
+      preLoaderRoute: typeof ToolsDataUriGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/date-converter': {
+      id: '/tools/date-converter'
+      path: '/tools/date-converter'
+      fullPath: '/tools/date-converter'
+      preLoaderRoute: typeof ToolsDateConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/date-generator': {
+      id: '/tools/date-generator'
+      path: '/tools/date-generator'
+      fullPath: '/tools/date-generator'
+      preLoaderRoute: typeof ToolsDateGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/date-to-timestamp': {
+      id: '/tools/date-to-timestamp'
+      path: '/tools/date-to-timestamp'
+      fullPath: '/tools/date-to-timestamp'
+      preLoaderRoute: typeof ToolsDateToTimestampRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/dns-record-builder': {
+      id: '/tools/dns-record-builder'
+      path: '/tools/dns-record-builder'
+      fullPath: '/tools/dns-record-builder'
+      preLoaderRoute: typeof ToolsDnsRecordBuilderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/hash-generator': {
       id: '/tools/hash-generator'
       path: '/tools/hash-generator'
@@ -961,6 +1081,12 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsCsvFormatterRoute: ToolsCsvFormatterRoute,
   ToolsCsvToJsonRoute: ToolsCsvToJsonRoute,
   ToolsCsvToMarkdownRoute: ToolsCsvToMarkdownRoute,
+  ToolsCuidGeneratorRoute: ToolsCuidGeneratorRoute,
+  ToolsDataUriGeneratorRoute: ToolsDataUriGeneratorRoute,
+  ToolsDateConverterRoute: ToolsDateConverterRoute,
+  ToolsDateGeneratorRoute: ToolsDateGeneratorRoute,
+  ToolsDateToTimestampRoute: ToolsDateToTimestampRoute,
+  ToolsDnsRecordBuilderRoute: ToolsDnsRecordBuilderRoute,
   ToolsHashGeneratorRoute: ToolsHashGeneratorRoute,
   ToolsHexConverterRoute: ToolsHexConverterRoute,
   ToolsHtmlEntitiesRoute: ToolsHtmlEntitiesRoute,
