@@ -1,5 +1,19 @@
-
 @import "tailwindcss";
+
+@theme {
+  --animate-slide-in: slide-in 150ms ease-out;
+
+  @keyframes slide-in {
+    from {
+      transform: translateY(-4px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -15,3 +29,78 @@ body {
   margin: 0;
 }
 
+@layer base {
+  :root {
+    --background: 210 8% 95%;
+    --surface: 60 9% 98%;
+    --text: 220 7% 10%;
+    --muted: 210 4% 46%;
+    --border: 60 6% 86%;
+    --accent: 202 39% 32%;
+    --accent-soft: 202 30% 93%;
+    --radius: 2px;
+    --font-heading: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  .dark {
+    --background: 213 9% 9%;
+    --surface: 215 7% 11%;
+    --text: 70 6% 91%;
+    --muted: 215 4% 54%;
+    --border: 215 7% 18%;
+    --accent: 203 25% 67%;
+    --accent-soft: 207 24% 18%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--text));
+    font-family: var(--font-body);
+    font-feature-settings: "ss01", "cv01";
+  }
+
+  ::selection {
+    background: hsl(var(--accent-soft));
+    color: hsl(var(--accent));
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  .text-muted {
+    color: hsl(var(--muted));
+  }
+  .text-accent {
+    color: hsl(var(--accent));
+  }
+  .bg-surface {
+    background-color: hsl(var(--surface));
+  }
+  .bg-accent-soft {
+    background-color: hsl(var(--accent-soft));
+  }
+  .border-rule {
+    border-color: hsl(var(--border));
+  }
+  .transition-tiny {
+    transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease, opacity 120ms ease;
+  }
+}
