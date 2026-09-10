@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ToolsBase64RouteImport } from './routes/tools/base64'
 import { Route as ToolsBinaryRouteImport } from './routes/tools/binary'
 import { Route as ToolsCaseRouteImport } from './routes/tools/case'
+import { Route as ToolsColorRouteImport } from './routes/tools/color'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +35,25 @@ const ToolsCaseRoute = ToolsCaseRouteImport.update({
   path: '/tools/case',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsColorRoute = ToolsColorRouteImport.update({
+  id: '/tools/color',
+  path: '/tools/color',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/tools/base64': typeof ToolsBase64Route
   '/tools/binary': typeof ToolsBinaryRoute
   '/tools/case': typeof ToolsCaseRoute
+  '/tools/color': typeof ToolsColorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/tools/base64': typeof ToolsBase64Route
   '/tools/binary': typeof ToolsBinaryRoute
   '/tools/case': typeof ToolsCaseRoute
+  '/tools/color': typeof ToolsColorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,21 @@ export interface FileRoutesById {
   '/tools/base64': typeof ToolsBase64Route
   '/tools/binary': typeof ToolsBinaryRoute
   '/tools/case': typeof ToolsCaseRoute
+  '/tools/color': typeof ToolsColorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/tools/base64' | '/tools/binary' | '/tools/case'
+  fullPaths:
+    '/' | '/tools/base64' | '/tools/binary' | '/tools/case' | '/tools/color'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/tools/base64' | '/tools/binary' | '/tools/case'
-  id: '__root__' | '/' | '/tools/base64' | '/tools/binary' | '/tools/case'
+  to: '/' | '/tools/base64' | '/tools/binary' | '/tools/case' | '/tools/color'
+  id:
+    | '__root__'
+    | '/'
+    | '/tools/base64'
+    | '/tools/binary'
+    | '/tools/case'
+    | '/tools/color'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +83,7 @@ export interface RootRouteChildren {
   ToolsBase64Route: typeof ToolsBase64Route
   ToolsBinaryRoute: typeof ToolsBinaryRoute
   ToolsCaseRoute: typeof ToolsCaseRoute
+  ToolsColorRoute: typeof ToolsColorRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +116,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsCaseRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/color': {
+      id: '/tools/color'
+      path: '/tools/color'
+      fullPath: '/tools/color'
+      preLoaderRoute: typeof ToolsColorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +131,7 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsBase64Route: ToolsBase64Route,
   ToolsBinaryRoute: ToolsBinaryRoute,
   ToolsCaseRoute: ToolsCaseRoute,
+  ToolsColorRoute: ToolsColorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
