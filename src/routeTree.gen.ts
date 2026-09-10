@@ -97,10 +97,35 @@ import { Route as ToolsPercentageCalculatorRouteImport } from './routes/tools/pe
 import { Route as ToolsPlaceholderImageRouteImport } from './routes/tools/placeholder-image'
 import { Route as ToolsPortValidatorRouteImport } from './routes/tools/port-validator'
 import { Route as ToolsPrefixSuffixRouteImport } from './routes/tools/prefix-suffix'
+import { Route as ToolsPrimeCheckerRouteImport } from './routes/tools/prime-checker'
 import { Route as ToolsQrGeneratorRouteImport } from './routes/tools/qr-generator'
+import { Route as ToolsQueryStringBuilderRouteImport } from './routes/tools/query-string-builder'
+import { Route as ToolsQueryStringParserRouteImport } from './routes/tools/query-string-parser'
+import { Route as ToolsRandomColorRouteImport } from './routes/tools/random-color'
+import { Route as ToolsRandomNumberRouteImport } from './routes/tools/random-number'
+import { Route as ToolsRandomStringRouteImport } from './routes/tools/random-string'
+import { Route as ToolsRatioCalculatorRouteImport } from './routes/tools/ratio-calculator'
+import { Route as ToolsRegexEscapeRouteImport } from './routes/tools/regex-escape'
+import { Route as ToolsRegexGeneratorRouteImport } from './routes/tools/regex-generator'
 import { Route as ToolsRegexTesterRouteImport } from './routes/tools/regex-tester'
+import { Route as ToolsRemoveDuplicateLinesRouteImport } from './routes/tools/remove-duplicate-lines'
+import { Route as ToolsReverseTextRouteImport } from './routes/tools/reverse-text'
+import { Route as ToolsRobotsTxtRouteImport } from './routes/tools/robots-txt'
+import { Route as ToolsRomanNumeralsRouteImport } from './routes/tools/roman-numerals'
 import { Route as ToolsRot13CipherRouteImport } from './routes/tools/rot13-cipher'
+import { Route as ToolsScientificNotationRouteImport } from './routes/tools/scientific-notation'
+import { Route as ToolsSemverRouteImport } from './routes/tools/semver'
+import { Route as ToolsShadeGeneratorRouteImport } from './routes/tools/shade-generator'
+import { Route as ToolsSitemapGeneratorRouteImport } from './routes/tools/sitemap-generator'
+import { Route as ToolsSlugGeneratorRouteImport } from './routes/tools/slug-generator'
+import { Route as ToolsSlugifyRouteImport } from './routes/tools/slugify'
 import { Route as ToolsSortLinesRouteImport } from './routes/tools/sort-lines'
+import { Route as ToolsSplitTextRouteImport } from './routes/tools/split-text'
+import { Route as ToolsSqlFormatterRouteImport } from './routes/tools/sql-formatter'
+import { Route as ToolsSqlMinifierRouteImport } from './routes/tools/sql-minifier'
+import { Route as ToolsSubnetCalculatorRouteImport } from './routes/tools/subnet-calculator'
+import { Route as ToolsSvgOptimizerRouteImport } from './routes/tools/svg-optimizer'
+import { Route as ToolsSvgToPngRouteImport } from './routes/tools/svg-to-png'
 import { Route as ToolsTextDiffRouteImport } from './routes/tools/text-diff'
 import { Route as ToolsTimestampConverterRouteImport } from './routes/tools/timestamp-converter'
 import { Route as ToolsUrlEncodeRouteImport } from './routes/tools/url-encode'
@@ -551,9 +576,54 @@ const ToolsPrefixSuffixRoute = ToolsPrefixSuffixRouteImport.update({
   path: '/tools/prefix-suffix',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsPrimeCheckerRoute = ToolsPrimeCheckerRouteImport.update({
+  id: '/tools/prime-checker',
+  path: '/tools/prime-checker',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsQrGeneratorRoute = ToolsQrGeneratorRouteImport.update({
   id: '/tools/qr-generator',
   path: '/tools/qr-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsQueryStringBuilderRoute = ToolsQueryStringBuilderRouteImport.update({
+  id: '/tools/query-string-builder',
+  path: '/tools/query-string-builder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsQueryStringParserRoute = ToolsQueryStringParserRouteImport.update({
+  id: '/tools/query-string-parser',
+  path: '/tools/query-string-parser',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsRandomColorRoute = ToolsRandomColorRouteImport.update({
+  id: '/tools/random-color',
+  path: '/tools/random-color',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsRandomNumberRoute = ToolsRandomNumberRouteImport.update({
+  id: '/tools/random-number',
+  path: '/tools/random-number',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsRandomStringRoute = ToolsRandomStringRouteImport.update({
+  id: '/tools/random-string',
+  path: '/tools/random-string',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsRatioCalculatorRoute = ToolsRatioCalculatorRouteImport.update({
+  id: '/tools/ratio-calculator',
+  path: '/tools/ratio-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsRegexEscapeRoute = ToolsRegexEscapeRouteImport.update({
+  id: '/tools/regex-escape',
+  path: '/tools/regex-escape',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsRegexGeneratorRoute = ToolsRegexGeneratorRouteImport.update({
+  id: '/tools/regex-generator',
+  path: '/tools/regex-generator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsRegexTesterRoute = ToolsRegexTesterRouteImport.update({
@@ -561,14 +631,95 @@ const ToolsRegexTesterRoute = ToolsRegexTesterRouteImport.update({
   path: '/tools/regex-tester',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsRemoveDuplicateLinesRoute =
+  ToolsRemoveDuplicateLinesRouteImport.update({
+    id: '/tools/remove-duplicate-lines',
+    path: '/tools/remove-duplicate-lines',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ToolsReverseTextRoute = ToolsReverseTextRouteImport.update({
+  id: '/tools/reverse-text',
+  path: '/tools/reverse-text',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsRobotsTxtRoute = ToolsRobotsTxtRouteImport.update({
+  id: '/tools/robots-txt',
+  path: '/tools/robots-txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsRomanNumeralsRoute = ToolsRomanNumeralsRouteImport.update({
+  id: '/tools/roman-numerals',
+  path: '/tools/roman-numerals',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsRot13CipherRoute = ToolsRot13CipherRouteImport.update({
   id: '/tools/rot13-cipher',
   path: '/tools/rot13-cipher',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsScientificNotationRoute = ToolsScientificNotationRouteImport.update({
+  id: '/tools/scientific-notation',
+  path: '/tools/scientific-notation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsSemverRoute = ToolsSemverRouteImport.update({
+  id: '/tools/semver',
+  path: '/tools/semver',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsShadeGeneratorRoute = ToolsShadeGeneratorRouteImport.update({
+  id: '/tools/shade-generator',
+  path: '/tools/shade-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsSitemapGeneratorRoute = ToolsSitemapGeneratorRouteImport.update({
+  id: '/tools/sitemap-generator',
+  path: '/tools/sitemap-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsSlugGeneratorRoute = ToolsSlugGeneratorRouteImport.update({
+  id: '/tools/slug-generator',
+  path: '/tools/slug-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsSlugifyRoute = ToolsSlugifyRouteImport.update({
+  id: '/tools/slugify',
+  path: '/tools/slugify',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsSortLinesRoute = ToolsSortLinesRouteImport.update({
   id: '/tools/sort-lines',
   path: '/tools/sort-lines',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsSplitTextRoute = ToolsSplitTextRouteImport.update({
+  id: '/tools/split-text',
+  path: '/tools/split-text',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsSqlFormatterRoute = ToolsSqlFormatterRouteImport.update({
+  id: '/tools/sql-formatter',
+  path: '/tools/sql-formatter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsSqlMinifierRoute = ToolsSqlMinifierRouteImport.update({
+  id: '/tools/sql-minifier',
+  path: '/tools/sql-minifier',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsSubnetCalculatorRoute = ToolsSubnetCalculatorRouteImport.update({
+  id: '/tools/subnet-calculator',
+  path: '/tools/subnet-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsSvgOptimizerRoute = ToolsSvgOptimizerRouteImport.update({
+  id: '/tools/svg-optimizer',
+  path: '/tools/svg-optimizer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsSvgToPngRoute = ToolsSvgToPngRouteImport.update({
+  id: '/tools/svg-to-png',
+  path: '/tools/svg-to-png',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsTextDiffRoute = ToolsTextDiffRouteImport.update({
@@ -686,10 +837,35 @@ export interface FileRoutesByFullPath {
   '/tools/placeholder-image': typeof ToolsPlaceholderImageRoute
   '/tools/port-validator': typeof ToolsPortValidatorRoute
   '/tools/prefix-suffix': typeof ToolsPrefixSuffixRoute
+  '/tools/prime-checker': typeof ToolsPrimeCheckerRoute
   '/tools/qr-generator': typeof ToolsQrGeneratorRoute
+  '/tools/query-string-builder': typeof ToolsQueryStringBuilderRoute
+  '/tools/query-string-parser': typeof ToolsQueryStringParserRoute
+  '/tools/random-color': typeof ToolsRandomColorRoute
+  '/tools/random-number': typeof ToolsRandomNumberRoute
+  '/tools/random-string': typeof ToolsRandomStringRoute
+  '/tools/ratio-calculator': typeof ToolsRatioCalculatorRoute
+  '/tools/regex-escape': typeof ToolsRegexEscapeRoute
+  '/tools/regex-generator': typeof ToolsRegexGeneratorRoute
   '/tools/regex-tester': typeof ToolsRegexTesterRoute
+  '/tools/remove-duplicate-lines': typeof ToolsRemoveDuplicateLinesRoute
+  '/tools/reverse-text': typeof ToolsReverseTextRoute
+  '/tools/robots-txt': typeof ToolsRobotsTxtRoute
+  '/tools/roman-numerals': typeof ToolsRomanNumeralsRoute
   '/tools/rot13-cipher': typeof ToolsRot13CipherRoute
+  '/tools/scientific-notation': typeof ToolsScientificNotationRoute
+  '/tools/semver': typeof ToolsSemverRoute
+  '/tools/shade-generator': typeof ToolsShadeGeneratorRoute
+  '/tools/sitemap-generator': typeof ToolsSitemapGeneratorRoute
+  '/tools/slug-generator': typeof ToolsSlugGeneratorRoute
+  '/tools/slugify': typeof ToolsSlugifyRoute
   '/tools/sort-lines': typeof ToolsSortLinesRoute
+  '/tools/split-text': typeof ToolsSplitTextRoute
+  '/tools/sql-formatter': typeof ToolsSqlFormatterRoute
+  '/tools/sql-minifier': typeof ToolsSqlMinifierRoute
+  '/tools/subnet-calculator': typeof ToolsSubnetCalculatorRoute
+  '/tools/svg-optimizer': typeof ToolsSvgOptimizerRoute
+  '/tools/svg-to-png': typeof ToolsSvgToPngRoute
   '/tools/text-diff': typeof ToolsTextDiffRoute
   '/tools/timestamp-converter': typeof ToolsTimestampConverterRoute
   '/tools/url-encode': typeof ToolsUrlEncodeRoute
@@ -785,10 +961,35 @@ export interface FileRoutesByTo {
   '/tools/placeholder-image': typeof ToolsPlaceholderImageRoute
   '/tools/port-validator': typeof ToolsPortValidatorRoute
   '/tools/prefix-suffix': typeof ToolsPrefixSuffixRoute
+  '/tools/prime-checker': typeof ToolsPrimeCheckerRoute
   '/tools/qr-generator': typeof ToolsQrGeneratorRoute
+  '/tools/query-string-builder': typeof ToolsQueryStringBuilderRoute
+  '/tools/query-string-parser': typeof ToolsQueryStringParserRoute
+  '/tools/random-color': typeof ToolsRandomColorRoute
+  '/tools/random-number': typeof ToolsRandomNumberRoute
+  '/tools/random-string': typeof ToolsRandomStringRoute
+  '/tools/ratio-calculator': typeof ToolsRatioCalculatorRoute
+  '/tools/regex-escape': typeof ToolsRegexEscapeRoute
+  '/tools/regex-generator': typeof ToolsRegexGeneratorRoute
   '/tools/regex-tester': typeof ToolsRegexTesterRoute
+  '/tools/remove-duplicate-lines': typeof ToolsRemoveDuplicateLinesRoute
+  '/tools/reverse-text': typeof ToolsReverseTextRoute
+  '/tools/robots-txt': typeof ToolsRobotsTxtRoute
+  '/tools/roman-numerals': typeof ToolsRomanNumeralsRoute
   '/tools/rot13-cipher': typeof ToolsRot13CipherRoute
+  '/tools/scientific-notation': typeof ToolsScientificNotationRoute
+  '/tools/semver': typeof ToolsSemverRoute
+  '/tools/shade-generator': typeof ToolsShadeGeneratorRoute
+  '/tools/sitemap-generator': typeof ToolsSitemapGeneratorRoute
+  '/tools/slug-generator': typeof ToolsSlugGeneratorRoute
+  '/tools/slugify': typeof ToolsSlugifyRoute
   '/tools/sort-lines': typeof ToolsSortLinesRoute
+  '/tools/split-text': typeof ToolsSplitTextRoute
+  '/tools/sql-formatter': typeof ToolsSqlFormatterRoute
+  '/tools/sql-minifier': typeof ToolsSqlMinifierRoute
+  '/tools/subnet-calculator': typeof ToolsSubnetCalculatorRoute
+  '/tools/svg-optimizer': typeof ToolsSvgOptimizerRoute
+  '/tools/svg-to-png': typeof ToolsSvgToPngRoute
   '/tools/text-diff': typeof ToolsTextDiffRoute
   '/tools/timestamp-converter': typeof ToolsTimestampConverterRoute
   '/tools/url-encode': typeof ToolsUrlEncodeRoute
@@ -885,10 +1086,35 @@ export interface FileRoutesById {
   '/tools/placeholder-image': typeof ToolsPlaceholderImageRoute
   '/tools/port-validator': typeof ToolsPortValidatorRoute
   '/tools/prefix-suffix': typeof ToolsPrefixSuffixRoute
+  '/tools/prime-checker': typeof ToolsPrimeCheckerRoute
   '/tools/qr-generator': typeof ToolsQrGeneratorRoute
+  '/tools/query-string-builder': typeof ToolsQueryStringBuilderRoute
+  '/tools/query-string-parser': typeof ToolsQueryStringParserRoute
+  '/tools/random-color': typeof ToolsRandomColorRoute
+  '/tools/random-number': typeof ToolsRandomNumberRoute
+  '/tools/random-string': typeof ToolsRandomStringRoute
+  '/tools/ratio-calculator': typeof ToolsRatioCalculatorRoute
+  '/tools/regex-escape': typeof ToolsRegexEscapeRoute
+  '/tools/regex-generator': typeof ToolsRegexGeneratorRoute
   '/tools/regex-tester': typeof ToolsRegexTesterRoute
+  '/tools/remove-duplicate-lines': typeof ToolsRemoveDuplicateLinesRoute
+  '/tools/reverse-text': typeof ToolsReverseTextRoute
+  '/tools/robots-txt': typeof ToolsRobotsTxtRoute
+  '/tools/roman-numerals': typeof ToolsRomanNumeralsRoute
   '/tools/rot13-cipher': typeof ToolsRot13CipherRoute
+  '/tools/scientific-notation': typeof ToolsScientificNotationRoute
+  '/tools/semver': typeof ToolsSemverRoute
+  '/tools/shade-generator': typeof ToolsShadeGeneratorRoute
+  '/tools/sitemap-generator': typeof ToolsSitemapGeneratorRoute
+  '/tools/slug-generator': typeof ToolsSlugGeneratorRoute
+  '/tools/slugify': typeof ToolsSlugifyRoute
   '/tools/sort-lines': typeof ToolsSortLinesRoute
+  '/tools/split-text': typeof ToolsSplitTextRoute
+  '/tools/sql-formatter': typeof ToolsSqlFormatterRoute
+  '/tools/sql-minifier': typeof ToolsSqlMinifierRoute
+  '/tools/subnet-calculator': typeof ToolsSubnetCalculatorRoute
+  '/tools/svg-optimizer': typeof ToolsSvgOptimizerRoute
+  '/tools/svg-to-png': typeof ToolsSvgToPngRoute
   '/tools/text-diff': typeof ToolsTextDiffRoute
   '/tools/timestamp-converter': typeof ToolsTimestampConverterRoute
   '/tools/url-encode': typeof ToolsUrlEncodeRoute
@@ -986,10 +1212,35 @@ export interface FileRouteTypes {
     | '/tools/placeholder-image'
     | '/tools/port-validator'
     | '/tools/prefix-suffix'
+    | '/tools/prime-checker'
     | '/tools/qr-generator'
+    | '/tools/query-string-builder'
+    | '/tools/query-string-parser'
+    | '/tools/random-color'
+    | '/tools/random-number'
+    | '/tools/random-string'
+    | '/tools/ratio-calculator'
+    | '/tools/regex-escape'
+    | '/tools/regex-generator'
     | '/tools/regex-tester'
+    | '/tools/remove-duplicate-lines'
+    | '/tools/reverse-text'
+    | '/tools/robots-txt'
+    | '/tools/roman-numerals'
     | '/tools/rot13-cipher'
+    | '/tools/scientific-notation'
+    | '/tools/semver'
+    | '/tools/shade-generator'
+    | '/tools/sitemap-generator'
+    | '/tools/slug-generator'
+    | '/tools/slugify'
     | '/tools/sort-lines'
+    | '/tools/split-text'
+    | '/tools/sql-formatter'
+    | '/tools/sql-minifier'
+    | '/tools/subnet-calculator'
+    | '/tools/svg-optimizer'
+    | '/tools/svg-to-png'
     | '/tools/text-diff'
     | '/tools/timestamp-converter'
     | '/tools/url-encode'
@@ -1085,10 +1336,35 @@ export interface FileRouteTypes {
     | '/tools/placeholder-image'
     | '/tools/port-validator'
     | '/tools/prefix-suffix'
+    | '/tools/prime-checker'
     | '/tools/qr-generator'
+    | '/tools/query-string-builder'
+    | '/tools/query-string-parser'
+    | '/tools/random-color'
+    | '/tools/random-number'
+    | '/tools/random-string'
+    | '/tools/ratio-calculator'
+    | '/tools/regex-escape'
+    | '/tools/regex-generator'
     | '/tools/regex-tester'
+    | '/tools/remove-duplicate-lines'
+    | '/tools/reverse-text'
+    | '/tools/robots-txt'
+    | '/tools/roman-numerals'
     | '/tools/rot13-cipher'
+    | '/tools/scientific-notation'
+    | '/tools/semver'
+    | '/tools/shade-generator'
+    | '/tools/sitemap-generator'
+    | '/tools/slug-generator'
+    | '/tools/slugify'
     | '/tools/sort-lines'
+    | '/tools/split-text'
+    | '/tools/sql-formatter'
+    | '/tools/sql-minifier'
+    | '/tools/subnet-calculator'
+    | '/tools/svg-optimizer'
+    | '/tools/svg-to-png'
     | '/tools/text-diff'
     | '/tools/timestamp-converter'
     | '/tools/url-encode'
@@ -1184,10 +1460,35 @@ export interface FileRouteTypes {
     | '/tools/placeholder-image'
     | '/tools/port-validator'
     | '/tools/prefix-suffix'
+    | '/tools/prime-checker'
     | '/tools/qr-generator'
+    | '/tools/query-string-builder'
+    | '/tools/query-string-parser'
+    | '/tools/random-color'
+    | '/tools/random-number'
+    | '/tools/random-string'
+    | '/tools/ratio-calculator'
+    | '/tools/regex-escape'
+    | '/tools/regex-generator'
     | '/tools/regex-tester'
+    | '/tools/remove-duplicate-lines'
+    | '/tools/reverse-text'
+    | '/tools/robots-txt'
+    | '/tools/roman-numerals'
     | '/tools/rot13-cipher'
+    | '/tools/scientific-notation'
+    | '/tools/semver'
+    | '/tools/shade-generator'
+    | '/tools/sitemap-generator'
+    | '/tools/slug-generator'
+    | '/tools/slugify'
     | '/tools/sort-lines'
+    | '/tools/split-text'
+    | '/tools/sql-formatter'
+    | '/tools/sql-minifier'
+    | '/tools/subnet-calculator'
+    | '/tools/svg-optimizer'
+    | '/tools/svg-to-png'
     | '/tools/text-diff'
     | '/tools/timestamp-converter'
     | '/tools/url-encode'
@@ -1284,10 +1585,35 @@ export interface RootRouteChildren {
   ToolsPlaceholderImageRoute: typeof ToolsPlaceholderImageRoute
   ToolsPortValidatorRoute: typeof ToolsPortValidatorRoute
   ToolsPrefixSuffixRoute: typeof ToolsPrefixSuffixRoute
+  ToolsPrimeCheckerRoute: typeof ToolsPrimeCheckerRoute
   ToolsQrGeneratorRoute: typeof ToolsQrGeneratorRoute
+  ToolsQueryStringBuilderRoute: typeof ToolsQueryStringBuilderRoute
+  ToolsQueryStringParserRoute: typeof ToolsQueryStringParserRoute
+  ToolsRandomColorRoute: typeof ToolsRandomColorRoute
+  ToolsRandomNumberRoute: typeof ToolsRandomNumberRoute
+  ToolsRandomStringRoute: typeof ToolsRandomStringRoute
+  ToolsRatioCalculatorRoute: typeof ToolsRatioCalculatorRoute
+  ToolsRegexEscapeRoute: typeof ToolsRegexEscapeRoute
+  ToolsRegexGeneratorRoute: typeof ToolsRegexGeneratorRoute
   ToolsRegexTesterRoute: typeof ToolsRegexTesterRoute
+  ToolsRemoveDuplicateLinesRoute: typeof ToolsRemoveDuplicateLinesRoute
+  ToolsReverseTextRoute: typeof ToolsReverseTextRoute
+  ToolsRobotsTxtRoute: typeof ToolsRobotsTxtRoute
+  ToolsRomanNumeralsRoute: typeof ToolsRomanNumeralsRoute
   ToolsRot13CipherRoute: typeof ToolsRot13CipherRoute
+  ToolsScientificNotationRoute: typeof ToolsScientificNotationRoute
+  ToolsSemverRoute: typeof ToolsSemverRoute
+  ToolsShadeGeneratorRoute: typeof ToolsShadeGeneratorRoute
+  ToolsSitemapGeneratorRoute: typeof ToolsSitemapGeneratorRoute
+  ToolsSlugGeneratorRoute: typeof ToolsSlugGeneratorRoute
+  ToolsSlugifyRoute: typeof ToolsSlugifyRoute
   ToolsSortLinesRoute: typeof ToolsSortLinesRoute
+  ToolsSplitTextRoute: typeof ToolsSplitTextRoute
+  ToolsSqlFormatterRoute: typeof ToolsSqlFormatterRoute
+  ToolsSqlMinifierRoute: typeof ToolsSqlMinifierRoute
+  ToolsSubnetCalculatorRoute: typeof ToolsSubnetCalculatorRoute
+  ToolsSvgOptimizerRoute: typeof ToolsSvgOptimizerRoute
+  ToolsSvgToPngRoute: typeof ToolsSvgToPngRoute
   ToolsTextDiffRoute: typeof ToolsTextDiffRoute
   ToolsTimestampConverterRoute: typeof ToolsTimestampConverterRoute
   ToolsUrlEncodeRoute: typeof ToolsUrlEncodeRoute
@@ -1913,11 +2239,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsPrefixSuffixRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/prime-checker': {
+      id: '/tools/prime-checker'
+      path: '/tools/prime-checker'
+      fullPath: '/tools/prime-checker'
+      preLoaderRoute: typeof ToolsPrimeCheckerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/qr-generator': {
       id: '/tools/qr-generator'
       path: '/tools/qr-generator'
       fullPath: '/tools/qr-generator'
       preLoaderRoute: typeof ToolsQrGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/query-string-builder': {
+      id: '/tools/query-string-builder'
+      path: '/tools/query-string-builder'
+      fullPath: '/tools/query-string-builder'
+      preLoaderRoute: typeof ToolsQueryStringBuilderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/query-string-parser': {
+      id: '/tools/query-string-parser'
+      path: '/tools/query-string-parser'
+      fullPath: '/tools/query-string-parser'
+      preLoaderRoute: typeof ToolsQueryStringParserRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/random-color': {
+      id: '/tools/random-color'
+      path: '/tools/random-color'
+      fullPath: '/tools/random-color'
+      preLoaderRoute: typeof ToolsRandomColorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/random-number': {
+      id: '/tools/random-number'
+      path: '/tools/random-number'
+      fullPath: '/tools/random-number'
+      preLoaderRoute: typeof ToolsRandomNumberRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/random-string': {
+      id: '/tools/random-string'
+      path: '/tools/random-string'
+      fullPath: '/tools/random-string'
+      preLoaderRoute: typeof ToolsRandomStringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/ratio-calculator': {
+      id: '/tools/ratio-calculator'
+      path: '/tools/ratio-calculator'
+      fullPath: '/tools/ratio-calculator'
+      preLoaderRoute: typeof ToolsRatioCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/regex-escape': {
+      id: '/tools/regex-escape'
+      path: '/tools/regex-escape'
+      fullPath: '/tools/regex-escape'
+      preLoaderRoute: typeof ToolsRegexEscapeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/regex-generator': {
+      id: '/tools/regex-generator'
+      path: '/tools/regex-generator'
+      fullPath: '/tools/regex-generator'
+      preLoaderRoute: typeof ToolsRegexGeneratorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/regex-tester': {
@@ -1927,6 +2316,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsRegexTesterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/remove-duplicate-lines': {
+      id: '/tools/remove-duplicate-lines'
+      path: '/tools/remove-duplicate-lines'
+      fullPath: '/tools/remove-duplicate-lines'
+      preLoaderRoute: typeof ToolsRemoveDuplicateLinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/reverse-text': {
+      id: '/tools/reverse-text'
+      path: '/tools/reverse-text'
+      fullPath: '/tools/reverse-text'
+      preLoaderRoute: typeof ToolsReverseTextRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/robots-txt': {
+      id: '/tools/robots-txt'
+      path: '/tools/robots-txt'
+      fullPath: '/tools/robots-txt'
+      preLoaderRoute: typeof ToolsRobotsTxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/roman-numerals': {
+      id: '/tools/roman-numerals'
+      path: '/tools/roman-numerals'
+      fullPath: '/tools/roman-numerals'
+      preLoaderRoute: typeof ToolsRomanNumeralsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/rot13-cipher': {
       id: '/tools/rot13-cipher'
       path: '/tools/rot13-cipher'
@@ -1934,11 +2351,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsRot13CipherRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/scientific-notation': {
+      id: '/tools/scientific-notation'
+      path: '/tools/scientific-notation'
+      fullPath: '/tools/scientific-notation'
+      preLoaderRoute: typeof ToolsScientificNotationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/semver': {
+      id: '/tools/semver'
+      path: '/tools/semver'
+      fullPath: '/tools/semver'
+      preLoaderRoute: typeof ToolsSemverRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/shade-generator': {
+      id: '/tools/shade-generator'
+      path: '/tools/shade-generator'
+      fullPath: '/tools/shade-generator'
+      preLoaderRoute: typeof ToolsShadeGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/sitemap-generator': {
+      id: '/tools/sitemap-generator'
+      path: '/tools/sitemap-generator'
+      fullPath: '/tools/sitemap-generator'
+      preLoaderRoute: typeof ToolsSitemapGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/slug-generator': {
+      id: '/tools/slug-generator'
+      path: '/tools/slug-generator'
+      fullPath: '/tools/slug-generator'
+      preLoaderRoute: typeof ToolsSlugGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/slugify': {
+      id: '/tools/slugify'
+      path: '/tools/slugify'
+      fullPath: '/tools/slugify'
+      preLoaderRoute: typeof ToolsSlugifyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/sort-lines': {
       id: '/tools/sort-lines'
       path: '/tools/sort-lines'
       fullPath: '/tools/sort-lines'
       preLoaderRoute: typeof ToolsSortLinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/split-text': {
+      id: '/tools/split-text'
+      path: '/tools/split-text'
+      fullPath: '/tools/split-text'
+      preLoaderRoute: typeof ToolsSplitTextRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/sql-formatter': {
+      id: '/tools/sql-formatter'
+      path: '/tools/sql-formatter'
+      fullPath: '/tools/sql-formatter'
+      preLoaderRoute: typeof ToolsSqlFormatterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/sql-minifier': {
+      id: '/tools/sql-minifier'
+      path: '/tools/sql-minifier'
+      fullPath: '/tools/sql-minifier'
+      preLoaderRoute: typeof ToolsSqlMinifierRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/subnet-calculator': {
+      id: '/tools/subnet-calculator'
+      path: '/tools/subnet-calculator'
+      fullPath: '/tools/subnet-calculator'
+      preLoaderRoute: typeof ToolsSubnetCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/svg-optimizer': {
+      id: '/tools/svg-optimizer'
+      path: '/tools/svg-optimizer'
+      fullPath: '/tools/svg-optimizer'
+      preLoaderRoute: typeof ToolsSvgOptimizerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/svg-to-png': {
+      id: '/tools/svg-to-png'
+      path: '/tools/svg-to-png'
+      fullPath: '/tools/svg-to-png'
+      preLoaderRoute: typeof ToolsSvgToPngRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/text-diff': {
@@ -2068,10 +2569,35 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsPlaceholderImageRoute: ToolsPlaceholderImageRoute,
   ToolsPortValidatorRoute: ToolsPortValidatorRoute,
   ToolsPrefixSuffixRoute: ToolsPrefixSuffixRoute,
+  ToolsPrimeCheckerRoute: ToolsPrimeCheckerRoute,
   ToolsQrGeneratorRoute: ToolsQrGeneratorRoute,
+  ToolsQueryStringBuilderRoute: ToolsQueryStringBuilderRoute,
+  ToolsQueryStringParserRoute: ToolsQueryStringParserRoute,
+  ToolsRandomColorRoute: ToolsRandomColorRoute,
+  ToolsRandomNumberRoute: ToolsRandomNumberRoute,
+  ToolsRandomStringRoute: ToolsRandomStringRoute,
+  ToolsRatioCalculatorRoute: ToolsRatioCalculatorRoute,
+  ToolsRegexEscapeRoute: ToolsRegexEscapeRoute,
+  ToolsRegexGeneratorRoute: ToolsRegexGeneratorRoute,
   ToolsRegexTesterRoute: ToolsRegexTesterRoute,
+  ToolsRemoveDuplicateLinesRoute: ToolsRemoveDuplicateLinesRoute,
+  ToolsReverseTextRoute: ToolsReverseTextRoute,
+  ToolsRobotsTxtRoute: ToolsRobotsTxtRoute,
+  ToolsRomanNumeralsRoute: ToolsRomanNumeralsRoute,
   ToolsRot13CipherRoute: ToolsRot13CipherRoute,
+  ToolsScientificNotationRoute: ToolsScientificNotationRoute,
+  ToolsSemverRoute: ToolsSemverRoute,
+  ToolsShadeGeneratorRoute: ToolsShadeGeneratorRoute,
+  ToolsSitemapGeneratorRoute: ToolsSitemapGeneratorRoute,
+  ToolsSlugGeneratorRoute: ToolsSlugGeneratorRoute,
+  ToolsSlugifyRoute: ToolsSlugifyRoute,
   ToolsSortLinesRoute: ToolsSortLinesRoute,
+  ToolsSplitTextRoute: ToolsSplitTextRoute,
+  ToolsSqlFormatterRoute: ToolsSqlFormatterRoute,
+  ToolsSqlMinifierRoute: ToolsSqlMinifierRoute,
+  ToolsSubnetCalculatorRoute: ToolsSubnetCalculatorRoute,
+  ToolsSvgOptimizerRoute: ToolsSvgOptimizerRoute,
+  ToolsSvgToPngRoute: ToolsSvgToPngRoute,
   ToolsTextDiffRoute: ToolsTextDiffRoute,
   ToolsTimestampConverterRoute: ToolsTimestampConverterRoute,
   ToolsUrlEncodeRoute: ToolsUrlEncodeRoute,
