@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ToolsBase64RouteImport } from './routes/tools/base64'
+import { Route as ToolsBinaryRouteImport } from './routes/tools/binary'
+import { Route as ToolsCaseRouteImport } from './routes/tools/case'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +24,49 @@ const ToolsBase64Route = ToolsBase64RouteImport.update({
   path: '/tools/base64',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsBinaryRoute = ToolsBinaryRouteImport.update({
+  id: '/tools/binary',
+  path: '/tools/binary',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsCaseRoute = ToolsCaseRouteImport.update({
+  id: '/tools/case',
+  path: '/tools/case',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/tools/base64': typeof ToolsBase64Route
+  '/tools/binary': typeof ToolsBinaryRoute
+  '/tools/case': typeof ToolsCaseRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/tools/base64': typeof ToolsBase64Route
+  '/tools/binary': typeof ToolsBinaryRoute
+  '/tools/case': typeof ToolsCaseRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/tools/base64': typeof ToolsBase64Route
+  '/tools/binary': typeof ToolsBinaryRoute
+  '/tools/case': typeof ToolsCaseRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/tools/base64'
+  fullPaths: '/' | '/tools/base64' | '/tools/binary' | '/tools/case'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/tools/base64'
-  id: '__root__' | '/' | '/tools/base64'
+  to: '/' | '/tools/base64' | '/tools/binary' | '/tools/case'
+  id: '__root__' | '/' | '/tools/base64' | '/tools/binary' | '/tools/case'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ToolsBase64Route: typeof ToolsBase64Route
+  ToolsBinaryRoute: typeof ToolsBinaryRoute
+  ToolsCaseRoute: typeof ToolsCaseRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +85,28 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsBase64RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/binary': {
+      id: '/tools/binary'
+      path: '/tools/binary'
+      fullPath: '/tools/binary'
+      preLoaderRoute: typeof ToolsBinaryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/case': {
+      id: '/tools/case'
+      path: '/tools/case'
+      fullPath: '/tools/case'
+      preLoaderRoute: typeof ToolsCaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ToolsBase64Route: ToolsBase64Route,
+  ToolsBinaryRoute: ToolsBinaryRoute,
+  ToolsCaseRoute: ToolsCaseRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
