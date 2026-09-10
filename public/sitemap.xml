@@ -129,6 +129,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/table-to-json</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tiny-tools-app.vercel.app/tools/factorial-calculator</loc>
     <priority>0.8</priority>
   </url>
@@ -250,6 +254,14 @@
   </url>
   <url>
     <loc>https://tiny-tools-app.vercel.app/tools/epoch-converter</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/timestamp-to-date</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/timezone-converter</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -462,6 +474,10 @@
   </url>
   <url>
     <loc>https://tiny-tools-app.vercel.app/tools/number-base-converter</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-tools-app.vercel.app/tools/text-to-ascii</loc>
     <priority>0.8</priority>
   </url>
   <url>

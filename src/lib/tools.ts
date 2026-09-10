@@ -288,6 +288,14 @@ export const TOOLS: Tool[] = [
 		runsLocally: true,
 	},
 	{
+		id: "table-to-json",
+		name: "Table → JSON",
+		description: "Convert tabular data to JSON",
+		category: "data",
+		path: "/tools/table-to-json",
+		runsLocally: true,
+	},
+	{
 		id: "factorial",
 		name: "Factorial",
 		description: "Calculate factorial",
@@ -535,6 +543,22 @@ export const TOOLS: Tool[] = [
 		description: "Unix epoch utilities",
 		category: "development",
 		path: "/tools/epoch-converter",
+		runsLocally: true,
+	},
+	{
+		id: "timestamp-to-date",
+		name: "Timestamp → Date",
+		description: "Unix timestamp to readable date",
+		category: "development",
+		path: "/tools/timestamp-to-date",
+		runsLocally: true,
+	},
+	{
+		id: "timezone-converter",
+		name: "Timezone Converter",
+		description: "Convert between timezones",
+		category: "development",
+		path: "/tools/timezone-converter",
 		runsLocally: true,
 	},
 	{
@@ -963,6 +987,14 @@ export const TOOLS: Tool[] = [
 		description: "Binary · Octal · Decimal · Hex",
 		category: "encoding",
 		path: "/tools/number-base-converter",
+		runsLocally: true,
+	},
+	{
+		id: "text-to-ascii",
+		name: "Text → ASCII",
+		description: "Remove accents and normalize characters",
+		category: "encoding",
+		path: "/tools/text-to-ascii",
 		runsLocally: true,
 	},
 

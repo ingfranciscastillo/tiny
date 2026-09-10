@@ -126,8 +126,12 @@ import { Route as ToolsSqlMinifierRouteImport } from './routes/tools/sql-minifie
 import { Route as ToolsSubnetCalculatorRouteImport } from './routes/tools/subnet-calculator'
 import { Route as ToolsSvgOptimizerRouteImport } from './routes/tools/svg-optimizer'
 import { Route as ToolsSvgToPngRouteImport } from './routes/tools/svg-to-png'
+import { Route as ToolsTableToJsonRouteImport } from './routes/tools/table-to-json'
 import { Route as ToolsTextDiffRouteImport } from './routes/tools/text-diff'
+import { Route as ToolsTextToAsciiRouteImport } from './routes/tools/text-to-ascii'
 import { Route as ToolsTimestampConverterRouteImport } from './routes/tools/timestamp-converter'
+import { Route as ToolsTimestampToDateRouteImport } from './routes/tools/timestamp-to-date'
+import { Route as ToolsTimezoneConverterRouteImport } from './routes/tools/timezone-converter'
 import { Route as ToolsUrlEncodeRouteImport } from './routes/tools/url-encode'
 import { Route as ToolsUuidGeneratorRouteImport } from './routes/tools/uuid-generator'
 import { Route as ToolsWordCountRouteImport } from './routes/tools/word-count'
@@ -722,14 +726,34 @@ const ToolsSvgToPngRoute = ToolsSvgToPngRouteImport.update({
   path: '/tools/svg-to-png',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsTableToJsonRoute = ToolsTableToJsonRouteImport.update({
+  id: '/tools/table-to-json',
+  path: '/tools/table-to-json',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsTextDiffRoute = ToolsTextDiffRouteImport.update({
   id: '/tools/text-diff',
   path: '/tools/text-diff',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsTextToAsciiRoute = ToolsTextToAsciiRouteImport.update({
+  id: '/tools/text-to-ascii',
+  path: '/tools/text-to-ascii',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsTimestampConverterRoute = ToolsTimestampConverterRouteImport.update({
   id: '/tools/timestamp-converter',
   path: '/tools/timestamp-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsTimestampToDateRoute = ToolsTimestampToDateRouteImport.update({
+  id: '/tools/timestamp-to-date',
+  path: '/tools/timestamp-to-date',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsTimezoneConverterRoute = ToolsTimezoneConverterRouteImport.update({
+  id: '/tools/timezone-converter',
+  path: '/tools/timezone-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsUrlEncodeRoute = ToolsUrlEncodeRouteImport.update({
@@ -866,8 +890,12 @@ export interface FileRoutesByFullPath {
   '/tools/subnet-calculator': typeof ToolsSubnetCalculatorRoute
   '/tools/svg-optimizer': typeof ToolsSvgOptimizerRoute
   '/tools/svg-to-png': typeof ToolsSvgToPngRoute
+  '/tools/table-to-json': typeof ToolsTableToJsonRoute
   '/tools/text-diff': typeof ToolsTextDiffRoute
+  '/tools/text-to-ascii': typeof ToolsTextToAsciiRoute
   '/tools/timestamp-converter': typeof ToolsTimestampConverterRoute
+  '/tools/timestamp-to-date': typeof ToolsTimestampToDateRoute
+  '/tools/timezone-converter': typeof ToolsTimezoneConverterRoute
   '/tools/url-encode': typeof ToolsUrlEncodeRoute
   '/tools/uuid-generator': typeof ToolsUuidGeneratorRoute
   '/tools/word-count': typeof ToolsWordCountRoute
@@ -990,8 +1018,12 @@ export interface FileRoutesByTo {
   '/tools/subnet-calculator': typeof ToolsSubnetCalculatorRoute
   '/tools/svg-optimizer': typeof ToolsSvgOptimizerRoute
   '/tools/svg-to-png': typeof ToolsSvgToPngRoute
+  '/tools/table-to-json': typeof ToolsTableToJsonRoute
   '/tools/text-diff': typeof ToolsTextDiffRoute
+  '/tools/text-to-ascii': typeof ToolsTextToAsciiRoute
   '/tools/timestamp-converter': typeof ToolsTimestampConverterRoute
+  '/tools/timestamp-to-date': typeof ToolsTimestampToDateRoute
+  '/tools/timezone-converter': typeof ToolsTimezoneConverterRoute
   '/tools/url-encode': typeof ToolsUrlEncodeRoute
   '/tools/uuid-generator': typeof ToolsUuidGeneratorRoute
   '/tools/word-count': typeof ToolsWordCountRoute
@@ -1115,8 +1147,12 @@ export interface FileRoutesById {
   '/tools/subnet-calculator': typeof ToolsSubnetCalculatorRoute
   '/tools/svg-optimizer': typeof ToolsSvgOptimizerRoute
   '/tools/svg-to-png': typeof ToolsSvgToPngRoute
+  '/tools/table-to-json': typeof ToolsTableToJsonRoute
   '/tools/text-diff': typeof ToolsTextDiffRoute
+  '/tools/text-to-ascii': typeof ToolsTextToAsciiRoute
   '/tools/timestamp-converter': typeof ToolsTimestampConverterRoute
+  '/tools/timestamp-to-date': typeof ToolsTimestampToDateRoute
+  '/tools/timezone-converter': typeof ToolsTimezoneConverterRoute
   '/tools/url-encode': typeof ToolsUrlEncodeRoute
   '/tools/uuid-generator': typeof ToolsUuidGeneratorRoute
   '/tools/word-count': typeof ToolsWordCountRoute
@@ -1241,8 +1277,12 @@ export interface FileRouteTypes {
     | '/tools/subnet-calculator'
     | '/tools/svg-optimizer'
     | '/tools/svg-to-png'
+    | '/tools/table-to-json'
     | '/tools/text-diff'
+    | '/tools/text-to-ascii'
     | '/tools/timestamp-converter'
+    | '/tools/timestamp-to-date'
+    | '/tools/timezone-converter'
     | '/tools/url-encode'
     | '/tools/uuid-generator'
     | '/tools/word-count'
@@ -1365,8 +1405,12 @@ export interface FileRouteTypes {
     | '/tools/subnet-calculator'
     | '/tools/svg-optimizer'
     | '/tools/svg-to-png'
+    | '/tools/table-to-json'
     | '/tools/text-diff'
+    | '/tools/text-to-ascii'
     | '/tools/timestamp-converter'
+    | '/tools/timestamp-to-date'
+    | '/tools/timezone-converter'
     | '/tools/url-encode'
     | '/tools/uuid-generator'
     | '/tools/word-count'
@@ -1489,8 +1533,12 @@ export interface FileRouteTypes {
     | '/tools/subnet-calculator'
     | '/tools/svg-optimizer'
     | '/tools/svg-to-png'
+    | '/tools/table-to-json'
     | '/tools/text-diff'
+    | '/tools/text-to-ascii'
     | '/tools/timestamp-converter'
+    | '/tools/timestamp-to-date'
+    | '/tools/timezone-converter'
     | '/tools/url-encode'
     | '/tools/uuid-generator'
     | '/tools/word-count'
@@ -1614,8 +1662,12 @@ export interface RootRouteChildren {
   ToolsSubnetCalculatorRoute: typeof ToolsSubnetCalculatorRoute
   ToolsSvgOptimizerRoute: typeof ToolsSvgOptimizerRoute
   ToolsSvgToPngRoute: typeof ToolsSvgToPngRoute
+  ToolsTableToJsonRoute: typeof ToolsTableToJsonRoute
   ToolsTextDiffRoute: typeof ToolsTextDiffRoute
+  ToolsTextToAsciiRoute: typeof ToolsTextToAsciiRoute
   ToolsTimestampConverterRoute: typeof ToolsTimestampConverterRoute
+  ToolsTimestampToDateRoute: typeof ToolsTimestampToDateRoute
+  ToolsTimezoneConverterRoute: typeof ToolsTimezoneConverterRoute
   ToolsUrlEncodeRoute: typeof ToolsUrlEncodeRoute
   ToolsUuidGeneratorRoute: typeof ToolsUuidGeneratorRoute
   ToolsWordCountRoute: typeof ToolsWordCountRoute
@@ -2442,6 +2494,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsSvgToPngRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/table-to-json': {
+      id: '/tools/table-to-json'
+      path: '/tools/table-to-json'
+      fullPath: '/tools/table-to-json'
+      preLoaderRoute: typeof ToolsTableToJsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/text-diff': {
       id: '/tools/text-diff'
       path: '/tools/text-diff'
@@ -2449,11 +2508,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsTextDiffRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/text-to-ascii': {
+      id: '/tools/text-to-ascii'
+      path: '/tools/text-to-ascii'
+      fullPath: '/tools/text-to-ascii'
+      preLoaderRoute: typeof ToolsTextToAsciiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/timestamp-converter': {
       id: '/tools/timestamp-converter'
       path: '/tools/timestamp-converter'
       fullPath: '/tools/timestamp-converter'
       preLoaderRoute: typeof ToolsTimestampConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/timestamp-to-date': {
+      id: '/tools/timestamp-to-date'
+      path: '/tools/timestamp-to-date'
+      fullPath: '/tools/timestamp-to-date'
+      preLoaderRoute: typeof ToolsTimestampToDateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/timezone-converter': {
+      id: '/tools/timezone-converter'
+      path: '/tools/timezone-converter'
+      fullPath: '/tools/timezone-converter'
+      preLoaderRoute: typeof ToolsTimezoneConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/url-encode': {
@@ -2598,8 +2678,12 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsSubnetCalculatorRoute: ToolsSubnetCalculatorRoute,
   ToolsSvgOptimizerRoute: ToolsSvgOptimizerRoute,
   ToolsSvgToPngRoute: ToolsSvgToPngRoute,
+  ToolsTableToJsonRoute: ToolsTableToJsonRoute,
   ToolsTextDiffRoute: ToolsTextDiffRoute,
+  ToolsTextToAsciiRoute: ToolsTextToAsciiRoute,
   ToolsTimestampConverterRoute: ToolsTimestampConverterRoute,
+  ToolsTimestampToDateRoute: ToolsTimestampToDateRoute,
+  ToolsTimezoneConverterRoute: ToolsTimezoneConverterRoute,
   ToolsUrlEncodeRoute: ToolsUrlEncodeRoute,
   ToolsUuidGeneratorRoute: ToolsUuidGeneratorRoute,
   ToolsWordCountRoute: ToolsWordCountRoute,
