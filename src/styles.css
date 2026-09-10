@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import '@fontsource-variable/ibm-plex-sans/wght.css';
+@import '@fontsource-variable/jetbrains-mono/wght.css';
 
 @theme {
   --animate-slide-in: slide-in 150ms ease-out;
@@ -39,9 +41,9 @@ body {
     --accent: 202 39% 32%;
     --accent-soft: 202 30% 93%;
     --radius: 2px;
-    --font-heading: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-    --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --font-heading: "IBM Plex Sans Variable", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "IBM Plex Sans Variable", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, monospace;
   }
 
   .dark {
