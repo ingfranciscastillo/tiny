@@ -5,6 +5,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://tiny-tools-app.vercel.app/privacy-policy</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://tiny-tools-app.vercel.app/tools/json-to-csv</loc>
     <priority>0.8</priority>
   </url>

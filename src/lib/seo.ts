@@ -49,3 +49,11 @@ export function homeHead(): HeadMeta {
 		absoluteUrl("/"),
 	);
 }
+
+export function pageHead(
+	title: string,
+	description: string,
+	path: string,
+): HeadMeta {
+	return buildHead(`${title} · ${SITE_NAME}`, description, absoluteUrl(path));
+}

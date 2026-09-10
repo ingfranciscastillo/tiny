@@ -138,10 +138,12 @@ function AppShell({ children }: { children: React.ReactNode }) {
 							GitHub
 						</a>
 						<span className="opacity-40">·</span>
-						{/* biome-ignore lint/a11y/useValidAnchor: placeholder until a real Privacy URL is provided */}
-						<a href="#" className="hover:text-accent transition-tiny">
+						<Link
+							to="/privacy-policy"
+							className="hover:text-accent transition-tiny"
+						>
 							Privacy
-						</a>
+						</Link>
 					</span>
 				</div>
 			</footer>

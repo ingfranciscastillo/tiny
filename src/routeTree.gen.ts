@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ToolsAsciiConverterRouteImport } from './routes/tools/ascii-converter'
 import { Route as ToolsAverageMedianRouteImport } from './routes/tools/average-median'
 import { Route as ToolsBase32ConverterRouteImport } from './routes/tools/base32-converter'
@@ -150,6 +151,11 @@ import { Route as ToolsYamlToJsonRouteImport } from './routes/tools/yaml-to-json
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsAsciiConverterRoute = ToolsAsciiConverterRouteImport.update({
@@ -840,6 +846,7 @@ const ToolsYamlToJsonRoute = ToolsYamlToJsonRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/tools/ascii-converter': typeof ToolsAsciiConverterRoute
   '/tools/average-median': typeof ToolsAverageMedianRoute
   '/tools/base32-converter': typeof ToolsBase32ConverterRoute
@@ -979,6 +986,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/tools/ascii-converter': typeof ToolsAsciiConverterRoute
   '/tools/average-median': typeof ToolsAverageMedianRoute
   '/tools/base32-converter': typeof ToolsBase32ConverterRoute
@@ -1119,6 +1127,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/tools/ascii-converter': typeof ToolsAsciiConverterRoute
   '/tools/average-median': typeof ToolsAverageMedianRoute
   '/tools/base32-converter': typeof ToolsBase32ConverterRoute
@@ -1260,6 +1269,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/privacy-policy'
     | '/tools/ascii-converter'
     | '/tools/average-median'
     | '/tools/base32-converter'
@@ -1399,6 +1409,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/privacy-policy'
     | '/tools/ascii-converter'
     | '/tools/average-median'
     | '/tools/base32-converter'
@@ -1538,6 +1549,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/privacy-policy'
     | '/tools/ascii-converter'
     | '/tools/average-median'
     | '/tools/base32-converter'
@@ -1678,6 +1690,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ToolsAsciiConverterRoute: typeof ToolsAsciiConverterRoute
   ToolsAverageMedianRoute: typeof ToolsAverageMedianRoute
   ToolsBase32ConverterRoute: typeof ToolsBase32ConverterRoute
@@ -1823,6 +1836,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/ascii-converter': {
@@ -2782,6 +2802,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   ToolsAsciiConverterRoute: ToolsAsciiConverterRoute,
   ToolsAverageMedianRoute: ToolsAverageMedianRoute,
   ToolsBase32ConverterRoute: ToolsBase32ConverterRoute,
