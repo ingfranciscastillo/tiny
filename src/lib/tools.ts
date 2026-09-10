@@ -46,7 +46,7 @@ export const TOOLS: Tool[] = [
 		name: "UUID Generator",
 		description: "Generate unique IDs",
 		category: "popular",
-		path: "/tools/uuid",
+		path: "/tools/uuid-generator",
 		runsLocally: true,
 	},
 	{
@@ -54,7 +54,7 @@ export const TOOLS: Tool[] = [
 		name: "Timestamp Converter",
 		description: "Convert Unix timestamps",
 		category: "popular",
-		path: "/tools/timestamp",
+		path: "/tools/timestamp-converter",
 		runsLocally: true,
 	},
 	{
@@ -78,7 +78,7 @@ export const TOOLS: Tool[] = [
 		name: "Text Diff",
 		description: "Compare two texts",
 		category: "popular",
-		path: "/tools/diff",
+		path: "/tools/text-diff",
 		runsLocally: true,
 	},
 	{

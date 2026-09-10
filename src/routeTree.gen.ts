@@ -31,6 +31,11 @@ import { Route as ToolsQrGeneratorRouteImport } from './routes/tools/qr-generato
 import { Route as ToolsRegexTesterRouteImport } from './routes/tools/regex-tester'
 import { Route as ToolsRot13CipherRouteImport } from './routes/tools/rot13-cipher'
 import { Route as ToolsSortLinesRouteImport } from './routes/tools/sort-lines'
+import { Route as ToolsTextDiffRouteImport } from './routes/tools/text-diff'
+import { Route as ToolsTimestampConverterRouteImport } from './routes/tools/timestamp-converter'
+import { Route as ToolsUrlEncodeRouteImport } from './routes/tools/url-encode'
+import { Route as ToolsUuidGeneratorRouteImport } from './routes/tools/uuid-generator'
+import { Route as ToolsWordCountRouteImport } from './routes/tools/word-count'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -142,6 +147,31 @@ const ToolsSortLinesRoute = ToolsSortLinesRouteImport.update({
   path: '/tools/sort-lines',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsTextDiffRoute = ToolsTextDiffRouteImport.update({
+  id: '/tools/text-diff',
+  path: '/tools/text-diff',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsTimestampConverterRoute = ToolsTimestampConverterRouteImport.update({
+  id: '/tools/timestamp-converter',
+  path: '/tools/timestamp-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsUrlEncodeRoute = ToolsUrlEncodeRouteImport.update({
+  id: '/tools/url-encode',
+  path: '/tools/url-encode',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsUuidGeneratorRoute = ToolsUuidGeneratorRouteImport.update({
+  id: '/tools/uuid-generator',
+  path: '/tools/uuid-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsWordCountRoute = ToolsWordCountRouteImport.update({
+  id: '/tools/word-count',
+  path: '/tools/word-count',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -166,6 +196,11 @@ export interface FileRoutesByFullPath {
   '/tools/regex-tester': typeof ToolsRegexTesterRoute
   '/tools/rot13-cipher': typeof ToolsRot13CipherRoute
   '/tools/sort-lines': typeof ToolsSortLinesRoute
+  '/tools/text-diff': typeof ToolsTextDiffRoute
+  '/tools/timestamp-converter': typeof ToolsTimestampConverterRoute
+  '/tools/url-encode': typeof ToolsUrlEncodeRoute
+  '/tools/uuid-generator': typeof ToolsUuidGeneratorRoute
+  '/tools/word-count': typeof ToolsWordCountRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -190,6 +225,11 @@ export interface FileRoutesByTo {
   '/tools/regex-tester': typeof ToolsRegexTesterRoute
   '/tools/rot13-cipher': typeof ToolsRot13CipherRoute
   '/tools/sort-lines': typeof ToolsSortLinesRoute
+  '/tools/text-diff': typeof ToolsTextDiffRoute
+  '/tools/timestamp-converter': typeof ToolsTimestampConverterRoute
+  '/tools/url-encode': typeof ToolsUrlEncodeRoute
+  '/tools/uuid-generator': typeof ToolsUuidGeneratorRoute
+  '/tools/word-count': typeof ToolsWordCountRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -215,6 +255,11 @@ export interface FileRoutesById {
   '/tools/regex-tester': typeof ToolsRegexTesterRoute
   '/tools/rot13-cipher': typeof ToolsRot13CipherRoute
   '/tools/sort-lines': typeof ToolsSortLinesRoute
+  '/tools/text-diff': typeof ToolsTextDiffRoute
+  '/tools/timestamp-converter': typeof ToolsTimestampConverterRoute
+  '/tools/url-encode': typeof ToolsUrlEncodeRoute
+  '/tools/uuid-generator': typeof ToolsUuidGeneratorRoute
+  '/tools/word-count': typeof ToolsWordCountRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -241,6 +286,11 @@ export interface FileRouteTypes {
     | '/tools/regex-tester'
     | '/tools/rot13-cipher'
     | '/tools/sort-lines'
+    | '/tools/text-diff'
+    | '/tools/timestamp-converter'
+    | '/tools/url-encode'
+    | '/tools/uuid-generator'
+    | '/tools/word-count'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -265,6 +315,11 @@ export interface FileRouteTypes {
     | '/tools/regex-tester'
     | '/tools/rot13-cipher'
     | '/tools/sort-lines'
+    | '/tools/text-diff'
+    | '/tools/timestamp-converter'
+    | '/tools/url-encode'
+    | '/tools/uuid-generator'
+    | '/tools/word-count'
   id:
     | '__root__'
     | '/'
@@ -289,6 +344,11 @@ export interface FileRouteTypes {
     | '/tools/regex-tester'
     | '/tools/rot13-cipher'
     | '/tools/sort-lines'
+    | '/tools/text-diff'
+    | '/tools/timestamp-converter'
+    | '/tools/url-encode'
+    | '/tools/uuid-generator'
+    | '/tools/word-count'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -314,6 +374,11 @@ export interface RootRouteChildren {
   ToolsRegexTesterRoute: typeof ToolsRegexTesterRoute
   ToolsRot13CipherRoute: typeof ToolsRot13CipherRoute
   ToolsSortLinesRoute: typeof ToolsSortLinesRoute
+  ToolsTextDiffRoute: typeof ToolsTextDiffRoute
+  ToolsTimestampConverterRoute: typeof ToolsTimestampConverterRoute
+  ToolsUrlEncodeRoute: typeof ToolsUrlEncodeRoute
+  ToolsUuidGeneratorRoute: typeof ToolsUuidGeneratorRoute
+  ToolsWordCountRoute: typeof ToolsWordCountRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -472,6 +537,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsSortLinesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/text-diff': {
+      id: '/tools/text-diff'
+      path: '/tools/text-diff'
+      fullPath: '/tools/text-diff'
+      preLoaderRoute: typeof ToolsTextDiffRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/timestamp-converter': {
+      id: '/tools/timestamp-converter'
+      path: '/tools/timestamp-converter'
+      fullPath: '/tools/timestamp-converter'
+      preLoaderRoute: typeof ToolsTimestampConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/url-encode': {
+      id: '/tools/url-encode'
+      path: '/tools/url-encode'
+      fullPath: '/tools/url-encode'
+      preLoaderRoute: typeof ToolsUrlEncodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/uuid-generator': {
+      id: '/tools/uuid-generator'
+      path: '/tools/uuid-generator'
+      fullPath: '/tools/uuid-generator'
+      preLoaderRoute: typeof ToolsUuidGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/word-count': {
+      id: '/tools/word-count'
+      path: '/tools/word-count'
+      fullPath: '/tools/word-count'
+      preLoaderRoute: typeof ToolsWordCountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -498,6 +598,11 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsRegexTesterRoute: ToolsRegexTesterRoute,
   ToolsRot13CipherRoute: ToolsRot13CipherRoute,
   ToolsSortLinesRoute: ToolsSortLinesRoute,
+  ToolsTextDiffRoute: ToolsTextDiffRoute,
+  ToolsTimestampConverterRoute: ToolsTimestampConverterRoute,
+  ToolsUrlEncodeRoute: ToolsUrlEncodeRoute,
+  ToolsUuidGeneratorRoute: ToolsUuidGeneratorRoute,
+  ToolsWordCountRoute: ToolsWordCountRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
