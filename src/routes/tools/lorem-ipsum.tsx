@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-
 import ToolShell, { OutputBlock } from "#/components/ToolShell";
+import { toolHead } from "#/lib/seo";
 
 export const Route = createFileRoute("/tools/lorem-ipsum")({
+	head: () => toolHead("lorem"),
 	component: LoremIpsum,
 });
 

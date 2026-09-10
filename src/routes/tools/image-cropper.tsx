@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useRef, useState } from "react";
-
 import ToolShell from "#/components/ToolShell";
+import { toolHead } from "#/lib/seo";
 
 export const Route = createFileRoute("/tools/image-cropper")({
+	head: () => toolHead("image-cropper"),
 	component: ImageCropper,
 });
 

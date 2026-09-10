@@ -7,6 +7,7 @@ import {
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { PaletteProvider, usePalette } from "#/lib/palette-context";
+import { SITE_DESCRIPTION, SITE_NAME } from "#/lib/seo";
 import { TOOLS } from "#/lib/tools";
 import { useTheme } from "#/lib/useTheme";
 import { getLocale } from "#/paraglide/runtime";
@@ -32,7 +33,19 @@ export const Route = createRootRoute({
 				content: "width=device-width, initial-scale=1",
 			},
 			{
-				title: "TanStack Start Starter",
+				title: SITE_NAME,
+			},
+			{
+				name: "description",
+				content: SITE_DESCRIPTION,
+			},
+			{
+				property: "og:site_name",
+				content: SITE_NAME,
+			},
+			{
+				property: "og:type",
+				content: "website",
 			},
 		],
 		links: [

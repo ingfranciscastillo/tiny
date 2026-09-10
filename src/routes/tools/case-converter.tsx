@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-
 import ToolShell, { OutputBlock, WorkSurface } from "#/components/ToolShell";
+import { toolHead } from "#/lib/seo";
 
 export const Route = createFileRoute("/tools/case-converter")({
+	head: () => toolHead("case"),
 	component: CaseConverter,
 });
 

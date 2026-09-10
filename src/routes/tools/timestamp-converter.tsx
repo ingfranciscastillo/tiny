@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-
 import CopyButton from "#/components/CopyButton";
 import ToolShell from "#/components/ToolShell";
+import { toolHead } from "#/lib/seo";
 
 export const Route = createFileRoute("/tools/timestamp-converter")({
+	head: () => toolHead("timestamp"),
 	component: TimestampConverter,
 });
 

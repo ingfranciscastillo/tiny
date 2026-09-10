@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { QRCodeCanvas } from "qrcode.react";
 import { useEffect, useRef, useState } from "react";
-
 import ToolShell from "#/components/ToolShell";
+import { toolHead } from "#/lib/seo";
 
 export const Route = createFileRoute("/tools/qr-generator")({
+	head: () => toolHead("qr"),
 	component: QrGenerator,
 });
 

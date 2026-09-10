@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-
 import ToolShell, { OutputBlock, WorkSurface } from "#/components/ToolShell";
+import { toolHead } from "#/lib/seo";
 
 export const Route = createFileRoute("/tools/json-to-csv")({
+	head: () => toolHead("json-to-csv"),
 	component: JsonToCsv,
 });
 

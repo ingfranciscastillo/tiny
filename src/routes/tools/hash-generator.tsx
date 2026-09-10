@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-
 import ToolShell from "#/components/ToolShell";
+import { toolHead } from "#/lib/seo";
 
 export const Route = createFileRoute("/tools/hash-generator")({
+	head: () => toolHead("hash"),
 	component: HashGenerator,
 });
 
